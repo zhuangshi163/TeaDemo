@@ -1,0 +1,1403 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaGdImage</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> TeaGdImage</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A helper class that helps to manage images, upload, resize, create thumbnails, crop images, etc.</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Leng Sheng Hong &lt;<a href="mailto:darkredz@gmail.com">darkredz@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id: TeaGdImage.php 1000 2009-08-19 21:37:38</li>
+				<li><span class="field">since:</span> 1.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-helper/_helper---TeaGdImage.php.html">/helper/TeaGdImage.php</a> (line <span class="field">19</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																								<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$cropSuffix" title="details" class="var-name">$cropSuffix</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$generatedQuality" title="details" class="var-name">$generatedQuality</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$generatedType" title="details" class="var-name">$generatedType</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$processPath" title="details" class="var-name">$processPath</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$rotateSuffix" title="details" class="var-name">$rotateSuffix</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$saveFile" title="details" class="var-name">$saveFile</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$thumbSuffix" title="details" class="var-name">$thumbSuffix</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$timeAsName" title="details" class="var-name">$timeAsName</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$ttfFont" title="details" class="var-name">$ttfFont</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$uploadPath" title="details" class="var-name">$uploadPath</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$waterSuffix" title="details" class="var-name">$waterSuffix</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																								<div class="method-definition">
+					<img src="images/Constructor.png" alt=" "/>
+					<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$uploadPath</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$processPath</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$saveFile</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$timeAsName</span> = <span class="var-default">true</span>])
+																<span class="method-result">TeaGdImage</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#adaptiveResize" title="details" class="method-name">adaptiveResize</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$width</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$height</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+																<span class="method-result">bool|string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#adaptiveResizeCropExcess" title="details" class="method-name">adaptiveResizeCropExcess</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">128</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">128</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#centerImageInContrainer" title="details" class="method-name">centerImageInContrainer</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$bgcolor</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+																<span class="method-result">bool|string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#checkImageExtension" title="details" class="method-name">checkImageExtension</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$allowExt</span> = <span class="var-default">array('jpg','jpeg','gif','png')</span>])
+																<span class="method-result">bool</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#checkImageSize" title="details" class="method-name">checkImageSize</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$maxSize</span>)
+																<span class="method-result">bool</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#checkImageType" title="details" class="method-name">checkImageType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$allowType</span> = <span class="var-default">array('jpg','jpeg','pjpeg','gif','png','x-png')</span>])
+																<span class="method-result">bool</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#createImageObject" title="details" class="method-name">createImageObject</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">&$img</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>)
+																<span class="method-result">resource</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#createSquare" title="details" class="method-name">createSquare</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$size</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+																<span class="method-result">bool|string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#createThumb" title="details" class="method-name">createThumb</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">128</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">128</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+																<span class="method-result">bool|string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#crop" title="details" class="method-name">crop</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$cropWidth</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$cropHeight</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$cropStartX</span> = <span class="var-default">0</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$cropStartY</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+																<span class="method-result">bool|string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#generateImage" title="details" class="method-name">generateImage</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$img</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span> = <span class="var-default">null</span>], <span class="var-type">resource</span>&nbsp;<span class="var-name">$img</span>)
+																<span class="method-result">bool</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getInfo" title="details" class="method-name">getInfo</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>)
+																<span class="method-result">array</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getThumb" title="details" class="method-name">getThumb</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>)
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getUploadFormat" title="details" class="method-name">getUploadFormat</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+																<span class="method-result">string|array</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getWaterMark" title="details" class="method-name">getWaterMark</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>)
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#ratioResize" title="details" class="method-name">ratioResize</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">null</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+																<span class="method-result">bool|string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#removeImage" title="details" class="method-name">removeImage</a>
+											(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$file</span>)
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#rotate" title="details" class="method-name">rotate</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$rotateBy</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+																<span class="method-result">bool|string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#setFont" title="details" class="method-name">setFont</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$ttfFontFile</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">''</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#uploadImage" title="details" class="method-name">uploadImage</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+																<span class="method-result">string|array</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#waterMark" title="details" class="method-name">waterMark</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$maxWidth</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$maxHeight</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+																<span class="method-result">bool|string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#waterMarkImage" title="details" class="method-name">waterMarkImage</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$watermarkImgPath</span>, [<span class="var-type">string|int</span>&nbsp;<span class="var-name">$posX</span> = <span class="var-default">'right'</span>], [<span class="var-type">string|int</span>&nbsp;<span class="var-name">$posY</span> = <span class="var-default">'bottom'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+																<span class="method-result">bool|string</span>
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="$cropSuffix" id="$cropSuffix"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$cropSuffix</span>
+			 = <span class="var-default"> '_crop'</span>			(line <span class="line-number">49</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Suffix name for the cropped image files, eg. 203992029_crop.jpg</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$generatedQuality" id="$generatedQuality"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$generatedQuality</span>
+			 = <span class="var-default"> 100</span>			(line <span class="line-number">78</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generated image quality. For png &amp; jpg only</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$generatedType" id="$generatedType"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$generatedType</span>
+			 = <span class="var-default"> 'jpg'</span>			(line <span class="line-number">72</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generated image type. gif, png, jpg</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$processPath" id="$processPath"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$processPath</span>
+						(line <span class="line-number">31</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Path to store the resized/processed image files(thumbnails/watermarks)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$rotateSuffix" id="$rotateSuffix"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$rotateSuffix</span>
+			 = <span class="var-default"> '_rotated'</span>			(line <span class="line-number">54</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Suffix name for the rotate image files, eg 203992029_rotated.jpg</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$saveFile" id="$saveFile"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$saveFile</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number">60</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determine whether to save the processed images</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$thumbSuffix" id="$thumbSuffix"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$thumbSuffix</span>
+			 = <span class="var-default"> '_thumb'</span>			(line <span class="line-number">37</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Suffix name for the generated thumbnail image files, eg. 203992029_thumb.jpg</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$timeAsName" id="$timeAsName"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$timeAsName</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number">84</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determine whether to use time + unique value as a file name for the uploaded images.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$ttfFont" id="$ttfFont"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$ttfFont</span>
+						(line <span class="line-number">66</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The file name of the TTF font to be used with watermarks.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$uploadPath" id="$uploadPath"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$uploadPath</span>
+						(line <span class="line-number">25</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Path to store the uploaded image files</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$waterSuffix" id="$waterSuffix"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$waterSuffix</span>
+			 = <span class="var-default"> '_water'</span>			(line <span class="line-number">43</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Suffix name for the generated watermarked image files, eg. 203992029_water.jpg</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">93</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Construtor for TeaGdImage</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">TeaGdImage</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$uploadPath</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$processPath</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$saveFile</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$timeAsName</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$uploadPath</span><span class="var-description">: Path of the uploaded image</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$processPath</span><span class="var-description">: Path to save the processes images</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$saveFile</span><span class="var-description">: To save the processed images</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$timeAsName</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="adaptiveResize" id="adaptiveResize"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">adaptiveResize</span> (line <span class="line-number">342</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adaptively Resizes the Image</p>
+<p class="description"><p>Resize the image to as close to the provided dimensions as possible, and then crops the  remaining overflow (from the center) to get the image to be the size specified</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns the generated image file name. Return false if failed.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool|string</span>
+		<span class="method-name">
+			adaptiveResize
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$width</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$height</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: The image file name.</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$width</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$height</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rename</span><span class="var-description">: New file name for the processed image file to be saved.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="adaptiveResizeCropExcess" id="adaptiveResizeCropExcess"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">adaptiveResizeCropExcess</span> (line <span class="line-number">397</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			adaptiveResizeCropExcess
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">128</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">128</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$file</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$width</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$height</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$rename</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="centerImageInContrainer" id="centerImageInContrainer"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">centerImageInContrainer</span> (line <span class="line-number">691</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Centers an image in the middle of a container image. Useful when you want to align an image horizontally and vertically  for example a landscape image in a square box.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns the generated image file name. Return false if failed</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool|string</span>
+		<span class="method-name">
+			centerImageInContrainer
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$width</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$height</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$bgcolor</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: Image file name</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$width</span><span class="var-description">: The width of the new image</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$height</span><span class="var-description">: The height of the new image</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$bgcolor</span><span class="var-description">: Array defining the background color array(RED, GREEN, BLUE) eg. (0, 255, 0) for bright green</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rename</span><span class="var-description">: New file name for the processed image file to be saved</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="checkImageExtension" id="checkImageExtension"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">checkImageExtension</span> (line <span class="line-number">934</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if image extension of the uploaded file(s) is in the allowed list.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns true if file extension is in the allowed list.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			checkImageExtension
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$allowExt</span> = <span class="var-default">array('jpg','jpeg','gif','png')</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: The file input field name in $_FILES HTTP File Upload variables</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$allowExt</span><span class="var-description">: Allowed file extensions. Default: jpg, jpeg, gif, png</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="checkImageSize" id="checkImageSize"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">checkImageSize</span> (line <span class="line-number">962</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if image file size does not exceed the max file size allowed.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns true if file size does not exceed the max file size allowed.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			checkImageSize
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$maxSize</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: The file input field name in $_FILES HTTP File Upload variables</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$maxSize</span><span class="var-description">: Allowed max file size in kilo bytes.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="checkImageType" id="checkImageType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">checkImageType</span> (line <span class="line-number">912</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if image mime type of the uploaded file(s) is in the allowed list</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns true if image mime type is in the allowed list.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			checkImageType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$allowType</span> = <span class="var-default">array('jpg','jpeg','pjpeg','gif','png','x-png')</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: The file field name in $_FILES HTTP File Upload variables</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$allowType</span><span class="var-description">: Allowed image format type. Default: JPEGs, GIFs and PNGs</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="createImageObject" id="createImageObject"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">createImageObject</span> (line <span class="line-number">117</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates an image object based on the file type.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">resource</span>
+		<span class="method-name">
+			createImageObject
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">&$img</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Image type, gif, png, jpg</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: File name of the image</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">&$img</span><span class="var-description">: The variable to store the image resource created.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="createSquare" id="createSquare"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">createSquare</span> (line <span class="line-number">326</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create a square thumbnail (resize adaptively)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns the generated image file name. Return false if failed.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool|string</span>
+		<span class="method-name">
+			createSquare
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$size</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: The image file name.</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$size</span><span class="var-description">: Width/height of the thumbnail</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rename</span><span class="var-description">: New file name for the processed image file to be saved.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="createThumb" id="createThumb"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">createThumb</span> (line <span class="line-number">265</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Resize/Generates thumbnail from an existing image file.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns the generated image file name. Return false if failed.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool|string</span>
+		<span class="method-name">
+			createThumb
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">128</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">128</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: The image file name.</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$width</span><span class="var-description">: Width of the thumbnail</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$height</span><span class="var-description">: Height of the thumbnail</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rename</span><span class="var-description">: New file name for the processed image file to be saved.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="crop" id="crop"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">crop</span> (line <span class="line-number">172</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Crops an image.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns the generated image file name. Return false if failed.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool|string</span>
+		<span class="method-name">
+			crop
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$cropWidth</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$cropHeight</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$cropStartX</span> = <span class="var-default">0</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$cropStartY</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: Image file name</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$cropWidth</span><span class="var-description">: Width to be cropped</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$cropHeight</span><span class="var-description">: Height to be cropped</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$cropStartX</span><span class="var-description">: Position x to start cropping</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$cropStartY</span><span class="var-description">: Position y to start cropping</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rename</span><span class="var-description">: New file name for the processed image file to be saved.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="generateImage" id="generateImage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">generateImage</span> (line <span class="line-number">141</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates an image from a resouce based on the generatedType</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			generateImage
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$img</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span> = <span class="var-default">null</span>], <span class="var-type">resource</span>&nbsp;<span class="var-name">$img</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">resource</span>
+				<span class="var-name">$img</span><span class="var-description">: The image resource</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: File name to be stored.</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$img</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getInfo" id="getInfo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getInfo</span> (line <span class="line-number">807</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the info of an image</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns info in array consists of width, height, type, name &amp; filesize.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getInfo
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: Image file name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getThumb" id="getThumb"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getThumb</span> (line <span class="line-number">740</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the file name of an image's thumbnail.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getThumb
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: Image file name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getUploadFormat" id="getUploadFormat"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getUploadFormat</span> (line <span class="line-number">889</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the uploaded images' format type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The image format type of the uploaded image.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string|array</span>
+		<span class="method-name">
+			getUploadFormat
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: The file field name in $_FILES HTTP File Upload variables</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getWaterMark" id="getWaterMark"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getWaterMark</span> (line <span class="line-number">753</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the file name of an image's watermark.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getWaterMark
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: Image file name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="ratioResize" id="ratioResize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">ratioResize</span> (line <span class="line-number">470</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Resizes the Image and keep it proportioned</p>
+<p class="description"><p>Resize the image to fit within specified area while maintaining the image ratio.</p><p>There are 3 modes of operation which are <ul><li>To resize so width matches specification and height it auto determined (set width but leave height as null)</li><li>To resize so height matches spectification and width is auto determined (set width to null and height to desired height)</li><li>To resize so image fits within the area defined by width and height (set both width and height)</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns the generated image file name. Return false if failed.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool|string</span>
+		<span class="method-name">
+			ratioResize
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$width</span> = <span class="var-default">null</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$height</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: The image file name.</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$width</span><span class="var-description">: The maximum width of the new image (or null if only setting height)</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$height</span><span class="var-description">: The maximum height of the new image (or null if only setting width)</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rename</span><span class="var-description">: New file name for the processed image file to be saved.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="removeImage" id="removeImage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">removeImage</span> (line <span class="line-number">767</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Tries to remove the images along with its thumbnails &amp; watermarks</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			removeImage
+		</span>
+					(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$file</span><span class="var-description">: Image file name(s)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="rotate" id="rotate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">rotate</span> (line <span class="line-number">219</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Rotate an image Clockwise by specified amount</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns the generated image file name. Return false if failed</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool|string</span>
+		<span class="method-name">
+			rotate
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$rotateBy</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: Image file name</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$rotateBy</span><span class="var-description">: Amount to rotate the image by in clockwise direction</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rename</span><span class="var-description">: New file name for the processed image file to be saved</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="setFont" id="setFont"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setFont</span> (line <span class="line-number">105</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the TTF Font type for water mark processing.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setFont
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$ttfFontFile</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ttfFontFile</span><span class="var-description">: the TTF font file name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: Path to the font</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="uploadImage" id="uploadImage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">uploadImage</span> (line <span class="line-number">824</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Save the uploaded image(s) in HTTP File Upload variables</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The file name of the uploaded image.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string|array</span>
+		<span class="method-name">
+			uploadImage
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: The file field name in $_FILES HTTP File Upload variables</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rename</span><span class="var-description">: Rename the uploaded file (without extension)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="waterMark" id="waterMark"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">waterMark</span> (line <span class="line-number">540</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add water mark text to an image.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns the generated image file name. Return false if failed.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool|string</span>
+		<span class="method-name">
+			waterMark
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$maxWidth</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$maxHeight</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: Image file name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: Text to be added as water mark</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$maxWidth</span><span class="var-description">: Maximum width of the processed image</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$maxHeight</span><span class="var-description">: Maximum height of the processed image</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rename</span><span class="var-description">: New file name for the processed image file to be saved.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="waterMarkImage" id="waterMarkImage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">waterMarkImage</span> (line <span class="line-number">609</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Embed a watermark image onto a given image.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns the generated image file name. Return false if failed</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool|string</span>
+		<span class="method-name">
+			waterMarkImage
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$watermarkImgPath</span>, [<span class="var-type">string|int</span>&nbsp;<span class="var-name">$posX</span> = <span class="var-default">'right'</span>], [<span class="var-type">string|int</span>&nbsp;<span class="var-name">$posY</span> = <span class="var-default">'bottom'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$rename</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: Image file name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$watermarkImgPath</span><span class="var-description">: Full path to watermark image</span>			</li>
+					<li>
+				<span class="var-type">string|int</span>
+				<span class="var-name">$posX</span><span class="var-description">: Position of watermark horizontally: left | middle | right  OR &gt; 0 to position Xpx from left or &lt; 0 to position Xpx from right</span>			</li>
+					<li>
+				<span class="var-type">string|int</span>
+				<span class="var-name">$posY</span><span class="var-description">: Position of watermark vertically: top  | middle | bottom OR &gt; 0 to position Xpx from top  or &lt; 0 to position Xpx from bottom</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rename</span><span class="var-description">: New file name for the processed image file to be saved</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:54 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaTimezone</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> TeaTimezone</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A helper class for PHP Timezones.</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Leng Sheng Hong &lt;<a href="mailto:darkredz@gmail.com">darkredz@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id: TeaTimezone.php 1000 2010-12-10 09:37:08</li>
+				<li><span class="field">since:</span> 1.3</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-helper/_helper---TeaTimezone.php.html">/helper/TeaTimezone.php</a> (line <span class="field">19</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+												<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#convertFromUTCTime" title="details" class="method-name">convertFromUTCTime</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$time</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$toTimezone</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dateFormat</span> = <span class="var-default">'Y-m-d H:i:s'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$enableDST</span> = <span class="var-default">true</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#convertTime" title="details" class="method-name">convertTime</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$time</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$fromTimezone</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$toTimezone</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dateFormat</span> = <span class="var-default">'Y-m-d H:i:s'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$enableDST</span> = <span class="var-default">true</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#convertToUTCTime" title="details" class="method-name">convertToUTCTime</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$time</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$fromTimezone</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dateFormat</span> = <span class="var-default">'Y-m-d H:i:s'</span>], <span class="var-type">bool</span>&nbsp;<span class="var-name">$enableDST</span>)
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#getCommonTimezone" title="details" class="method-name">getCommonTimezone</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$timeformat</span> = <span class="var-default">'H:i'</span>])
+																<span class="method-result">array</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#getCommonTimezoneHTMLList" title="details" class="method-name">getCommonTimezoneHTMLList</a>
+											([<span class="var-type">int|float</span>&nbsp;<span class="var-name">$selectedOffset</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'[UTC '</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$suffix</span> = <span class="var-default">'] '</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$timeformat</span> = <span class="var-default">'H:i'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$optionFormat</span> = <span class="var-default">'hour'</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#getGeolocationFromTimezone" title="details" class="method-name">getGeolocationFromTimezone</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$timezoneIdentifier</span>)
+																<span class="method-result">array</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#getOffsetFromTimezone" title="details" class="method-name">getOffsetFromTimezone</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$timezoneIdentifier</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$timeformat</span> = <span class="var-default">'H:i'</span>])
+																<span class="method-result">int|string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#getTimezoneByRegion" title="details" class="method-name">getTimezoneByRegion</a>
+											([<span class="var-type">string|array</span>&nbsp;<span class="var-name">$regionName</span> = <span class="var-default">null</span>])
+																<span class="method-result">array</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#getTimezoneFromOffset" title="details" class="method-name">getTimezoneFromOffset</a>
+											(<span class="var-type">int|float</span>&nbsp;<span class="var-name">$offsetInHour</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$onlyFirst</span> = <span class="var-default">false</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#getTimezoneHTMLList" title="details" class="method-name">getTimezoneHTMLList</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$selectedTimezone</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$useOffsetAsValue</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'[UTC '</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$suffix</span> = <span class="var-default">'] '</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$timeformat</span> = <span class="var-default">'H:i'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$optionFormat</span> = <span class="var-default">'hour'</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#getTimezoneWithOffset" title="details" class="method-name">getTimezoneWithOffset</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$timeformat</span> = <span class="var-default">'H:i'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$groupby</span> = <span class="var-default">null</span>])
+																<span class="method-result">array</span>
+									</div>
+																																																																																																							</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+													<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="convertFromUTCTime" id="convertFromUTCTime"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static convertFromUTCTime</span> (line <span class="line-number">423</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert time from UTC time</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The formatted date time after conversion</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			convertFromUTCTime
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$time</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$toTimezone</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dateFormat</span> = <span class="var-default">'Y-m-d H:i:s'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$enableDST</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$time</span><span class="var-description">: A valid date time string</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$toTimezone</span><span class="var-description">: A valid timezone identifier to be converted to</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dateFormat</span><span class="var-description">: Date format for the converted time. Default is 'Y-m-d H:i:s'</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$enableDST</span><span class="var-description">: Enable/disable Daylight Saving Time in the time conversion. Default is DST enabled.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="convertTime" id="convertTime"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static convertTime</span> (line <span class="line-number">360</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert time from a timezone to another</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The formatted date time after conversion</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			convertTime
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$time</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$fromTimezone</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$toTimezone</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dateFormat</span> = <span class="var-default">'Y-m-d H:i:s'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$enableDST</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$time</span><span class="var-description">: A valid date time string</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$fromTimezone</span><span class="var-description">: A valid timezone identifier for the original time</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$toTimezone</span><span class="var-description">: A valid timezone identifier to be converted to</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dateFormat</span><span class="var-description">: Date format for the converted time. Default is 'Y-m-d H:i:s'</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$enableDST</span><span class="var-description">: Enable/disable Daylight Saving Time in the time conversion. Default is DST enabled.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="convertToUTCTime" id="convertToUTCTime"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static convertToUTCTime</span> (line <span class="line-number">435</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert time to UTC time</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The formatted date time after conversion</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			convertToUTCTime
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$time</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$fromTimezone</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dateFormat</span> = <span class="var-default">'Y-m-d H:i:s'</span>], <span class="var-type">bool</span>&nbsp;<span class="var-name">$enableDST</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$time</span><span class="var-description">: A valid date time string</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$fromTimezone</span><span class="var-description">: A valid timezone identifier to be converted to</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dateFormat</span><span class="var-description">: Date format for the converted time. Default is 'Y-m-d H:i:s'</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$enableDST</span><span class="var-description">: Enable/disable Daylight Saving Time in the time conversion. Default is DST enabled.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getCommonTimezone" id="getCommonTimezone"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static getCommonTimezone</span> (line <span class="line-number">58</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get an array of common timezones with its offset from UTC as key, eg. Western European Time, Central Standard Time, Chinese Standard Time</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getCommonTimezone
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$timeformat</span> = <span class="var-default">'H:i'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$timeformat</span><span class="var-description">: Determines the format of the offset to be returned (in second, minute, hour or H:i (date time format))</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getCommonTimezoneHTMLList" id="getCommonTimezoneHTMLList"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static getCommonTimezoneHTMLList</span> (line <span class="line-number">130</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get select list's option HTML for common timezones with its offset from UTC as key, eg. Western European Time, Central Standard Time, Chinese Standard Time</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getCommonTimezoneHTMLList
+		</span>
+					([<span class="var-type">int|float</span>&nbsp;<span class="var-name">$selectedOffset</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'[UTC '</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$suffix</span> = <span class="var-default">'] '</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$timeformat</span> = <span class="var-default">'H:i'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$optionFormat</span> = <span class="var-default">'hour'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int|float</span>
+				<span class="var-name">$selectedOffset</span><span class="var-description">: Default selected offset in hour in the options. By default none is selected. Use offset from UTC as value, eg. 0, 6.5, 8, -7</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: Prefix string for $timeformat</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$suffix</span><span class="var-description">: Suffix string for $timeformat</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$timeformat</span><span class="var-description">: Formats the time offset to be displayed in the list</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$optionFormat</span><span class="var-description">: Formats the time offset in option's value attribute</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getGeolocationFromTimezone" id="getGeolocationFromTimezone"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static getGeolocationFromTimezone</span> (line <span class="line-number">444</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get location information for a timezone, including country_code, latitude, longitude and comments.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getGeolocationFromTimezone
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$timezoneIdentifier</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$timezoneIdentifier</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getOffsetFromTimezone" id="getOffsetFromTimezone"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static getOffsetFromTimezone</span> (line <span class="line-number">316</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get UTC offset from timezone in second, minute, hour or Hi (date time format)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Offset in second, minute, hour or H:i (date time format)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int|string</span>
+		<span class="method-name">
+			getOffsetFromTimezone
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$timezoneIdentifier</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$timeformat</span> = <span class="var-default">'H:i'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$timezoneIdentifier</span><span class="var-description">: Timezone identifier, eg. Asia/Kuala_Lumpur</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$timeformat</span><span class="var-description">: Determines the format of the offset to be returned (in second, minute, hour or H:i (date time format))</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getTimezoneByRegion" id="getTimezoneByRegion"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static getTimezoneByRegion</span> (line <span class="line-number">271</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get an array of timezone identifiers by region (Asia, Africa, America, etc.)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTimezoneByRegion
+		</span>
+					([<span class="var-type">string|array</span>&nbsp;<span class="var-name">$regionName</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$regionName</span><span class="var-description">: Optional parameter to specify a/a list of regions</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getTimezoneFromOffset" id="getTimezoneFromOffset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static getTimezoneFromOffset</span> (line <span class="line-number">339</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get one/a list of timezones identifiers from a UTC offset(in hour)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTimezoneFromOffset
+		</span>
+					(<span class="var-type">int|float</span>&nbsp;<span class="var-name">$offsetInHour</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$onlyFirst</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int|float</span>
+				<span class="var-name">$offsetInHour</span><span class="var-description">: Offset from UTC. eg. -6, 7.5, 8</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$onlyFirst</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getTimezoneHTMLList" id="getTimezoneHTMLList"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static getTimezoneHTMLList</span> (line <span class="line-number">196</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get select list's option HTML for all PHP timezones with its offset from UTC as key, eg. Western European Time, Central Standard Time, Chinese Standard Time</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTimezoneHTMLList
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$selectedTimezone</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$useOffsetAsValue</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'[UTC '</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$suffix</span> = <span class="var-default">'] '</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$timeformat</span> = <span class="var-default">'H:i'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$optionFormat</span> = <span class="var-default">'hour'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$selectedTimezone</span><span class="var-description">: Default selected timezone in the options. By default none is selected. Use timezone identifier as value, eg. 'Asia/Hong_Kong'</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$useOffsetAsValue</span><span class="var-description">: Use UTC offset as option value. Default is true. If false, timezone identifier will be used</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: Prefix string for $timeformat</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$suffix</span><span class="var-description">: Suffix string for $timeformat</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$timeformat</span><span class="var-description">: Formats the time offset to be displayed in the list</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$optionFormat</span><span class="var-description">: Formats the time offset in option's value attribute</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getTimezoneWithOffset" id="getTimezoneWithOffset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static getTimezoneWithOffset</span> (line <span class="line-number">27</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns timezone list with its offset from UTC</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTimezoneWithOffset
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$timeformat</span> = <span class="var-default">'H:i'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$groupby</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$timeformat</span><span class="var-description">: Determines the format of the offset to be returned (in second, minute, hour or H:i (date time format))</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$groupby</span><span class="var-description">: Group result by offset or timezone. Defalut is null. Options: 'offset' or 'timezone'</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:23:00 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

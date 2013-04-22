@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaWebApp</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> TeaWebApp</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">TeaWebApp is the global context that processed user's requests.</p>
+<p class="description"><p>It manages the controllers in MVC pattern, handling URI requests 404 not found, redirection, etc.</p><p>This class is tightly coupled with TeaUriRouter.</p><p></p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Leng Sheng Hong &lt;<a href="mailto:darkredz@gmail.com">darkredz@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id: TeaWebApp.php 1000 2009-07-7 18:27:22</li>
+				<li><span class="field">since:</span> 1.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-app/_app---TeaWebApp.php.html">/app/TeaWebApp.php</a> (line <span class="field">24</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$route" title="details" class="var-name">$route</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																								<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#debug" title="details" class="method-name">debug</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$var</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getModule" title="details" class="method-name">getModule</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span>, <span class="var-type">string|array</span>&nbsp;<span class="var-name">$moduleUri</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#module" title="details" class="method-name">module</a>
+											(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$moduleUri</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#reroute" title="details" class="method-name">reroute</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$routeuri</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$is404</span> = <span class="var-default">false</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#routeTo" title="details" class="method-name">routeTo</a>
+										()
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#run" title="details" class="method-name">run</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#throwHeader" title="details" class="method-name">throwHeader</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$code</span>)
+																<span class="method-result">void</span>
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="$route" id="$route"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$route</span>
+						(line <span class="line-number">28</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> routes defined in <em>routes.conf.php</em></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="debug" id="debug"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">debug</span> (line <span class="line-number">477</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">To debug variables with Teaphp's diagnostic view</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			debug
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$var</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$var</span><span class="var-description">: The variable to view in diagnostics.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getModule" id="getModule"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getModule</span> (line <span class="line-number">384</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Advanced version of TeaWebApp::module(). Process a module from the main application or other modules.</p>
+<p class="description"><p>Module rendered using this method is located in SITE_PATH/PROTECTED_FOLDER/module</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Output of the module</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getModule
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span>, <span class="var-type">string|array</span>&nbsp;<span class="var-name">$moduleUri</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$moduleName</span><span class="var-description">: Name of the module folder. To execute Controller/method in the main application, pass a null or empty string value for $moduleName.</span>			</li>
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$moduleUri</span><span class="var-description">: URI or Controller name of the module</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: Action to be called</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: Parameters to be passed in to the Module</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="module" id="module"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">module</span> (line <span class="line-number">292</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Process a module from the main application.</p>
+<p class="description"><p>This is similar to rerouting to a Controller. The framework offer 3 ways to process and render a module.</p><p>Based on a predefined route:</p><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-comm">#&nbsp;The&nbsp;route&nbsp;is&nbsp;predefined&nbsp;in&nbsp;routes.conf.php</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">#&nbsp;$route['*']['/top/:nav']&nbsp;=&nbsp;array('MyController',&nbsp;'renderTop');</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$data</span><span class="src-sym">[</span><span class="src-str">'top'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodapp">app</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="Tea-app/TeaWebApp.html#methodmodule">module</a><span class="src-sym">(</span><span class="src-str">'/top/banner'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div>
+ Based on Controller name and Action method:</p><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodapp">app</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="Tea-app/TeaWebApp.html#methodmodule">module</a><span class="src-sym">(</span><span class="src-str">'MyController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'renderTop'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">#&nbsp;If&nbsp;controller&nbsp;is&nbsp;in&nbsp;sub&nbsp;folder</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodapp">app</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="Tea-app/TeaWebApp.html#methodmodule">module</a><span class="src-sym">(</span><span class="src-str">'folder/MyController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'renderTop'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">#&nbsp;Passed&nbsp;in&nbsp;parameter&nbsp;if&nbsp;controller&nbsp;is&nbsp;using&nbsp;$this-&gt;param['var']</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodapp">app</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="Tea-app/TeaWebApp.html#methodmodule">module</a><span class="src-sym">(</span><span class="src-str">'MyController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'renderTop'</span><span class="src-sym">,&nbsp;</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'nav'</span>=&gt;<span class="src-str">'banner'</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+</ol></div>
+ If class name is different from controller filename:</p><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-comm">#&nbsp;filename&nbsp;is&nbsp;index.php,&nbsp;class&nbsp;name&nbsp;is&nbsp;Admin</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodapp">app</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="Tea-app/TeaWebApp.html#methodmodule">module</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'index'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'Admin'</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-str">'renderTop'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">#&nbsp;in&nbsp;a&nbsp;sub&nbsp;folder</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodapp">app</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="Tea-app/TeaWebApp.html#methodmodule">module</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'admin/index'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'Admin'</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-str">'renderTop'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">#&nbsp;with&nbsp;parameters</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodapp">app</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="Tea-app/TeaWebApp.html#methodmodule">module</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'admin/index'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'Admin'</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-str">'renderTop'</span><span class="src-sym">,&nbsp;</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'nav'</span>=&gt;<span class="src-str">'banner'</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Output of the module</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			module
+		</span>
+					(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$moduleUri</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$moduleUri</span><span class="var-description">: URI or Controller name of the module</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: Action to be called</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: Parameters to be passed in to the Module</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="reroute" id="reroute"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">reroute</span> (line <span class="line-number">235</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Reroute the URI to an internal route</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			reroute
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$routeuri</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$is404</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$routeuri</span><span class="var-description">: route uri to redirect to</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$is404</span><span class="var-description">: send a 404 status in header</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="routeTo" id="routeTo"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">routeTo</span> (line <span class="line-number">43</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Handles the routing process.</p>
+<p class="description"><p>Auto routing, sub folder, subdomain, sub folder on subdomain are supported.  It can be used with or without the <em>index.php</em> in the URI</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> HTTP status code such as 404 or URL for redirection</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			routeTo
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="run" id="run"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">run</span> (line <span class="line-number">33</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Main function to run the web application</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			run
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="throwHeader" id="throwHeader"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">throwHeader</span> (line <span class="line-number">423</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Analyze controller return value and send appropriate headers such as 404, 302, 301, redirect to internal routes.</p>
+<p class="description"><p>It is very SEO friendly but you would need to know the basics of HTTP status code.</p><p>Automatically handles 404, include error document or redirect to inner route  to handle the error based on config <strong>ERROR_404_DOCUMENT</strong> and <strong>ERROR_404_ROUTE</strong></p><p>Controller return value examples:</p><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-num">404&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="src-comm">#send&nbsp;404&nbsp;header</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'/internal/route'</span><span class="src-sym">,&nbsp;</span><span class="src-num">404</span><span class="src-sym">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="src-comm">#send&nbsp;404&nbsp;header&nbsp;&amp;&nbsp;redirect&nbsp;to&nbsp;an&nbsp;internal&nbsp;route</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-str">'http://www.google.com'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="src-comm">#redirect&nbsp;to&nbsp;URL.&nbsp;default&nbsp;302&nbsp;Found&nbsp;sent</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'http://www.google.com'</span><span class="src-sym">,</span><span class="src-num">301</span><span class="src-sym">)&nbsp;&nbsp;&nbsp;</span><span class="src-comm">#redirect&nbsp;to&nbsp;URL.&nbsp;forced&nbsp;301&nbsp;Moved&nbsp;Permenantly&nbsp;sent</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'/hello/sayhi'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'internal'</span><span class="src-sym">)&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="src-comm">#redirect&nbsp;internally,&nbsp;200&nbsp;OK</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			throwHeader
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$code</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$code</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:23:02 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

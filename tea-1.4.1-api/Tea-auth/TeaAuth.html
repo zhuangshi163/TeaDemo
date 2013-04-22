@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaAuth</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> TeaAuth</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">TeaAuth class, manage user authentication</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Gustavo Seip &lt;<a href="mailto:glseip@gmail.com">glseip@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id: TeaAuth.php 2009-10-06 15:10:12</li>
+				<li><span class="field">since:</span> 1.3</li>
+				<li><span class="field">license:</span> <a href="http://www.Teaphp.com/license">http://www.Teaphp.com/license</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-auth/_auth---TeaAuth.php.html">/auth/TeaAuth.php</a> (line <span class="field">12</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#FORM_DISCARDED" title="details" class="const-name">FORM_DISCARDED</a> = 					<span class="var-type"> 1</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#FORM_TIMEOUT" title="details" class="const-name">FORM_TIMEOUT</a> = 					<span class="var-type"> 2</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#LEVEL_HIGH" title="details" class="const-name">LEVEL_HIGH</a> = 					<span class="var-type"> 1</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#LEVEL_LOW" title="details" class="const-name">LEVEL_LOW</a> = 					<span class="var-type"> 3</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#LEVEL_MEDIUM" title="details" class="const-name">LEVEL_MEDIUM</a> = 					<span class="var-type"> 2</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$appName" title="details" class="var-name">$appName</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type"><a href="Tea-session/TeaSession.html">TeaSession</a></span>
+					<a href="#$appSession" title="details" class="var-name">$appSession</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$authPostExpire" title="details" class="var-name">$authPostExpire</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$authPostWait" title="details" class="var-name">$authPostWait</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$authSessionExpire" title="details" class="var-name">$authSessionExpire</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$group" title="details" class="var-name">$group</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">boolean</span>
+					<a href="#$isValid" title="details" class="var-name">$isValid</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$salt" title="details" class="var-name">$salt</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">integer</span>
+					<a href="#$securityLevel" title="details" class="var-name">$securityLevel</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$username" title="details" class="var-name">$username</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#finalize" title="details" class="method-name">finalize</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Constructor.png" alt=" "/>
+					<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$appName</span>)
+																<span class="method-result">TeaAuth</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getApplicationName" title="details" class="method-name">getApplicationName</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getPostExpire" title="details" class="method-name">getPostExpire</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getPostWait" title="details" class="method-name">getPostWait</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getSalt" title="details" class="method-name">getSalt</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getSecurityLevel" title="details" class="method-name">getSecurityLevel</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getSessionExpire" title="details" class="method-name">getSessionExpire</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#isValid" title="details" class="method-name">isValid</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#securityToken" title="details" class="method-name">securityToken</a>
+										()
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#setApplicationName" title="details" class="method-name">setApplicationName</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$appName</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#setData" title="details" class="method-name">setData</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">FALSE</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#setPostExpire" title="details" class="method-name">setPostExpire</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$postExpire</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#setPostWait" title="details" class="method-name">setPostWait</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$postWait</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#setSalt" title="details" class="method-name">setSalt</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$salt</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#setSecurityLevel" title="details" class="method-name">setSecurityLevel</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$securityLevel</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#setSessionExpire" title="details" class="method-name">setSessionExpire</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$sessionExpire</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#start" title="details" class="method-name">start</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#validate" title="details" class="method-name">validate</a>
+										()
+																<span class="method-result"><Boolean></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#validateForm" title="details" class="method-name">validateForm</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$receivedToken</span>)
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#__get" title="details" class="method-name">__get</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#__set" title="details" class="method-name">__set</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+																<span class="method-result">void</span>
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="$appName" id="$appName"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$appName</span>
+						(line <span class="line-number">47</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Application name</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$appSession" id="$appSession"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="Tea-session/TeaSession.html">TeaSession</a></span>
+			<span class="var-name">$appSession</span>
+						(line <span class="line-number">42</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">TeaSession instance</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$authPostExpire" id="$authPostExpire"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$authPostExpire</span>
+			 = <span class="var-default"> 20</span>			(line <span class="line-number">72</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Minimun time for form timeout</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$authPostWait" id="$authPostWait"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$authPostWait</span>
+			 = <span class="var-default"> 60</span>			(line <span class="line-number">67</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Maximun time for form timeout</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$authSessionExpire" id="$authSessionExpire"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$authSessionExpire</span>
+			 = <span class="var-default"> 60</span>			(line <span class="line-number">57</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">maximum time for downtime</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$group" id="$group"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$group</span>
+						(line <span class="line-number">89</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Group name from the session</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$isValid" id="$isValid"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$isValid</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">77</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Indicator for valid authetication</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$salt" id="$salt"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$salt</span>
+						(line <span class="line-number">52</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A random string for hashing</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$securityLevel" id="$securityLevel"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">integer</span>
+			<span class="var-name">$securityLevel</span>
+						(line <span class="line-number">62</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Security level</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$username" id="$username"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$username</span>
+						(line <span class="line-number">83</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Username from the session</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="finalize" id="finalize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">finalize</span> (line <span class="line-number">109</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Finalize autentication</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			finalize
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">94</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor - returns an instance object of TeaAuth</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">TeaAuth</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$appName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$appName</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getApplicationName" id="getApplicationName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getApplicationName</span> (line <span class="line-number">213</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getApplicationName
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="getPostExpire" id="getPostExpire"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getPostExpire</span> (line <span class="line-number">253</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getPostExpire
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="getPostWait" id="getPostWait"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getPostWait</span> (line <span class="line-number">263</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getPostWait
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="getSalt" id="getSalt"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getSalt</span> (line <span class="line-number">223</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getSalt
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="getSecurityLevel" id="getSecurityLevel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getSecurityLevel</span> (line <span class="line-number">233</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getSecurityLevel
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="getSessionExpire" id="getSessionExpire"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getSessionExpire</span> (line <span class="line-number">243</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getSessionExpire
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="isValid" id="isValid"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">isValid</span> (line <span class="line-number">268</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			isValid
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="securityToken" id="securityToken"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">securityToken</span> (line <span class="line-number">180</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get token for security purpose (secure forms, etc)</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.serversidemagazine.com/php/php-security-measures-against-csrf-attacks">http://www.serversidemagazine.com/php/php-security-measures-against-csrf-attacks</a></li>
+				<li><span class="field">see:</span> <a href="http://www.serversidemagazine.com/php/session-hijacking">http://www.serversidemagazine.com/php/session-hijacking</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			securityToken
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="setApplicationName" id="setApplicationName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setApplicationName</span> (line <span class="line-number">208</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setApplicationName
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$appName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$appName</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="setData" id="setData"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setData</span> (line <span class="line-number">119</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set auth data for user session</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setData
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$group</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$username</span><span class="var-description">: User name</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$group</span><span class="var-description">: User group</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="setPostExpire" id="setPostExpire"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setPostExpire</span> (line <span class="line-number">248</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setPostExpire
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$postExpire</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$postExpire</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="setPostWait" id="setPostWait"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setPostWait</span> (line <span class="line-number">258</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setPostWait
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$postWait</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$postWait</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="setSalt" id="setSalt"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setSalt</span> (line <span class="line-number">218</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setSalt
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$salt</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$salt</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="setSecurityLevel" id="setSecurityLevel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setSecurityLevel</span> (line <span class="line-number">228</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setSecurityLevel
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$securityLevel</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$securityLevel</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="setSessionExpire" id="setSessionExpire"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setSessionExpire</span> (line <span class="line-number">238</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setSessionExpire
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$sessionExpire</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$sessionExpire</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="start" id="start"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">start</span> (line <span class="line-number">101</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Start auth component</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			start
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="validate" id="validate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">validate</span> (line <span class="line-number">159</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate authentication data</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://phpsec.org/projects/guide/4.html">http://phpsec.org/projects/guide/4.html</a></li>
+				<li><span class="field">see:</span> <a href="http://www.serversidemagazine.com/php/session-hijacking">http://www.serversidemagazine.com/php/session-hijacking</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><Boolean></span>
+		<span class="method-name">
+			validate
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="validateForm" id="validateForm"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">validateForm</span> (line <span class="line-number">193</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate form with security token</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="http://www.serversidemagazine.com/php/php-security-measures-against-csrf-attacks">http://www.serversidemagazine.com/php/php-security-measures-against-csrf-attacks</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			validateForm
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$receivedToken</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$receivedToken</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="__get" id="__get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">__get</span> (line <span class="line-number">278</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__get
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="__set" id="__set"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">__set</span> (line <span class="line-number">273</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__set
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="FORM_DISCARDED" id="FORM_DISCARDED"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">FORM_DISCARDED</span>
+			 = <span class="const-default"> 1</span>
+			(line <span class="line-number">32</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Discarded form indicator</p>
+	
+	
+</div>
+<a name="FORM_TIMEOUT" id="FORM_TIMEOUT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">FORM_TIMEOUT</span>
+			 = <span class="const-default"> 2</span>
+			(line <span class="line-number">37</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Timeout form indicator</p>
+	
+	
+</div>
+<a name="LEVEL_HIGH" id="LEVEL_HIGH"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LEVEL_HIGH</span>
+			 = <span class="const-default"> 1</span>
+			(line <span class="line-number">17</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">HIGH security level</p>
+	
+	
+</div>
+<a name="LEVEL_LOW" id="LEVEL_LOW"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LEVEL_LOW</span>
+			 = <span class="const-default"> 3</span>
+			(line <span class="line-number">27</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">LOW security level</p>
+	
+	
+</div>
+<a name="LEVEL_MEDIUM" id="LEVEL_MEDIUM"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LEVEL_MEDIUM</span>
+			 = <span class="const-default"> 2</span>
+			(line <span class="line-number">22</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">MEDIUM security level</p>
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:52 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,1538 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Tea</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> Tea</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Tea is a singleton class serving common framework functionalities.</p>
+<p class="description"><p>You can access Tea in every class to retrieve configuration settings,  DB connections, application properties, logging, loader utilities and etc.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Leng Sheng Hong &lt;<a href="mailto:darkredz@gmail.com">darkredz@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id: Tea.php 1000 2009-07-7 18:27:22</li>
+				<li><span class="field">since:</span> 1.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea/_deployment---deploy.php.html">/deployment/deploy.php</a> (line <span class="field">25</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					<img src="images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$_acl" title="details" class="var-name">$_acl</a>
+				</div>
+																<div class="var-title">
+					<img src="images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$_app" title="details" class="var-name">$_app</a>
+				</div>
+																<div class="var-title">
+					<img src="images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$_cache" title="details" class="var-name">$_cache</a>
+				</div>
+																<div class="var-title">
+					<img src="images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$_conf" title="details" class="var-name">$_conf</a>
+				</div>
+																<div class="var-title">
+					<img src="images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$_db" title="details" class="var-name">$_db</a>
+				</div>
+																<div class="var-title">
+					<img src="images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$_globalApps" title="details" class="var-name">$_globalApps</a>
+				</div>
+																<div class="var-title">
+					<img src="images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$_logger" title="details" class="var-name">$_logger</a>
+				</div>
+																<div class="var-title">
+					<img src="images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$_session" title="details" class="var-name">$_session</a>
+				</div>
+																<div class="var-title">
+					<img src="images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$_translator" title="details" class="var-name">$_translator</a>
+				</div>
+																<div class="var-title">
+					<img src="images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$_useDbReplicate" title="details" class="var-name">$_useDbReplicate</a>
+				</div>
+																																																																																															</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+												<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#acl" title="details" class="method-name">acl</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">'TeaAcl'</span>])
+																<span class="method-result"><a href="Tea-auth/TeaAcl.html">TeaAcl</a>|<a href="Tea-auth/TeaRbAcl.html">TeaRbAcl</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#app" title="details" class="method-name">app</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$appType</span> = <span class="var-default">'TeaWebApp'</span>])
+																<span class="method-result"><a href="Tea-app/TeaWebApp.html">TeaWebApp</a>|<a href="Tea-app/TeaCliApp.html">TeaCliApp</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#autoload" title="details" class="method-name">autoload</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$classname</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#benchmark" title="details" class="method-name">benchmark</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$html</span> = <span class="var-default">false</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#cache" title="details" class="method-name">cache</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$cacheType</span> = <span class="var-default">'file'</span>])
+																<span class="method-result"><a href="Tea-cache/TeaFileCache.html">TeaFileCache</a>|<a href="Tea-cache/TeaphpCache.html">TeaphpCache</a>|<a href="Tea-cache/TeaFrontCache.html">TeaFrontCache</a>|<a href="Tea-cache/TeaApcCache.html">TeaApcCache</a>|<a href="Tea-cache/TeaMemCache.html">TeaMemCache</a>|<a href="Tea-cache/TeaXCache.html">TeaXCache</a>|<a href="Tea-cache/TeaEAcceleratorCache.html">TeaEAcceleratorCache</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#cacheSession" title="details" class="method-name">cacheSession</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'TeaSession/'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'file'</span>])
+																<span class="method-result">true/false</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#conf" title="details" class="method-name">conf</a>
+										()
+																<span class="method-result"><a href="Tea-app/TeaConfig.html">TeaConfig</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#db" title="details" class="method-name">db</a>
+										()
+																<span class="method-result"><a href="Tea-db/TeaSqlMagic.html">TeaSqlMagic</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#getAppPath" title="details" class="method-name">getAppPath</a>
+										()
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#getTranslator" title="details" class="method-name">getTranslator</a>
+										()
+																<span class="method-result"><a href="Tea-translate/TeaTranslator.html">TeaTranslator</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#load" title="details" class="method-name">load</a>
+											(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$class_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">FALSE</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#loadClass" title="details" class="method-name">loadClass</a>
+											(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$class_name</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">FALSE</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#loadClassAt" title="details" class="method-name">loadClassAt</a>
+											(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$class_name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$moduleFolder</span> = <span class="var-default">Null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">FALSE</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#loadClassFromApp" title="details" class="method-name">loadClassFromApp</a>
+											(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$className</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$appName</span> = <span class="var-default">'default'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">false</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#loadController" title="details" class="method-name">loadController</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$class_name</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#loadControllerAt" title="details" class="method-name">loadControllerAt</a>
+											(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$class_name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$moduleFolder</span> = <span class="var-default">Null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#loadControllerFromApp" title="details" class="method-name">loadControllerFromApp</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$controllerName</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$appName</span> = <span class="var-default">'default'</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$class_name</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#loadCore" title="details" class="method-name">loadCore</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$class_name</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#loadHelper" title="details" class="method-name">loadHelper</a>
+											(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$class_name</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">FALSE</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#loadModel" title="details" class="method-name">loadModel</a>
+											(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$class_name</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">FALSE</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#loadModelAt" title="details" class="method-name">loadModelAt</a>
+											(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$class_name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$moduleFolder</span> = <span class="var-default">Null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">FALSE</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#loadModelFromApp" title="details" class="method-name">loadModelFromApp</a>
+											(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$modelName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$appName</span> = <span class="var-default">'default'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">false</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#loadPlugin" title="details" class="method-name">loadPlugin</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$class_name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleFolder</span> = <span class="var-default">Null</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#logger" title="details" class="method-name">logger</a>
+										()
+																<span class="method-result"><a href="Tea-logging/TeaLog.html">TeaLog</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#powerby" title="details" class="method-name">powerby</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#session" title="details" class="method-name">session</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$namespace</span> = <span class="var-default">null</span>])
+																<span class="method-result"><a href="Tea-session/TeaSession.html">TeaSession</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#setGlobalApps" title="details" class="method-name">setGlobalApps</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$apps</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#translator" title="details" class="method-name">translator</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$adapter</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+																<span class="method-result"><a href="Tea-translate/TeaTranslator.html">TeaTranslator</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#useDbReplicate" title="details" class="method-name">useDbReplicate</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#version" title="details" class="method-name">version</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																																																																																																																																																																																																																																																															</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="$_acl" id="$_acl"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$_acl</span>
+						(line <span class="line-number">32</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$_app" id="$_app"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$_app</span>
+						(line <span class="line-number">26</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$_cache" id="$_cache"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$_cache</span>
+						(line <span class="line-number">31</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$_conf" id="$_conf"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$_conf</span>
+						(line <span class="line-number">27</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$_db" id="$_db"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$_db</span>
+						(line <span class="line-number">29</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$_globalApps" id="$_globalApps"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$_globalApps</span>
+						(line <span class="line-number">35</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$_logger" id="$_logger"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$_logger</span>
+						(line <span class="line-number">28</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$_session" id="$_session"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$_session</span>
+						(line <span class="line-number">33</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$_translator" id="$_translator"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$_translator</span>
+						(line <span class="line-number">34</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$_useDbReplicate" id="$_useDbReplicate"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$_useDbReplicate</span>
+						(line <span class="line-number">30</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="acl" id="acl"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static acl</span> (line <span class="line-number">107</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">return:</span> the application ACL singleton, auto create if the singleton has not been created yet.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-auth/TeaAcl.html">TeaAcl</a>|<a href="Tea-auth/TeaRbAcl.html">TeaRbAcl</a></span>
+		<span class="method-name">
+			acl
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">'TeaAcl'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span><span class="var-description">: the class to use for ACL. Can be TeaAcl or TeaRbAcl</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="app" id="app"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static app</span> (line <span class="line-number">95</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">return:</span> the application singleton, auto create if the singleton has not been created yet.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-app/TeaWebApp.html">TeaWebApp</a>|<a href="Tea-app/TeaCliApp.html">TeaCliApp</a></span>
+		<span class="method-name">
+			app
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$appType</span> = <span class="var-default">'TeaWebApp'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$appType</span><span class="var-description">: The type of application you want. Options are: 'TeaWebApp' and 'TeaCliApp'</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="autoload" id="autoload"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static autoload</span> (line <span class="line-number">400</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Provides auto loading feature. To be used with the Magic method __autoload</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			autoload
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$classname</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$classname</span><span class="var-description">: Class name to be loaded.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="benchmark" id="benchmark"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static benchmark</span> (line <span class="line-number">550</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Simple benchmarking. To used this, set <div class="src-code"><ol><li><div class="src-line"><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'START_TIME'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<a href="http://www.php.net/microtime">microtime</a><span class="src-sym">(</span><span class="src-id">true</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div> in <em>common.conf.php</em> .</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Duration(sec) of the benchmarked process. If $html is True, returns string &lt;!-- Generated in 0.002456 seconds --&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			benchmark
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$html</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$html</span><span class="var-description">: To return the duration as string in HTML comment.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="cache" id="cache"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static cache</span> (line <span class="line-number">196</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">return:</span> file/php/apc/memcache/xcache/eaccelerator &amp; frontend caching tool, singleton, auto create if the singleton has not been created yet.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-cache/TeaFileCache.html">TeaFileCache</a>|<a href="Tea-cache/TeaphpCache.html">TeaphpCache</a>|<a href="Tea-cache/TeaFrontCache.html">TeaFrontCache</a>|<a href="Tea-cache/TeaApcCache.html">TeaApcCache</a>|<a href="Tea-cache/TeaMemCache.html">TeaMemCache</a>|<a href="Tea-cache/TeaXCache.html">TeaXCache</a>|<a href="Tea-cache/TeaEAcceleratorCache.html">TeaEAcceleratorCache</a></span>
+		<span class="method-name">
+			cache
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$cacheType</span> = <span class="var-default">'file'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$cacheType</span><span class="var-description">: Cache type: file, php, front, apc, memcache, xcache, eaccelerator. Default is file based cache.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="cacheSession" id="cacheSession"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static cacheSession</span> (line <span class="line-number">156</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">return:</span> according to cache system being installed</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">true/false</span>
+		<span class="method-name">
+			cacheSession
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">'TeaSession/'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'file'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$prefix</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="conf" id="conf"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static conf</span> (line <span class="line-number">40</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">return:</span> configuration settings defined in <em>common.conf.php</em>, auto create if the singleton has not been created yet.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-app/TeaConfig.html">TeaConfig</a></span>
+		<span class="method-name">
+			conf
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="db" id="db"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static db</span> (line <span class="line-number">125</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">return:</span> the database singleton, auto create if the singleton has not been created yet.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-db/TeaSqlMagic.html">TeaSqlMagic</a></span>
+		<span class="method-name">
+			db
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="getAppPath" id="getAppPath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static getAppPath</span> (line <span class="line-number">537</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the path where the Application source is located.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getAppPath
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="getTranslator" id="getTranslator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static getTranslator</span> (line <span class="line-number">177</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Simple accessor to Tea Translator class. You must be sure you have initialised it before calling. See translator(...)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-translate/TeaTranslator.html">TeaTranslator</a></span>
+		<span class="method-name">
+			getTranslator
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="load" id="load"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static load</span> (line <span class="line-number">262</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imports the definition of class(es) and tries to create an object/a list of objects of the class.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> returns NULL by default. If $createObj is TRUE, it creates and return the Object of the class name passed in.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			load
+		</span>
+					(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$class_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$class_name</span><span class="var-description">: Name(s) of the class to be imported</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: Path to the class file</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$createObj</span><span class="var-description">: Determined whether to create object(s) of the class</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="loadClass" id="loadClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static loadClass</span> (line <span class="line-number">292</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imports the definition of User defined class(es). Class file is located at <strong>SITE_PATH/protected/class/</strong></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> returns NULL by default. If $createObj is TRUE, it creates and return the Object(s) of the class name passed in.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadClass
+		</span>
+					(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$class_name</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$class_name</span><span class="var-description">: Name(s) of the class to be imported</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$createObj</span><span class="var-description">: Determined whether to create object(s) of the class</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="loadClassAt" id="loadClassAt"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static loadClassAt</span> (line <span class="line-number">373</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imports the definition of User defined class(es) in a certain module or from the main app.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> returns NULL by default. If $createObj is TRUE, it creates and return the Object(s) of the class name passed in.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadClassAt
+		</span>
+					(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$class_name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$moduleFolder</span> = <span class="var-default">Null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">FALSE</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$class_name</span><span class="var-description">: Name(s) of the class to be imported</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: module folder name. Default is the main app folder.</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$createObj</span><span class="var-description">: Determined whether to create object(s) of the class</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$moduleFolder</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="loadClassFromApp" id="loadClassFromApp"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static loadClassFromApp</span> (line <span class="line-number">79</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imports the definition of User defined class(es) from a Tea application</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> returns NULL by default. If $createObj is TRUE, it creates and return the Object(s) of the class name passed in.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadClassFromApp
+		</span>
+					(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$className</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$appName</span> = <span class="var-default">'default'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$className</span><span class="var-description">: Name(s) of the Model class to be imported</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$appName</span><span class="var-description">: Name of the application to be loaded from</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$createObj</span><span class="var-description">: Determined whether to create object(s) of the class</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="loadController" id="loadController"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static loadController</span> (line <span class="line-number">300</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imports the definition of Controller class. Class file is located at <strong>SITE_PATH/protected/controller/</strong></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadController
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$class_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class_name</span><span class="var-description">: Name of the class to be imported</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="loadControllerAt" id="loadControllerAt"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static loadControllerAt</span> (line <span class="line-number">356</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imports the definition of Controller class(es) in a certain module or from the main app.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadControllerAt
+		</span>
+					(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$class_name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$moduleFolder</span> = <span class="var-default">Null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$class_name</span><span class="var-description">: Name(s) of the Controller class to be imported</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: module folder name. Default is the main app folder.</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$moduleFolder</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="loadControllerFromApp" id="loadControllerFromApp"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static loadControllerFromApp</span> (line <span class="line-number">87</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imports the definition of Controller class from a Tea application</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadControllerFromApp
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$controllerName</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$appName</span> = <span class="var-default">'default'</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$class_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class_name</span><span class="var-description">: Name of the class to be imported</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$controllerName</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$appName</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="loadCore" id="loadCore"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static loadCore</span> (line <span class="line-number">329</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imports the definition of Tea framework core class. Class file is located at <strong>BASE_PATH</strong>.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">example:</span> example not found</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadCore
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$class_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class_name</span><span class="var-description">: Name of the class to be imported</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="loadHelper" id="loadHelper"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static loadHelper</span> (line <span class="line-number">320</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imports the definition of Helper class(es). Class file is located at <strong>BASE_PATH/protected/helper/</strong></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> returns NULL by default. If $createObj is TRUE, it creates and return the Object(s) of the class name passed in.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadHelper
+		</span>
+					(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$class_name</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$class_name</span><span class="var-description">: Name(s) of the Helper class to be imported</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$createObj</span><span class="var-description">: Determined whether to create object(s) of the class</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="loadModel" id="loadModel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static loadModel</span> (line <span class="line-number">310</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imports the definition of Model class(es). Class file is located at <strong>SITE_PATH/protected/model/</strong></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> returns NULL by default. If $createObj is TRUE, it creates and return the Object(s) of the class name passed in.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadModel
+		</span>
+					(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$class_name</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$class_name</span><span class="var-description">: Name(s) of the Model class to be imported</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$createObj</span><span class="var-description">: Determined whether to create object(s) of the class</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="loadModelAt" id="loadModelAt"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static loadModelAt</span> (line <span class="line-number">341</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imports the definition of Model class(es) in a certain module or from the main app.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> returns NULL by default. If $createObj is TRUE, it creates and return the Object(s) of the class name passed in.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadModelAt
+		</span>
+					(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$class_name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$moduleFolder</span> = <span class="var-default">Null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">FALSE</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$class_name</span><span class="var-description">: Name(s) of the Model class to be imported</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: module folder name. Default is the main app folder.</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$createObj</span><span class="var-description">: Determined whether to create object(s) of the class</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$moduleFolder</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="loadModelFromApp" id="loadModelFromApp"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static loadModelFromApp</span> (line <span class="line-number">68</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Imports the definition of Model class(es) from a Tea application</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> returns NULL by default. If $createObj is TRUE, it creates and return the Object(s) of the class name passed in.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			loadModelFromApp
+		</span>
+					(<span class="var-type">string|array</span>&nbsp;<span class="var-name">$modelName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$appName</span> = <span class="var-default">'default'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$modelName</span><span class="var-description">: Name(s) of the Model class to be imported</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$appName</span><span class="var-description">: Name of the application to be loaded from</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$createObj</span><span class="var-description">: Determined whether to create object(s) of the class</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="loadPlugin" id="loadPlugin"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static loadPlugin</span> (line <span class="line-number">388</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loads template tag class from plugin directory for both main app and modules</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadPlugin
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$class_name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleFolder</span> = <span class="var-default">Null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class_name</span><span class="var-description">: Template tag class name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$moduleFolder</span><span class="var-description">: Folder name of the module. If Null, the class will be loaded from main app.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="logger" id="logger"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static logger</span> (line <span class="line-number">184</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">return:</span> logging tool for logging, tracing and profiling, singleton, auto create if the singleton has not been created yet.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-logging/TeaLog.html">TeaLog</a></span>
+		<span class="method-name">
+			logger
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="powerby" id="powerby"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static powerby</span> (line <span class="line-number">560</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			powerby
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="session" id="session"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static session</span> (line <span class="line-number">145</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-session/TeaSession.html">TeaSession</a></span>
+		<span class="method-name">
+			session
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$namespace</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$namespace</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="setGlobalApps" id="setGlobalApps"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static setGlobalApps</span> (line <span class="line-number">57</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the list of Tea applications.</p>
+<p class="description"><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-comm">//by&nbsp;default,&nbsp;Tea::loadModelFromApp()&nbsp;will&nbsp;load&nbsp;from&nbsp;this&nbsp;application&nbsp;path</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$apps</span><span class="src-sym">[</span><span class="src-str">'default'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">'/var/path/to/shared/app/'</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$apps</span><span class="src-sym">[</span><span class="src-str">'app2'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">'/var/path/to/shared/app2/'</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$apps</span><span class="src-sym">[</span><span class="src-str">'app3'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">'/var/path/to/shared/app3/'</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setGlobalApps
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$apps</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$apps</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="translator" id="translator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static translator</span> (line <span class="line-number">165</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-translate/TeaTranslator.html">TeaTranslator</a></span>
+		<span class="method-name">
+			translator
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$adapter</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$adapter</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="useDbReplicate" id="useDbReplicate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static useDbReplicate</span> (line <span class="line-number">118</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Call this method to use database replication instead of a single db server.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			useDbReplicate
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="version" id="version"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static version</span> (line <span class="line-number">564</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			version
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:50 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaMasterSlave</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> TeaMasterSlave</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">TeaMasterSlave is an ORM tool based on TeaSqlMagic with Database Replication support.</p>
+<p class="description"><p>This class handles Master-Slave connections. It automatically handle CRUD operations with appropriate slave/master DB server.  You can handle thee connections manually by using useConnection, connectMaster, and connectSlave.</p><p>TeaMasterSlave <strong>DOES NOT</strong> send SELECT statement to a random slave. Instead, it is based on calculation with both access time and Slave nodes.</p><p>To use DB replication, you would have to setup the slave servers in <strong>db.conf.php</strong></p><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-comm">//This&nbsp;will&nbsp;serve&nbsp;as&nbsp;the&nbsp;Master</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$dbconfig</span><span class="src-sym">[</span><span class="src-str">'dev'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'localhost'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'db'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'root'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'1234'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'mysql'</span><span class="src-sym">,</span><span class="src-id">true</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//slave&nbsp;with&nbsp;the&nbsp;same&nbsp;info&nbsp;as&nbsp;master</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$dbconfig</span><span class="src-sym">[</span><span class="src-str">'slave'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'192.168.1.1'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'192.168.1.2'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'192.168.1.3'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//OR&nbsp;...</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//slave&nbsp;with&nbsp;different&nbsp;info,&nbsp;use&nbsp;a&nbsp;string&nbsp;if&nbsp;it's&nbsp;same&nbsp;as&nbsp;the&nbsp;master&nbsp;info.</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$dbconfig</span><span class="src-sym">[</span><span class="src-str">'slave'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'192.168.1.1'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'db'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'dairy'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'668dj0'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'mysql'</span><span class="src-sym">,</span><span class="src-id">true</span><span class="src-sym">)</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'192.168.1.2'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'db'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'yuhus'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'gu34k2'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'mysql'</span><span class="src-sym">,</span><span class="src-id">true</span><span class="src-sym">)</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'192.168.1.3'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'db'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'lily'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'84ju2a'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'mysql'</span><span class="src-sym">,</span><span class="src-id">true</span><span class="src-sym">)</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'192.168.1.4'</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div>
+ In the bootstrap index.php you would need to call the <strong>useDbReplicate</strong> method.</p><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methoduseDbReplicate">useDbReplicate</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methoddb">db</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="Tea-db/TeaSqlMagic.html#methodsetMap">setMap</a><span class="src-sym">(</span><span class="src-var">$dbmap</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methoddb">db</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="Tea-db/TeaSqlMagic.html#methodsetDb">setDb</a><span class="src-sym">(</span><span class="src-var">$dbconfig</span><span class="src-sym">,&nbsp;</span><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'APP_MODE'</span><span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Leng Sheng Hong &lt;<a href="mailto:darkredz@gmail.com">darkredz@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id: TeaMasterSlave.php 1000 2009-08-20 22:53:26</li>
+				<li><span class="field">since:</span> 1.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-db/_db---TeaMasterSlave.php.html">/db/TeaMasterSlave.php</a> (line <span class="field">54</span>)
+		</p>
+		
+				
+		<pre><a href="Tea-db/TeaSqlMagic.html">TeaSqlMagic</a>
+   |
+   --TeaMasterSlave</pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#MASTER" title="details" class="const-name">MASTER</a> = 					<span class="var-type"> 'master'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#SLAVE" title="details" class="const-name">SLAVE</a> = 					<span class="var-type"> 'slave'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$autoToggle" title="details" class="var-name">$autoToggle</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$pdoList" title="details" class="var-name">$pdoList</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																								<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#connect" title="details" class="method-name">connect</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#connectMaster" title="details" class="method-name">connectMaster</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#connectSlave" title="details" class="method-name">connectSlave</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$slaveIndex</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#query" title="details" class="method-name">query</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>])
+																<span class="method-result">PDOStatement</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#useConnection" title="details" class="method-name">useConnection</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$mode</span>)
+																<span class="method-result">void</span>
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="$autoToggle" id="$autoToggle"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$autoToggle</span>
+			 = <span class="var-default"> True</span>			(line <span class="line-number">65</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$pdoList" id="$pdoList"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$pdoList</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">63</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Stores the pdo connection for master &amp; slave</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="Tea-db/TeaSqlMagic.html">TeaSqlMagic</a></span></p>
+					<blockquote>
+													<img src="images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="Tea-db/TeaSqlMagic.html#var$connected">TeaSqlMagic::$connected</a></span><br>
+							</span>
+													<img src="images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="Tea-db/TeaSqlMagic.html#var$dbconfig">TeaSqlMagic::$dbconfig</a></span><br>
+							</span>
+													<img src="images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="Tea-db/TeaSqlMagic.html#var$dbconfig_list">TeaSqlMagic::$dbconfig_list</a></span><br>
+							</span>
+													<img src="images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="Tea-db/TeaSqlMagic.html#var$map">TeaSqlMagic::$map</a></span><br>
+							</span>
+													<img src="images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="Tea-db/TeaSqlMagic.html#var$modelPath">TeaSqlMagic::$modelPath</a></span><br>
+							</span>
+													<img src="images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="Tea-db/TeaSqlMagic.html#var$pdo">TeaSqlMagic::$pdo</a></span><br>
+							</span>
+													<img src="images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="Tea-db/TeaSqlMagic.html#var$sql_list">TeaSqlMagic::$sql_list</a></span><br>
+							</span>
+													<img src="images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="Tea-db/TeaSqlMagic.html#var$sql_tracking">TeaSqlMagic::$sql_tracking</a></span><br>
+							</span>
+													<img src="images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="Tea-db/TeaSqlMagic.html#var$transactionLevel">TeaSqlMagic::$transactionLevel</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="connect" id="connect"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">connect</span> (line <span class="line-number">70</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Connects to the database with the default slaves configurations</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			connect
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="Tea-db/TeaSqlMagic.html#methodconnect">TeaSqlMagic::connect()</a></dt>
+						<dd>Connects to the database with the default database connection configuration</dd>
+					</dl>
+			
+	</div>
+<a name="connectMaster" id="connectMaster"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">connectMaster</span> (line <span class="line-number">128</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Connects to the database with the default database configurations (master)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			connectMaster
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="connectSlave" id="connectSlave"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">connectSlave</span> (line <span class="line-number">113</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Connects to a slave.</p>
+<p class="description"><p>Choose an index of the slave configuration to connect as defined in db.conf.php</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			connectSlave
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$slaveIndex</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$slaveIndex</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="query" id="query"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">query</span> (line <span class="line-number">166</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute a query to the connected database. Auto toggle between master &amp; slave.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">PDOStatement</span>
+		<span class="method-name">
+			query
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: SQL query prepared statement</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$param</span><span class="var-description">: Values used in the prepared SQL</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="Tea-db/TeaSqlMagic.html#methodquery">TeaSqlMagic::query()</a></dt>
+						<dd>Execute a query to the connected database</dd>
+					</dl>
+			
+	</div>
+<a name="useConnection" id="useConnection"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">useConnection</span> (line <span class="line-number">146</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set connection to use slaves or master.</p>
+<p class="description"><p>If you use this method, you would have to handle the connection (slave/master) manually for the all query codes after this call.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			useConnection
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$mode</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mode</span><span class="var-description">: Either 'master' or 'slave'</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="Tea-db/TeaSqlMagic.html">TeaSqlMagic</a></span></p>
+					<blockquote>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodaddWhereIsNull">TeaSqlMagic::addWhereIsNull()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodaddWhereNotNull">TeaSqlMagic::addWhereNotNull()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodappendMap">TeaSqlMagic::appendMap()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodbeginTransaction">TeaSqlMagic::beginTransaction()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodcommit">TeaSqlMagic::commit()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodconnect">TeaSqlMagic::connect()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methoddelete">TeaSqlMagic::delete()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methoddeleteAll">TeaSqlMagic::deleteAll()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methoddisconnect">TeaSqlMagic::disconnect()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodfetchAll">TeaSqlMagic::fetchAll()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodfetchRow">TeaSqlMagic::fetchRow()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodfind">TeaSqlMagic::find()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodgetDbObject">TeaSqlMagic::getDbObject()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodgetDefaultDbConfig">TeaSqlMagic::getDefaultDbConfig()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodgetMap">TeaSqlMagic::getMap()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodgetOne">TeaSqlMagic::getOne()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodgetQueryCount">TeaSqlMagic::getQueryCount()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodget_query_count">TeaSqlMagic::get_query_count()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodinsert">TeaSqlMagic::insert()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodinsertAttributes">TeaSqlMagic::insertAttributes()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodinsert_attributes">TeaSqlMagic::insert_attributes()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodlastInsertId">TeaSqlMagic::lastInsertId()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodloadModel">TeaSqlMagic::loadModel()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodquery">TeaSqlMagic::query()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodquote">TeaSqlMagic::quote()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodquoteArray">TeaSqlMagic::quoteArray()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodreconnect">TeaSqlMagic::reconnect()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodrelate">TeaSqlMagic::relate()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodrelatedInsert">TeaSqlMagic::relatedInsert()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodrelatedUpdate">TeaSqlMagic::relatedUpdate()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodrelateExpand">TeaSqlMagic::relateExpand()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodrelateMany">TeaSqlMagic::relateMany()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodrelationType">TeaSqlMagic::relationType()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodrollBack">TeaSqlMagic::rollBack()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodsetDb">TeaSqlMagic::setDb()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodsetMap">TeaSqlMagic::setMap()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodshowSQL">TeaSqlMagic::showSQL()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodshow_sql">TeaSqlMagic::show_sql()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodtoArray">TeaSqlMagic::toArray()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodtoObject">TeaSqlMagic::toObject()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodupdate">TeaSqlMagic::update()</a></span><br>
+													<img src="images/Method.png" alt=" "/>
+							<span class="method-name"><a href="Tea-db/TeaSqlMagic.html#methodupdate_attributes">TeaSqlMagic::update_attributes()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="MASTER" id="MASTER"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">MASTER</span>
+			 = <span class="const-default"> 'master'</span>
+			(line <span class="line-number">56</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="SLAVE" id="SLAVE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">SLAVE</span>
+			 = <span class="const-default"> 'slave'</span>
+			(line <span class="line-number">57</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+							<h4>Inherited Constants</h4>
+				<A NAME='inherited_consts'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="Tea-db/TeaSqlMagic.html">TeaSqlMagic</a></span></p>
+					<blockquote>
+													<img src="images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="Tea-db/TeaSqlMagic.html#constJOIN">TeaSqlMagic::JOIN</a></span><br>
+							</span>
+													<img src="images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="Tea-db/TeaSqlMagic.html#constJOIN_INNER">TeaSqlMagic::JOIN_INNER</a></span><br>
+							</span>
+													<img src="images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="Tea-db/TeaSqlMagic.html#constJOIN_LEFT">TeaSqlMagic::JOIN_LEFT</a></span><br>
+							</span>
+													<img src="images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="Tea-db/TeaSqlMagic.html#constJOIN_LEFT_OUTER">TeaSqlMagic::JOIN_LEFT_OUTER</a></span><br>
+							</span>
+													<img src="images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="Tea-db/TeaSqlMagic.html#constJOIN_RIGHT">TeaSqlMagic::JOIN_RIGHT</a></span><br>
+							</span>
+													<img src="images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="Tea-db/TeaSqlMagic.html#constJOIN_RIGHT_OUTER">TeaSqlMagic::JOIN_RIGHT_OUTER</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:57 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

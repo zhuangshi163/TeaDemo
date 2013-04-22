@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaCacheSession</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> TeaCacheSession</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">TeaCacheSession, manage session inside cache system instead of</p>
+<p class="description"><p>default php session system, extremely useful when we need extreme  performance and combined with memcache  Create your required cache system, pass the cache object to the TeaCacheSession::installOnCache, example:  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$cache&nbsp;</span>=&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodcache">cache</a><span class="src-sym">(</span><span class="src-str">'memcache'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea-session/TeaCacheSession.html">TeaCacheSession</a></span><span class="src-sym">::</span><span class="src-id">insallOnCache</span><span class="src-sym">(</span><span class="src-var">$cache</span><span class="src-sym">,&nbsp;</span><span class="src-str">'myPrefixForSessionID'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$session&nbsp;</span>=&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodsession">session</a><span class="src-sym">(</span><span class="src-str">&quot;mysite&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div>  After that use session variables normally and transparently ;)  Add something to session  <div class="src-code"><ol><li><div class="src-line"><span class="src-var">$session</span><span class="src-sym">-&gt;</span><span class="src-id">someVariable&nbsp;</span>=&nbsp;<span class="src-str">&quot;something&quot;</span><span class="src-sym">;</span></div></li>
+</ol></div>  Get that variable  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$var&nbsp;</span>=&nbsp;<span class="src-var">$session</span>=&gt;<span class="src-id">get</span><span class="src-sym">(</span><span class="src-str">&quot;someVariable&quot;</span><span class="src-sym">)</span><span class="src-sym">;&nbsp;</span><span class="src-sym">(</span><span class="src-id">returns&nbsp;</span><span class="src-str">&quot;something&quot;</span><span class="src-sym">)</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Zohaib Sibt-e-Hassan &lt;<a href="mailto:zohaib.hassan@gmail.com">zohaib.hassan@gmail.com</a>&gt;</li>
+				<li><span class="field">copyright:</span> &amp;copy; 2009 Zohaib Sibt-e-Hassan</li>
+				<li><span class="field">since:</span> 1.3</li>
+				<li><span class="field">license:</span> <a href="http://www.Teaphp.com/license">http://www.Teaphp.com/license</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-session/_session---TeaCacheSession.php.html">/session/TeaCacheSession.php</a> (line <span class="field">36</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					<img src="images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$cache" title="details" class="var-name">$cache</a>
+				</div>
+																<div class="var-title">
+					<img src="images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$lifetime" title="details" class="var-name">$lifetime</a>
+				</div>
+																<div class="var-title">
+					<img src="images/StaticVariable.png" alt=" " />
+					static <span class="var-type">mixed</span>
+					<a href="#$sessionPrefix" title="details" class="var-name">$sessionPrefix</a>
+				</div>
+																																							</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+												<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#close" title="details" class="method-name">close</a>
+										()
+																<span class="method-result">boolean</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#destroy" title="details" class="method-name">destroy</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
+																<span class="method-result">boolean</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#gc" title="details" class="method-name">gc</a>
+										()
+																<span class="method-result">boolean</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#installOnCache" title="details" class="method-name">installOnCache</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$cacheSystem</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">null</span>])
+																<span class="method-result">boolean</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#open" title="details" class="method-name">open</a>
+										()
+																<span class="method-result">boolean</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#read" title="details" class="method-name">read</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#write" title="details" class="method-name">write</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+																<span class="method-result">boolean</span>
+									</div>
+																																																																							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="$cache" id="$cache"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$cache</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">51</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Cache object</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$lifetime" id="$lifetime"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$lifetime</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number">41</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Session lifetime</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$sessionPrefix" id="$sessionPrefix"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$sessionPrefix</span>
+			 = <span class="var-default"> 'TeaCS'</span>			(line <span class="line-number">46</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Session ID prefix</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="close" id="close"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static close</span> (line <span class="line-number">108</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Close session system</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			close
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="destroy" id="destroy"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static destroy</span> (line <span class="line-number">90</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Destroy given session $id from cache</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if key was deleted, otherwise false</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			destroy
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="gc" id="gc"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static gc</span> (line <span class="line-number">101</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Garbage collect always returns true; since cache systems automatically expire out keys</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			gc
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="installOnCache" id="installOnCache"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static installOnCache</span> (line <span class="line-number">115</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Install session managment on given $cacheSystem, with given $prefix</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> status of installtaion</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			installOnCache
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$cacheSystem</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$cacheSystem</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$prefix</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="open" id="open"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static open</span> (line <span class="line-number">58</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Open session system</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			open
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="read" id="read"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static read</span> (line <span class="line-number">68</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Read session data against given $id</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> false if id was not found in session system; string data otherwise</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			read
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="write" id="write"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static write</span> (line <span class="line-number">79</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Write given session $data again given session $id</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if value was session was written successfully</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			write
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:52 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

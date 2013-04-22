@@ -1,0 +1,1432 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaRestClient</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> TeaRestClient</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A REST client to make requests to 3rd party RESTful web services such as Twitter.</p>
+<p class="description"><p>You can send GET, POST, PUT and DELETE requests with TeaRestClient.  Method chaining is also supported by this class.</p><p>Example usage: <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-comm">//Example&nbsp;usage&nbsp;in&nbsp;a&nbsp;Tea&nbsp;Controller</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//import&nbsp;the&nbsp;class&nbsp;and&nbsp;create&nbsp;the&nbsp;REST&nbsp;client&nbsp;object</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$client&nbsp;</span>=&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">load</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><span class="src-id">helper</span><span class="src-sym">(</span><span class="src-str">'TeaRestClient'</span><span class="src-sym">,&nbsp;</span><span class="src-id">true</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$client</span><span class="src-sym">-&gt;</span><a href="Tea-helper/TeaRestClient.html#methodconnect_to">connect_to</a><span class="src-sym">(</span><span class="src-str">&quot;http://twitter.com/direct_messages.xml&quot;</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">-&gt;</span><a href="Tea-helper/TeaRestClient.html#methodauth">auth</a><span class="src-sym">(</span><span class="src-str">'twituser'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'password'</span><span class="src-sym">,&nbsp;</span><span class="src-id">true</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">-&gt;</span><a href="Tea-helper/TeaRestClient.html#methodget">get</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-key">if</span><span class="src-sym">(</span><span class="src-var">$client</span><span class="src-sym">-&gt;</span><a href="Tea-helper/TeaRestClient.html#methodisSuccess">isSuccess</a><span class="src-sym">(</span><span class="src-sym">))</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">&quot;</span><span class="src-str">&lt;pre&gt;Received&nbsp;content-type:&nbsp;{<span class="src-var">$client</span></span><span class="src-sym">-&gt;</span><span class="src-id">resultContentType</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-str"></span><span class="src-sym">}</span>&lt;br/&gt;</span><span class="src-str">&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/print_r">print_r</a><span class="src-sym">(&nbsp;</span><span class="src-var">$client</span><span class="src-sym">-&gt;</span><a href="Tea-helper/TeaRestClient.html#methodresult">result</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-sym">}</span><span class="src-key">else</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">&quot;</span><span class="src-str">&lt;pre&gt;Request&nbsp;unsuccessful,&nbsp;error&nbsp;{<span class="src-var">$client</span></span><span class="src-sym">-&gt;</span><span class="src-id">resultCode</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-str"></span><span class="src-sym">}</span>&nbsp;return</span><span class="src-str">&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-sym">}</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Leng Sheng Hong &lt;<a href="mailto:darkredz@gmail.com">darkredz@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id: TeaRestClient.php 1000 2009-07-7 18:27:22</li>
+				<li><span class="field">since:</span> 1.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-helper/_helper---TeaRestClient.php.html">/helper/TeaRestClient.php</a> (line <span class="field">37</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#ATOM" title="details" class="const-name">ATOM</a> = 					<span class="var-type"> 'application/atom+xml'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#CSS" title="details" class="const-name">CSS</a> = 					<span class="var-type"> 'text/css'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#CSV" title="details" class="const-name">CSV</a> = 					<span class="var-type"> 'text/csv'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#GIF" title="details" class="const-name">GIF</a> = 					<span class="var-type"> 'image/gif'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#HTML" title="details" class="const-name">HTML</a> = 					<span class="var-type"> 'text/html'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#JPG" title="details" class="const-name">JPG</a> = 					<span class="var-type"> 'image/jpeg'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#JS" title="details" class="const-name">JS</a> = 					<span class="var-type"> 'application/javascript'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#JSON" title="details" class="const-name">JSON</a> = 					<span class="var-type"> 'application/json'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#PDF" title="details" class="const-name">PDF</a> = 					<span class="var-type"> 'application/pdf'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#PNG" title="details" class="const-name">PNG</a> = 					<span class="var-type"> 'image/png'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#RSS" title="details" class="const-name">RSS</a> = 					<span class="var-type"> 'application/rss+xml'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#TEXT" title="details" class="const-name">TEXT</a> = 					<span class="var-type"> 'text/plain'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#XML" title="details" class="const-name">XML</a> = 					<span class="var-type"> 'application/xml'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#YAML" title="details" class="const-name">YAML</a> = 					<span class="var-type"> 'text/yaml'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$args" title="details" class="var-name">$args</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$auth_pwd" title="details" class="var-name">$auth_pwd</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$auth_user" title="details" class="var-name">$auth_user</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$content_type_received" title="details" class="var-name">$content_type_received</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$curl_opt" title="details" class="var-name">$curl_opt</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$header_code_received" title="details" class="var-name">$header_code_received</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$result" title="details" class="var-name">$result</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$server_url" title="details" class="var-name">$server_url</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																												<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#checkUrlExist" title="details" class="method-name">checkUrlExist</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+																<span class="method-result">boolean</span>
+									</div>
+																																																																																																																																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#retrieveHeaderCode" title="details" class="method-name">retrieveHeaderCode</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+																<span class="method-result">int</span>
+									</div>
+																																												<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#accept" title="details" class="method-name">accept</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#auth" title="details" class="method-name">auth</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$password</span> = <span class="var-default">NULL</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$basic</span> = <span class="var-default">FALSE</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																								<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#connect_to" title="details" class="method-name">connect_to</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$server_url</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#data" title="details" class="method-name">data</a>
+											([<span class="var-type">string|array</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#delete" title="details" class="method-name">delete</a>
+										()
+																<span class="method-result"><a href="Tea-helper/TeaRestClient.html">TeaRestClient</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#execute" title="details" class="method-name">execute</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$method</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#get" title="details" class="method-name">get</a>
+										()
+																<span class="method-result"><a href="Tea-helper/TeaRestClient.html">TeaRestClient</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#isSuccess" title="details" class="method-name">isSuccess</a>
+										()
+																<span class="method-result">bool</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Constructor.png" alt=" "/>
+					<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$server_url</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">TeaRestClient</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#json_result" title="details" class="method-name">json_result</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$toArray</span> = <span class="var-default">FALSE</span>])
+																<span class="method-result">object</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#options" title="details" class="method-name">options</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$optArr</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#post" title="details" class="method-name">post</a>
+										()
+																<span class="method-result"><a href="Tea-helper/TeaRestClient.html">TeaRestClient</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#put" title="details" class="method-name">put</a>
+										()
+																<span class="method-result"><a href="Tea-helper/TeaRestClient.html">TeaRestClient</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#result" title="details" class="method-name">result</a>
+										()
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#resultCode" title="details" class="method-name">resultCode</a>
+										()
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#resultContentType" title="details" class="method-name">resultContentType</a>
+										()
+																<span class="method-result">int</span>
+									</div>
+																								<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#setContentType" title="details" class="method-name">setContentType</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#timeout" title="details" class="method-name">timeout</a>
+											([<span class="var-type">int</span>&nbsp;<span class="var-name">$sec</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#xml_result" title="details" class="method-name">xml_result</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$domObject</span> = <span class="var-default">FALSE</span>])
+																<span class="method-result">SimpleXMLElement|DOMDocument</span>
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="$args" id="$args"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$args</span>
+						(line <span class="line-number">42</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$auth_pwd" id="$auth_pwd"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$auth_pwd</span>
+						(line <span class="line-number">41</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$auth_user" id="$auth_user"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$auth_user</span>
+						(line <span class="line-number">40</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$content_type_received" id="$content_type_received"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$content_type_received</span>
+						(line <span class="line-number">45</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$curl_opt" id="$curl_opt"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$curl_opt</span>
+						(line <span class="line-number">39</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$header_code_received" id="$header_code_received"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$header_code_received</span>
+						(line <span class="line-number">44</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$result" id="$result"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$result</span>
+						(line <span class="line-number">43</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$server_url" id="$server_url"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$server_url</span>
+						(line <span class="line-number">38</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="checkUrlExist" id="checkUrlExist"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static checkUrlExist</span> (line <span class="line-number">91</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check if a given URL exist.</p>
+<p class="description"><p>The url exists if the return HTTP code is 200</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if exists (200)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			checkUrlExist
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: Url of the page</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="retrieveHeaderCode" id="retrieveHeaderCode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static retrieveHeaderCode</span> (line <span class="line-number">107</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Send request to a URL and returns the HEAD request HTTP code.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> returns the HTTP code</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			retrieveHeaderCode
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: Url of the page</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="accept" id="accept"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">accept</span> (line <span class="line-number">233</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get/set desired accept type.</p>
+<p class="description"><p>This should be used if the REST server analyze Accept header to parse what format  you're seeking for the result content. eg. json, xml, rss, atom.  TeaRestClient provides a list of common used format to be used in your code.</p><p>Example to retrieve result in JSON: <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$client&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="Tea-helper/TeaRestClient.html">TeaRestClient</a></span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$client</span><span class="src-sym">-&gt;</span><a href="Tea-helper/TeaRestClient.html#methodconnect_to">connect_to</a><span class="src-sym">(</span><span class="src-str">&quot;http://twitter.com/direct_messages&quot;</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">-&gt;</span><a href="Tea-helper/TeaRestClient.html#methodauth">auth</a><span class="src-sym">(</span><span class="src-str">'username'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'password'</span><span class="src-sym">,&nbsp;</span><span class="src-id">true</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">-&gt;</span><a href="Tea-helper/TeaRestClient.html#methodaccept">accept</a><span class="src-sym">(</span><span class="src-id"><a href="Tea-helper/TeaRestClient.html">TeaRestClient</a></span><span class="src-sym">::</span><span class="src-id">JSON</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">-&gt;</span><a href="Tea-helper/TeaRestClient.html#methodget">get</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			accept
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="auth" id="auth"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">auth</span> (line <span class="line-number">205</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get/set authentication details for the RESTful call</p>
+<p class="description"><p>Authentication can be done with HTTP Basic or Digest. HTTP Auth Digest will be used by default.  If no values are passed into the method,  the auth details with be returned in an array consist of Username and Password.</p><p>&lt;p&gt;If you are implementing your own RESTful api, you can handle authentication with TeaDigestAuth::http_auth()  or setup authentication in your routes.&lt;/p&gt;</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			auth
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$password</span> = <span class="var-default">NULL</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$basic</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$username</span><span class="var-description">: Username</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$password</span><span class="var-description">: Password</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$basic</span><span class="var-description">: to switch between HTTP Basic or Digest authentication</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="connect_to" id="connect_to"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">connect_to</span> (line <span class="line-number">77</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get/set the REST server URL</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			connect_to
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$server_url</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$server_url</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="data" id="data"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">data</span> (line <span class="line-number">141</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get/set data for the REST request.</p>
+<p class="description"><p>The data can either be a string of params <strong>id=19&amp;year=2009&amp;filter=true</strong>  or an assoc array <strong>array('id'=&gt;19, 'year'=&gt;2009, 'filter'=&gt;true)</strong></p><p>&lt;p&gt;The data is returned when no data value is passed into the method.&lt;/p&gt;</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			data
+		</span>
+					([<span class="var-type">string|array</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="delete" id="delete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">delete</span> (line <span class="line-number">385</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute the request with HTTP DELETE request method</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-helper/TeaRestClient.html">TeaRestClient</a></span>
+		<span class="method-name">
+			delete
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="execute" id="execute"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">execute</span> (line <span class="line-number">275</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute the RESTful request through either GET, POST, PUT or DELETE request method</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			execute
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$method</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$method</span><span class="var-description">: Method string is case insensitive.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="get" id="get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">get</span> (line <span class="line-number">291</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute the request with HTTP GET request method</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-helper/TeaRestClient.html">TeaRestClient</a></span>
+		<span class="method-name">
+			get
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="isSuccess" id="isSuccess"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">isSuccess</span> (line <span class="line-number">424</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determined if it's a successful request</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			isSuccess
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">63</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">TeaRestClient</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$server_url</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$server_url</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="json_result" id="json_result"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">json_result</span> (line <span class="line-number">469</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert the REST result to JSON object</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">object</span>
+		<span class="method-name">
+			json_result
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$toArray</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$toArray</span><span class="var-description">: convert result into assoc array if True.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="options" id="options"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">options</span> (line <span class="line-number">183</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get/Set options for executing the REST connection.</p>
+<p class="description"><p>This method prepares options for Curl to work.  Instead of setting CURLOPT_URL = value, you should use URL = value while setting various options</p><p>The options are returned when no option array is passed into the method.</p><p>&lt;p&gt;See http://www.php.net/manual/en/function.curl-setopt.php for the list of Curl options.&lt;/p&gt;  Option keys are case insensitive. Example option input:  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$client&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="Tea-helper/TeaRestClient.html">TeaRestClient</a></span><span class="src-sym">(</span><span class="src-str">'http://somewebsite.com/api/rest'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$client</span><span class="src-sym">-&gt;</span><a href="Tea-helper/TeaRestClient.html#methodoptions">options</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'returnTransfer'</span>=&gt;<span class="src-id">true</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'header'</span>=&gt;<span class="src-id">true</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'SSL_VERIFYPEER'</span>=&gt;<span class="src-id">false</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'timeout'</span>=&gt;<span class="src-num">10</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$client</span><span class="src-sym">-&gt;</span><a href="Tea-helper/TeaRestClient.html#methodexecute">execute</a><span class="src-sym">(</span><span class="src-str">'get'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//or&nbsp;$client-&gt;get();</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			options
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$optArr</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$optArr</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="post" id="post"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">post</span> (line <span class="line-number">325</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute the request with HTTP POST request method</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-helper/TeaRestClient.html">TeaRestClient</a></span>
+		<span class="method-name">
+			post
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="put" id="put"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">put</span> (line <span class="line-number">355</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute the request with HTTP PUT request method</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-helper/TeaRestClient.html">TeaRestClient</a></span>
+		<span class="method-name">
+			put
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="result" id="result"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">result</span> (line <span class="line-number">416</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get result of the executed request</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			result
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="resultCode" id="resultCode"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">resultCode</span> (line <span class="line-number">432</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get result's HTTP status code of the executed request</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			resultCode
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="resultContentType" id="resultContentType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">resultContentType</span> (line <span class="line-number">441</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get result's content type of the executed request</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			resultContentType
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="setContentType" id="setContentType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setContentType</span> (line <span class="line-number">260</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get/set desired content type to be post to the server  &lt;p&gt;This should be used if the REST server analyze Content-Type header to parse what format  you're posting to the API. eg. json, xml, rss, atom.</p>
+<p class="description"><p>TeaRestClient provides a list of common used format to be used in your code.&lt;/p&gt;  Example to retrieve result in JSON:  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$client&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="Tea-helper/TeaRestClient.html">TeaRestClient</a></span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$client</span><span class="src-sym">-&gt;</span><a href="Tea-helper/TeaRestClient.html#methodconnect_to">connect_to</a><span class="src-sym">(</span><span class="src-str">&quot;http://twitter.com/post_status&quot;</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">-&gt;</span><a href="Tea-helper/TeaRestClient.html#methodauth">auth</a><span class="src-sym">(</span><span class="src-str">'username'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'password'</span><span class="src-sym">,&nbsp;</span><span class="src-id">true</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">-&gt;</span><a href="Tea-helper/TeaRestClient.html#methodsetContentType">setContentType</a><span class="src-sym">(</span><span class="src-id"><a href="Tea-helper/TeaRestClient.html">TeaRestClient</a></span><span class="src-sym">::</span><span class="src-id">JSON</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">-&gt;</span><a href="Tea-helper/TeaRestClient.html#methodpost">post</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			setContentType
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="timeout" id="timeout"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">timeout</span> (line <span class="line-number">122</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get/set the connection timeout duration (seconds)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			timeout
+		</span>
+					([<span class="var-type">int</span>&nbsp;<span class="var-name">$sec</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$sec</span><span class="var-description">: Timeout duration in seconds</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="xml_result" id="xml_result"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">xml_result</span> (line <span class="line-number">455</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert the REST result to XML object</p>
+<p class="description"><p>Returns a SimpleXMLElement object by default which consumed less memory than DOMDocument.  However if you need the result to be DOMDocument which is more flexible and powerful in modifying XML,  just passed in True to the function.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">SimpleXMLElement|DOMDocument</span>
+		<span class="method-name">
+			xml_result
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$domObject</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$domObject</span><span class="var-description">: convert result in to DOMDOcument if True</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="ATOM" id="ATOM"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ATOM</span>
+			 = <span class="const-default"> 'application/atom+xml'</span>
+			(line <span class="line-number">55</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="CSS" id="CSS"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CSS</span>
+			 = <span class="const-default"> 'text/css'</span>
+			(line <span class="line-number">52</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="CSV" id="CSV"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CSV</span>
+			 = <span class="const-default"> 'text/csv'</span>
+			(line <span class="line-number">61</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="GIF" id="GIF"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">GIF</span>
+			 = <span class="const-default"> 'image/gif'</span>
+			(line <span class="line-number">60</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="HTML" id="HTML"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">HTML</span>
+			 = <span class="const-default"> 'text/html'</span>
+			(line <span class="line-number">48</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="JPG" id="JPG"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">JPG</span>
+			 = <span class="const-default"> 'image/jpeg'</span>
+			(line <span class="line-number">59</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="JS" id="JS"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">JS</span>
+			 = <span class="const-default"> 'application/javascript'</span>
+			(line <span class="line-number">51</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="JSON" id="JSON"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">JSON</span>
+			 = <span class="const-default"> 'application/json'</span>
+			(line <span class="line-number">50</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="PDF" id="PDF"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">PDF</span>
+			 = <span class="const-default"> 'application/pdf'</span>
+			(line <span class="line-number">56</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="PNG" id="PNG"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">PNG</span>
+			 = <span class="const-default"> 'image/png'</span>
+			(line <span class="line-number">58</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="RSS" id="RSS"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RSS</span>
+			 = <span class="const-default"> 'application/rss+xml'</span>
+			(line <span class="line-number">53</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="TEXT" id="TEXT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">TEXT</span>
+			 = <span class="const-default"> 'text/plain'</span>
+			(line <span class="line-number">57</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="XML" id="XML"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">XML</span>
+			 = <span class="const-default"> 'application/xml'</span>
+			(line <span class="line-number">49</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="YAML" id="YAML"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">YAML</span>
+			 = <span class="const-default"> 'text/yaml'</span>
+			(line <span class="line-number">54</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:58 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

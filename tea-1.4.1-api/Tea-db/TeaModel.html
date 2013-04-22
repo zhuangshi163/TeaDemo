@@ -1,0 +1,1857 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaModel</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> TeaModel</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">TeaModel is the base class for Model classes in Teaphp that provides useful querying methods.</p>
+<p class="description"><p>The model classes can extend TeaModel for more powerful ORM features which enable you to write shorter codes.  Extending this class is optional.</p><p>All the extra ORM methods can be accessed in a static and non-static way. Example:</p><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$food&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id">Food</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$food</span><span class="src-sym">-&gt;</span><a href="Tea-db/TeaModel.html#methodgetOne">getOne</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id">Food</span><span class="src-sym">::</span><span class="src-id">_getOne</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$food</span><span class="src-sym">-&gt;</span><a href="Tea-db/TeaModel.html#methodcount">count</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id">Food</span><span class="src-sym">::</span><span class="src-id">_count</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//Dynamic&nbsp;querying</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$food</span><span class="src-sym">-&gt;</span><span class="src-id">getById</span><span class="src-sym">(</span><span class="src-num">14</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$food</span><span class="src-sym">-&gt;</span><span class="src-id">getById_location</span><span class="src-sym">(</span><span class="src-num">14</span><span class="src-sym">,&nbsp;</span><span class="src-str">'Malaysia'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//Get&nbsp;only&nbsp;one&nbsp;item</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$food</span><span class="src-sym">-&gt;</span><span class="src-id">getById_first</span><span class="src-sym">(</span><span class="src-num">14</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$food</span><span class="src-sym">-&gt;</span><span class="src-id">getById_location_first</span><span class="src-sym">(</span><span class="src-num">14</span><span class="src-sym">,&nbsp;</span><span class="src-str">'Malaysia'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//Gets&nbsp;list&nbsp;of&nbsp;food&nbsp;with&nbsp;its&nbsp;food&nbsp;type</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$food</span><span class="src-sym">-&gt;</span><span class="src-id">relateFoodType</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$food</span><span class="src-sym">-&gt;</span><span class="src-id">relateFoodType</span><span class="src-sym">(</span><span class="src-var">$food</span><span class="src-sym">,&nbsp;</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'limit'</span>=&gt;<span class="src-str">'first'</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$food</span><span class="src-sym">-&gt;</span><span class="src-id">relateFoodType_first</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//Static&nbsp;querying&nbsp;needs&nbsp;PHP&nbsp;5.3&nbsp;or&nbsp;above</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id">Food</span><span class="src-sym">::</span><span class="src-id">getById</span><span class="src-sym">(</span><span class="src-num">14</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id">Food</span><span class="src-sym">::</span><span class="src-id">getById_first</span><span class="src-sym">(</span><span class="src-num">14</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id">Food</span><span class="src-sym">::</span><span class="src-id">getById_location_first</span><span class="src-sym">(</span><span class="src-num">14</span><span class="src-sym">,&nbsp;</span><span class="src-str">'Malaysia'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id">Food</span><span class="src-sym">::</span><span class="src-id">relateFoodType</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id">Food</span><span class="src-sym">::</span><span class="src-id">relateFoodType_first</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div>
+ If you are using static querying methods such as Food::_count(), Food::getById(), you would need to setup the class name in your Model constructor.</p><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodloadCore">loadCore</a><span class="src-sym">(</span><span class="src-str">'db/TeaModel'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-key">class&nbsp;</span><span class="src-id">Model&nbsp;</span><span class="src-key">extends&nbsp;</span><a href="Tea-db/TeaModel.html">TeaModel</a><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><span class="src-id">__construct</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">parent</span><span class="src-sym">::</span><span class="src-var">$className&nbsp;</span>=&nbsp;__CLASS__<span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//OR&nbsp;parent::setupModel(__CLASS__);</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-sym">}</span></div></li>
+</ol></div> Please check the database demo MainController's test() method for some example usage.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Leng Sheng Hong &lt;<a href="mailto:darkredz@gmail.com">darkredz@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id: TeaModel.php 1000 2009-08-27 10:28:56</li>
+				<li><span class="field">since:</span> 1.2</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-db/_db---TeaModel.php.html">/db/TeaModel.php</a> (line <span class="field">67</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					<img src="images/StaticVariable.png" alt=" " />
+					static <span class="var-type">bool</span>
+					<a href="#$caseSensitive" title="details" class="var-name">$caseSensitive</a>
+				</div>
+																<div class="var-title">
+					<img src="images/StaticVariable.png" alt=" " />
+					static <span class="var-type">string</span>
+					<a href="#$className" title="details" class="var-name">$className</a>
+				</div>
+																															</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																												<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#_count" title="details" class="method-name">_count</a>
+											([<span class="var-type">object</span>&nbsp;<span class="var-name">$model</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#_delete" title="details" class="method-name">_delete</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#_deleteAll" title="details" class="method-name">_deleteAll</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#_find" title="details" class="method-name">_find</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#_getOne" title="details" class="method-name">_getOne</a>
+											([<span class="var-type">object</span>&nbsp;<span class="var-name">$model</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#_insert" title="details" class="method-name">_insert</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$model</span>)
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#_insertAttributes" title="details" class="method-name">_insertAttributes</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#_insert_attributes" title="details" class="method-name">_insert_attributes</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$model</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#_lastInsertId" title="details" class="method-name">_lastInsertId</a>
+										()
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#_limit" title="details" class="method-name">_limit</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">1</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$asc</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$desc</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>], <span class="var-type">object</span>&nbsp;<span class="var-name">$model</span>)
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#_relate" title="details" class="method-name">_relate</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$rmodel</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#_relatedInsert" title="details" class="method-name">_relatedInsert</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$rmodels</span>)
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#_relatedUpdate" title="details" class="method-name">_relatedUpdate</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$rmodels</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#_update" title="details" class="method-name">_update</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#_update_attributes" title="details" class="method-name">_update_attributes</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#_validate" title="details" class="method-name">_validate</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$checkMode</span> = <span class="var-default">'all'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$requireMode</span> = <span class="var-default">'null'</span>])
+																<span class="method-result">array</span>
+									</div>
+																								<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#__callStatic" title="details" class="method-name">__callStatic</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$args</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#__set_state" title="details" class="method-name">__set_state</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$properties</span>)
+																<span class="method-result">void</span>
+									</div>
+																				<div class="method-definition">
+					<img src="images/Constructor.png" alt=" "/>
+					<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$properties</span> = <span class="var-default">null</span>])
+																<span class="method-result">TeaModel</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#beginTransaction" title="details" class="method-name">beginTransaction</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#commit" title="details" class="method-name">commit</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#count" title="details" class="method-name">count</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#db" title="details" class="method-name">db</a>
+										()
+																<span class="method-result"><a href="Tea-db/TeaSqlMagic.html">TeaSqlMagic</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#delete" title="details" class="method-name">delete</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#deleteAll" title="details" class="method-name">deleteAll</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#find" title="details" class="method-name">find</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getOne" title="details" class="method-name">getOne</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#insert" title="details" class="method-name">insert</a>
+										()
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#insertAttributes" title="details" class="method-name">insertAttributes</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#insert_attributes" title="details" class="method-name">insert_attributes</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#lastInsertId" title="details" class="method-name">lastInsertId</a>
+										()
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#limit" title="details" class="method-name">limit</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">1</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$asc</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$desc</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#relate" title="details" class="method-name">relate</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$rmodel</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#relatedInsert" title="details" class="method-name">relatedInsert</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$rmodels</span>)
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#relatedUpdate" title="details" class="method-name">relatedUpdate</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$rmodels</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#relateExpand" title="details" class="method-name">relateExpand</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$rmodel</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#relateMany" title="details" class="method-name">relateMany</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$rmodel</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#rollBack" title="details" class="method-name">rollBack</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#setupModel" title="details" class="method-name">setupModel</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">__CLASS__</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$caseSensitive</span> = <span class="var-default">false</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#update" title="details" class="method-name">update</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#update_attributes" title="details" class="method-name">update_attributes</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#validate" title="details" class="method-name">validate</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$checkMode</span> = <span class="var-default">'all'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$requireMode</span> = <span class="var-default">'null'</span>])
+																<span class="method-result">array</span>
+									</div>
+																																																																																																																																																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#__call" title="details" class="method-name">__call</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$args</span>)
+																<span class="method-result">void</span>
+									</div>
+																											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="$caseSensitive" id="$caseSensitive"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			static <span class="var-type">bool</span>
+			<span class="var-name">$caseSensitive</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">72</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determine whether the DB field names should be case sensitive.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$className" id="$className"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			static <span class="var-type">string</span>
+			<span class="var-name">$className</span>
+			 = <span class="var-default"> __CLASS__</span>			(line <span class="line-number">78</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The class name of the Model</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="_count" id="_count"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static _count</span> (line <span class="line-number">537</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve the total records in a table. COUNT()</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> total of records</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			_count
+		</span>
+					([<span class="var-type">object</span>&nbsp;<span class="var-name">$model</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be select.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Options for the query. Available options see @see find() and additional 'distinct' option</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_delete" id="_delete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static _delete</span> (line <span class="line-number">414</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete an existing record. (Prepares and execute the DELETE statements)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_delete
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be deleted.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Associative array of options to generate the UPDATE statement. Supported: <em>where, limit, param</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_deleteAll" id="_deleteAll"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static _deleteAll</span> (line <span class="line-number">405</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete ALL existing records. (Prepares and executes the DELETE statement)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_deleteAll
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object whos records should all be deleted</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_find" id="_find"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static _find</span> (line <span class="line-number">311</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Find a record. (Prepares and execute the SELECT statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A model object or associateve array of the queried result</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			_find
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$model</span><span class="var-description">: The model class name or object to be select</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Associative array of options to generate the SELECT statement. Supported: <em>where, limit, select, param, asc, desc, custom, asArray</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_getOne" id="_getOne"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static _getOne</span> (line <span class="line-number">519</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve model by one record.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A model object or associateve array of the queried result</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			_getOne
+		</span>
+					([<span class="var-type">object</span>&nbsp;<span class="var-name">$model</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be select.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Options for the query. Available options see @see find()</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_insert" id="_insert"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static _insert</span> (line <span class="line-number">333</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a new record. (Prepares and execute the INSERT statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The inserted record's Id</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			_insert
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be insert.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_insertAttributes" id="_insertAttributes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static _insertAttributes</span> (line <span class="line-number">343</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a new record with a list of keys &amp; values (assoc array) (Prepares and execute the INSERT statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The inserted record's Id</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			_insertAttributes
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be insert.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: Array of data (keys and values) to be insert</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_insert_attributes" id="_insert_attributes"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static _insert_attributes</span> (line <span class="line-number">351</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use TeaModel::_insertAttributes() instead.</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> deprecated since version 1.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_insert_attributes
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$model</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$model</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_lastInsertId" id="_lastInsertId"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static _lastInsertId</span> (line <span class="line-number">397</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the last inserted record's id</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			_lastInsertId
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="_limit" id="_limit"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static _limit</span> (line <span class="line-number">494</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve a list of paginated data. To be used with TeaPager</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A model object or associateve array of the queried result</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			_limit
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">1</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$asc</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$desc</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>], <span class="var-type">object</span>&nbsp;<span class="var-name">$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be select.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$limit</span><span class="var-description">: String for the limit query, eg. '6,10'</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$asc</span><span class="var-description">: Fields to be sorted Ascendingly. Use comma to seperate multiple fields, eg. 'name,timecreated'</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$desc</span><span class="var-description">: Fields to be sorted Descendingly. Use comma to seperate multiple fields, eg. 'name,timecreated'</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Options for the query. Available options see @see find()</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_relate" id="_relate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static _relate</span> (line <span class="line-number">322</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Find a record and its associated model. Relational search. (Prepares and execute the SELECT statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A list of model object(s) or associateve array of the queried result</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			_relate
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$rmodel</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$model</span><span class="var-description">: The model class name or object to be select.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rmodel</span><span class="var-description">: The related model class name.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Associative array of options to generate the SELECT statement. Supported: <em>where, limit, select, param, joinType, match, asc, desc, custom, asArray, include, includeWhere, includeParam</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_relatedInsert" id="_relatedInsert"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static _relatedInsert</span> (line <span class="line-number">361</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a new record with its associated models. Relational insert. (Prepares and execute the INSERT statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The inserted record's Id</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			_relatedInsert
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$rmodels</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be insert.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$rmodels</span><span class="var-description">: A list of associated model objects to be insert along with the main model.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_relatedUpdate" id="_relatedUpdate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static _relatedUpdate</span> (line <span class="line-number">371</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update an existing record with its associated models. Relational update. (Prepares and execute the UPDATE statements)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_relatedUpdate
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$rmodels</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be updated.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$rmodels</span><span class="var-description">: A list of associated model objects to be updated or insert along with the main model.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Assoc array of options to update the main model. Supported: <em>where, limit, field, param</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_update" id="_update"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static _update</span> (line <span class="line-number">380</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update an existing record. (Prepares and execute the UPDATE statements)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_update
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be updated.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Associative array of options to generate the UPDATE statement. Supported: <em>where, limit, field, param</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_update_attributes" id="_update_attributes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static _update_attributes</span> (line <span class="line-number">389</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update an existing record with a list of keys &amp; values (assoc array). (Prepares and execute the UPDATE statements)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_update_attributes
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be updated.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Associative array of options to generate the UPDATE statement. Supported: <em>where, limit, field, param</em></span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_validate" id="_validate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static _validate</span> (line <span class="line-number">128</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate the Model with the rules defined in getVRules()</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return array of errors if exists. Return null if data passes the validation rules.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			_validate
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$checkMode</span> = <span class="var-default">'all'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$requireMode</span> = <span class="var-default">'null'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$model</span><span class="var-description">: Model object to be validated.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$checkMode</span><span class="var-description">: Validation mode. all, all_one, skip</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$requireMode</span><span class="var-description">: Require Check Mode. null, nullempty</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="__callStatic" id="__callStatic"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static __callStatic</span> (line <span class="line-number">662</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__callStatic
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$args</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$args</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="__set_state" id="__set_state"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static __set_state</span> (line <span class="line-number">768</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__set_state
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$properties</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$properties</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">84</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor of a Model. Sets the model class properties with a list of keys &amp; values.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">TeaModel</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$properties</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$properties</span><span class="var-description">: Array of data (keys and values) to set the model properties</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="beginTransaction" id="beginTransaction"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">beginTransaction</span> (line <span class="line-number">156</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Initiates a transaction. Transactions can be nestable.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			beginTransaction
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="commit" id="commit"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">commit</span> (line <span class="line-number">149</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Commits a transaction. Transactions can be nestable.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			commit
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="count" id="count"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">count</span> (line <span class="line-number">469</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve the total records in a table. COUNT()</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> total of records</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			count
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Options for the query. Available options see @see find() and additional 'distinct' option</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="db" id="db"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">db</span> (line <span class="line-number">142</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Shorthand for Tea::db()</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-db/TeaSqlMagic.html">TeaSqlMagic</a></span>
+		<span class="method-name">
+			db
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="delete" id="delete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">delete</span> (line <span class="line-number">300</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete an existing record. (Prepares and execute the DELETE statements)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			delete
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Associative array of options to generate the UPDATE statement. Supported: <em>where, limit, param</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="deleteAll" id="deleteAll"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">deleteAll</span> (line <span class="line-number">292</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete ALL existing records. (Prepares and executes the DELETE statements)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			deleteAll
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="find" id="find"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">find</span> (line <span class="line-number">172</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Find a record. (Prepares and execute the SELECT statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A model object or associateve array of the queried result</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			find
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Associative array of options to generate the SELECT statement. Supported: <em>where, limit, select, param, groupby, asc, desc, custom, asArray</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getOne" id="getOne"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getOne</span> (line <span class="line-number">455</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve model by one record.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A model object or associateve array of the queried result</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getOne
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Options for the query. Available options see @see find()</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="insert" id="insert"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">insert</span> (line <span class="line-number">224</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a new record. (Prepares and execute the INSERT statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The inserted record's Id</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			insert
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="insertAttributes" id="insertAttributes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">insertAttributes</span> (line <span class="line-number">233</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a new record with a list of keys &amp; values (assoc array) (Prepares and execute the INSERT statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The inserted record's Id</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			insertAttributes
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: Array of data (keys and values) to be insert</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="insert_attributes" id="insert_attributes"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">insert_attributes</span> (line <span class="line-number">241</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use insertAttributes() instead</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> deprecated since version 1.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			insert_attributes
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="lastInsertId" id="lastInsertId"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">lastInsertId</span> (line <span class="line-number">285</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the last inserted record's id</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			lastInsertId
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="limit" id="limit"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">limit</span> (line <span class="line-number">430</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve a list of paginated data. To be used with TeaPager</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A model object or associateve array of the queried result</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			limit
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">1</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$asc</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$desc</span> = <span class="var-default">''</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$limit</span><span class="var-description">: String for the limit query, eg. '6,10'</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$asc</span><span class="var-description">: Fields to be sorted Ascendingly. Use comma to seperate multiple fields, eg. 'name,timecreated'</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$desc</span><span class="var-description">: Fields to be sorted Descendingly. Use comma to seperate multiple fields, eg. 'name,timecreated'</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Options for the query. Available options see @see find()</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="relate" id="relate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">relate</span> (line <span class="line-number">182</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Find a record and its associated model. Relational search. (Prepares and execute the SELECT statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A list of model object(s) or associateve array of the queried result</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			relate
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$rmodel</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rmodel</span><span class="var-description">: The related model class name.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Associative array of options to generate the SELECT statement. Supported: <em>where, limit, select, param, joinType, groupby, match, asc, desc, custom, asArray, include, includeWhere, includeParam</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="relatedInsert" id="relatedInsert"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">relatedInsert</span> (line <span class="line-number">250</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a new record with its associated models. Relational insert. (Prepares and execute the INSERT statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The inserted record's Id</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			relatedInsert
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$rmodels</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$rmodels</span><span class="var-description">: A list of associated model objects to be insert along with the main model.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="relatedUpdate" id="relatedUpdate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">relatedUpdate</span> (line <span class="line-number">277</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update an existing record with its associated models. Relational update. (Prepares and execute the UPDATE statements)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			relatedUpdate
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$rmodels</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$rmodels</span><span class="var-description">: A list of associated model objects to be updated or insert along with the main model.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Assoc array of options to update the main model. Supported: <em>where, limit, field, param</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="relateExpand" id="relateExpand"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">relateExpand</span> (line <span class="line-number">216</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Expand related models (Tree Relationships).</p>
+<p class="description"><p>Example:  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$recipe&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id">Recipe</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$recipe</span><span class="src-sym">-&gt;</span><a href="Tea-db/TeaModel.html#methodrelateExpand">relateExpand</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'Food'</span><span class="src-sym">,</span><span class="src-str">'Article'</span><span class="src-sym">))</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A list of model objects of the queried result</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			relateExpand
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$rmodel</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$rmodel</span><span class="var-description">: The related models class names.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Array of options for each related model to generate the SELECT statement. Supported: <em>where, limit, select, param, joinType, groupby, match, asc, desc, custom, asArray, include, includeWhere, includeParam</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="relateMany" id="relateMany"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">relateMany</span> (line <span class="line-number">199</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Combine relational search results (combine multiple relates).</p>
+<p class="description"><p>Example:  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$food&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id">Food</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$food</span><span class="src-sym">-&gt;</span><a href="Tea-db/TeaModel.html#methodrelateMany">relateMany</a><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'Recipe'</span><span class="src-sym">,</span><span class="src-str">'Article'</span><span class="src-sym">,</span><span class="src-str">'FoodType'</span><span class="src-sym">))</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A list of model objects of the queried result</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			relateMany
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$rmodel</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$rmodel</span><span class="var-description">: The related models class names.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Array of options for each related model to generate the SELECT statement. Supported: <em>where, limit, select, param, joinType, groupby, match, asc, desc, custom, asArray, include, includeWhere, includeParam</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="rollBack" id="rollBack"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">rollBack</span> (line <span class="line-number">163</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Rolls back a transaction. Transactions can be nestable.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			rollBack
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="setupModel" id="setupModel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setupModel</span> (line <span class="line-number">99</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setup the model. Use if needed with constructor.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setupModel
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">__CLASS__</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$caseSensitive</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span><span class="var-description">: Class name of the Model</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$caseSensitive</span><span class="var-description">: Determine whether the DB field names should be case sensitive.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="update" id="update"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">update</span> (line <span class="line-number">259</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update an existing record. (Prepares and execute the UPDATE statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Number of rows affected</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			update
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Associative array of options to generate the UPDATE statement. Supported: <em>where, limit, field, param</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="update_attributes" id="update_attributes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">update_attributes</span> (line <span class="line-number">268</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update an existing record with a list of keys &amp; values (assoc array). (Prepares and execute the UPDATE statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Number of rows affected</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			update_attributes
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Associative array of options to generate the UPDATE statement. Supported: <em>where, limit, field, param</em></span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="validate" id="validate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">validate</span> (line <span class="line-number">111</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Validate the Model with the rules defined in getVRules()</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return array of errors if exists. Return null if data passes the validation rules.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			validate
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$checkMode</span> = <span class="var-default">'all'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$requireMode</span> = <span class="var-default">'null'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$checkMode</span><span class="var-description">: Validation mode. all, all_one, skip</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$requireMode</span><span class="var-description">: Require Check Mode. null, nullempty</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="__call" id="__call"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">__call</span> (line <span class="line-number">556</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__call
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$args</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$args</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:57 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

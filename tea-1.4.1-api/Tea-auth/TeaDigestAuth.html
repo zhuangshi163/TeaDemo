@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaDigestAuth</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> TeaDigestAuth</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Handles HTTP digest authentication</p>
+<p class="description"><p>HTTP digest authentication can be used with the URI router.  HTTP digest is much more recommended over the use of HTTP Basic auth which doesn't provide any encryption.  If you are running PHP on Apache in CGI/FastCGI mode, you would need to  add the following line to your .htaccess for digest auth to work correctly.</p><p><div class="src-code"><ol><li><div class="src-line"><span class="src-id">RewriteRule&nbsp;</span>.*&nbsp;-&nbsp;<span class="src-sym">[</span><span class="src-id">E</span>=<span class="src-id">HTTP_AUTHORIZATION</span>:%<span class="src-sym">{</span><span class="src-id">HTTP</span>:<span class="src-id">Authorization</span><span class="src-sym">}</span><span class="src-sym">,</span><span class="src-id">L</span><span class="src-sym">]</span></div></li>
+</ol></div>
+ This class is tested under Apache 2.2 and Cherokee web server. It should work in both mod_php and cgi mode.</p><p></p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Leng Sheng Hong &lt;<a href="mailto:darkredz@gmail.com">darkredz@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id: TeaDigestAuth.php 1000 2009-07-7 18:27:22</li>
+				<li><span class="field">since:</span> 1.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-auth/_auth---TeaDigestAuth.php.html">/auth/TeaDigestAuth.php</a> (line <span class="field">27</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+												<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#http_auth" title="details" class="method-name">http_auth</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$realm</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$users</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$fail_msg</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$fail_url</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">string</span>
+									</div>
+																							</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+													<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="http_auth" id="http_auth"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static http_auth</span> (line <span class="line-number">41</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Authenticate against a list of username and passwords.</p>
+<p class="description"><p>HTTP Digest Authentication 401 doesn't work with PHP in CGI mode,  you have to tweak stuff in .htaccess <div class="src-code"><ol><li><div class="src-line"><span class="src-id">RewriteRule&nbsp;</span>.*&nbsp;-&nbsp;<span class="src-sym">[</span><span class="src-id">E</span>=<span class="src-id">HTTP_AUTHORIZATION</span>:%<span class="src-sym">{</span><span class="src-id">HTTP</span>:<span class="src-id">Authorization</span><span class="src-sym">}</span><span class="src-sym">,</span><span class="src-id">L</span><span class="src-sym">]</span></div></li>
+</ol></div></p><p></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The username if login success.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			http_auth
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$realm</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$users</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$fail_msg</span> = <span class="var-default">NULL</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$fail_url</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$realm</span><span class="var-description">: Name of the authentication session</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$users</span><span class="var-description">: An assoc array of username and password: array('uname1'=&gt;'pwd1', 'uname2'=&gt;'pwd2')</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$fail_msg</span><span class="var-description">: Message to be displayed if the User cancel the login</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$fail_url</span><span class="var-description">: URL to be redirect if the User cancel the login</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:54 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

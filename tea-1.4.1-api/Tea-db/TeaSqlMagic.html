@@ -1,0 +1,2167 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaSqlMagic</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> TeaSqlMagic</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">TeaSqlMagic is a fast ORM tool which handles relational data.</p>
+<p class="description"><p>It generates SQL query on the fly and escaping/quoting record values to prevent sql injection.  You can do CRUD operations in an easier way with TeaSqlMagic instead of writing queries manually.</p><p>Database models does not need to extend any classes with TeaSqlMagic. Database table relationships are defined in a  centralized way in <em>SITE_PATH/protected/config/db.conf.php</em> instead of defining them in each Model class.</p><p>Unlike most active records, TeaSqlMagic class does not use any php Magic methods in order to gain higher performance.</p><p>It does not implements the active record design pattern, a popular Object-Relational Mapping (ORM) technique.  However, it can still be used with some flavours of active record features.</p><p>TeaSqlMagic is more like a blend between Active record and DataMapper design pattern.</p><p>Creating an instance of an TeaSqlMagic class does not immediately connect to the RDBMS server.   Use connect() or reconnect() to make the actual connection on demand.</p><p>Please check <a href="http://www.Teaphp.com/doc/guide/database">the Guide</a> for more details about this class.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Leng Sheng Hong &lt;<a href="mailto:darkredz@gmail.com">darkredz@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id: TeaSqlMagic.php 1000 2009-07-7 18:27:22</li>
+				<li><span class="field">since:</span> 1.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-db/_db---TeaSqlMagic.php.html">/db/TeaSqlMagic.php</a> (line <span class="field">39</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="Tea-db/TeaMasterSlave.html">TeaMasterSlave</a>
+					</td>
+					<td>
+											TeaMasterSlave is an ORM tool based on TeaSqlMagic with Database Replication support.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#JOIN" title="details" class="const-name">JOIN</a> = 					<span class="var-type"> ''</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#JOIN_INNER" title="details" class="const-name">JOIN_INNER</a> = 					<span class="var-type"> 'INNER'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#JOIN_LEFT" title="details" class="const-name">JOIN_LEFT</a> = 					<span class="var-type"> 'LEFT'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#JOIN_LEFT_OUTER" title="details" class="const-name">JOIN_LEFT_OUTER</a> = 					<span class="var-type"> 'LEFT OUTER'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#JOIN_RIGHT" title="details" class="const-name">JOIN_RIGHT</a> = 					<span class="var-type"> 'RIGHT'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#JOIN_RIGHT_OUTER" title="details" class="const-name">JOIN_RIGHT_OUTER</a> = 					<span class="var-type"> 'RIGHT OUTER'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																								<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$connected" title="details" class="var-name">$connected</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$dbconfig" title="details" class="var-name">$dbconfig</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$dbconfig_list" title="details" class="var-name">$dbconfig_list</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$map" title="details" class="var-name">$map</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$modelPath" title="details" class="var-name">$modelPath</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$pdo" title="details" class="var-name">$pdo</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$sql_list" title="details" class="var-name">$sql_list</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$sql_tracking" title="details" class="var-name">$sql_tracking</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$transactionLevel" title="details" class="var-name">$transactionLevel</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+												<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#addWhereIsNull" title="details" class="method-name">addWhereIsNull</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$where</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$relatedKey</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$modelKey</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#addWhereNotNull" title="details" class="method-name">addWhereNotNull</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$where</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$relatedKey</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$modelKey</span>)
+																<span class="method-result">void</span>
+									</div>
+																																																																																																																																																																																																																																																																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#relationType" title="details" class="method-name">relationType</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$map</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$model_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$relate_model_name</span>)
+																<span class="method-result">array</span>
+									</div>
+																																																								<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#toArray" title="details" class="method-name">toArray</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$object</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#toObject" title="details" class="method-name">toObject</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$array</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$class_name</span>)
+																<span class="method-result">void</span>
+									</div>
+																																																				<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#appendMap" title="details" class="method-name">appendMap</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$dbmap</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#beginTransaction" title="details" class="method-name">beginTransaction</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#commit" title="details" class="method-name">commit</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#connect" title="details" class="method-name">connect</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#delete" title="details" class="method-name">delete</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#deleteAll" title="details" class="method-name">deleteAll</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#disconnect" title="details" class="method-name">disconnect</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#fetchAll" title="details" class="method-name">fetchAll</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$fetchMode</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$fetchModeOptionalParam1</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$fetchModeOptionalParam2</span> = <span class="var-default">array()</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#fetchRow" title="details" class="method-name">fetchRow</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$fetchMode</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$fetchModeOptionalParam1</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$fetchModeOptionalParam2</span> = <span class="var-default">array()</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#find" title="details" class="method-name">find</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getDbObject" title="details" class="method-name">getDbObject</a>
+										()
+																<span class="method-result">PDO</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getDefaultDbConfig" title="details" class="method-name">getDefaultDbConfig</a>
+										()
+																<span class="method-result">array</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getMap" title="details" class="method-name">getMap</a>
+										()
+																<span class="method-result">array</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getOne" title="details" class="method-name">getOne</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getQueryCount" title="details" class="method-name">getQueryCount</a>
+										()
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#get_query_count" title="details" class="method-name">get_query_count</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#insert" title="details" class="method-name">insert</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$model</span>)
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#insertAttributes" title="details" class="method-name">insertAttributes</a>
+											(<span class="var-type">string|object </span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#insert_attributes" title="details" class="method-name">insert_attributes</a>
+											(<span class="var-type">string|object </span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#lastInsertId" title="details" class="method-name">lastInsertId</a>
+										()
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#loadModel" title="details" class="method-name">loadModel</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$className</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">false</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#query" title="details" class="method-name">query</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>])
+																<span class="method-result">PDOStatement</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#quote" title="details" class="method-name">quote</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#quoteArray" title="details" class="method-name">quoteArray</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$array</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#reconnect" title="details" class="method-name">reconnect</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$db_config_name</span> = <span class="var-default">Null</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#relate" title="details" class="method-name">relate</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$rmodel</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#relatedInsert" title="details" class="method-name">relatedInsert</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$rmodels</span>)
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#relatedUpdate" title="details" class="method-name">relatedUpdate</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$rmodels</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#relateExpand" title="details" class="method-name">relateExpand</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$rmodel</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#relateMany" title="details" class="method-name">relateMany</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$rmodel</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+																<span class="method-result">mixed</span>
+									</div>
+																								<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#rollBack" title="details" class="method-name">rollBack</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#setDb" title="details" class="method-name">setDb</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$dbconfig</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$default_name</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#setMap" title="details" class="method-name">setMap</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$dbmap</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#showSQL" title="details" class="method-name">showSQL</a>
+										()
+																<span class="method-result">array</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#show_sql" title="details" class="method-name">show_sql</a>
+										()
+																<span class="method-result">array</span>
+									</div>
+																																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#update" title="details" class="method-name">update</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#update_attributes" title="details" class="method-name">update_attributes</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">int</span>
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="$connected" id="$connected"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$connected</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">51</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determined whether the database connection is made.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$dbconfig" id="$dbconfig"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$dbconfig</span>
+						(line <span class="line-number">60</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$dbconfig_list" id="$dbconfig_list"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$dbconfig_list</span>
+						(line <span class="line-number">61</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$map" id="$map"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$map</span>
+						(line <span class="line-number">59</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$modelPath" id="$modelPath"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$modelPath</span>
+						(line <span class="line-number">57</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Path to the folder where the model class files are located. Ends with a slash. eg. /var/www/modelfiles/</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$pdo" id="$pdo"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$pdo</span>
+						(line <span class="line-number">62</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$sql_list" id="$sql_list"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$sql_list</span>
+						(line <span class="line-number">66</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$sql_tracking" id="$sql_tracking"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$sql_tracking</span>
+			 = <span class="var-default">false</span>			(line <span class="line-number">45</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Enable/disable SQL tracking, to view SQL which has been queried, use showSQL()</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$transactionLevel" id="$transactionLevel"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$transactionLevel</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number">64</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="addWhereIsNull" id="addWhereIsNull"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static addWhereIsNull</span> (line <span class="line-number">2370</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addWhereIsNull
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$where</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$relatedKey</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$modelKey</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$where</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$relatedKey</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$modelKey</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="addWhereNotNull" id="addWhereNotNull"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static addWhereNotNull</span> (line <span class="line-number">2362</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addWhereNotNull
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$where</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$relatedKey</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$modelKey</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$where</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$relatedKey</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$modelKey</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="relationType" id="relationType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static relationType</span> (line <span class="line-number">2338</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve the relationship between 2 model class</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Relationship with details such as relationship type, foreign key, linked table</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			relationType
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$map</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$model_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$relate_model_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$map</span><span class="var-description">: The relationship mapping</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$model_name</span><span class="var-description">: Main model name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$relate_model_name</span><span class="var-description">: Related model name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="toArray" id="toArray"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static toArray</span> (line <span class="line-number">2391</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			toArray
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$object</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$object</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="toObject" id="toObject"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static toObject</span> (line <span class="line-number">2378</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			toObject
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$array</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$class_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$array</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$class_name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="appendMap" id="appendMap"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">appendMap</span> (line <span class="line-number">125</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Append to DB relationship mapping</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			appendMap
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$dbmap</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$dbmap</span><span class="var-description">: Database relationship mapping</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="beginTransaction" id="beginTransaction"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">beginTransaction</span> (line <span class="line-number">204</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Initiates a transaction. Transactions can be nestable.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			beginTransaction
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="commit" id="commit"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">commit</span> (line <span class="line-number">217</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Commits a transaction. Transactions can be nestable.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			commit
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="connect" id="connect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">connect</span> (line <span class="line-number">143</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Connects to the database with the default database connection configuration</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			connect
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="Tea-db/TeaMasterSlave.html#methodconnect">TeaMasterSlave::connect()</a>
+								: Connects to the database with the default slaves configurations
+							</li>
+				</ul>
+	</div>
+<a name="delete" id="delete"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">delete</span> (line <span class="line-number">2286</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete an existing record. (Prepares and execute the DELETE statements)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			delete
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be deleted.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Associative array of options to generate the UPDATE statement. Supported: <em>where, limit, param</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="deleteAll" id="deleteAll"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">deleteAll</span> (line <span class="line-number">2271</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete all records from table (Prepares and executes the DELETE statement)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			deleteAll
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object from which to delete all records</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="disconnect" id="disconnect"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">disconnect</span> (line <span class="line-number">196</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Close a database connection</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			disconnect
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="fetchAll" id="fetchAll"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">fetchAll</span> (line <span class="line-number">322</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			fetchAll
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$fetchMode</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$fetchModeOptionalParam1</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$fetchModeOptionalParam2</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$query</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$param</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fetchMode</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fetchModeOptionalParam1</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fetchModeOptionalParam2</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="fetchRow" id="fetchRow"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">fetchRow</span> (line <span class="line-number">293</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			fetchRow
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$fetchMode</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$fetchModeOptionalParam1</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$fetchModeOptionalParam2</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$query</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$param</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fetchMode</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fetchModeOptionalParam1</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fetchModeOptionalParam2</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="find" id="find"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">find</span> (line <span class="line-number">440</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Find a record. (Prepares and execute the SELECT statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A model object or associateve array of the queried result</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			find
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$model</span><span class="var-description">: The model class name or object to be select</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Associative array of options to generate the SELECT statement. Supported: <em>where, limit, select, groupby, having, param, asc, desc, custom, asArray, filters</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getDbObject" id="getDbObject"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getDbObject</span> (line <span class="line-number">414</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the underlying PDO object used in TeaSqlMagic</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">PDO</span>
+		<span class="method-name">
+			getDbObject
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="getDefaultDbConfig" id="getDefaultDbConfig"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getDefaultDbConfig</span> (line <span class="line-number">109</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the default database configuration</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> array(db_host, db_name, db_user, db_pwd, db_driver, db_connection_cache)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getDefaultDbConfig
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="getMap" id="getMap"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getMap</span> (line <span class="line-number">136</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get DB relationship mapping</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Database relationship mapping</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getMap
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="getOne" id="getOne"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getOne</span> (line <span class="line-number">426</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve model by one record.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A model object or associateve array of the queried result</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getOne
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Options for the query. Available options see @see find()</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$model</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getQueryCount" id="getQueryCount"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getQueryCount</span> (line <span class="line-number">371</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the number of queries executed</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			getQueryCount
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="get_query_count" id="get_query_count"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">get_query_count</span> (line <span class="line-number">363</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use getQueryCount() instead</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> deprecated since version 1.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_query_count
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="insert" id="insert"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">insert</span> (line <span class="line-number">1910</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a new record. (Prepares and execute the INSERT statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The inserted record's Id</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			insert
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$model</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be insert.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="insertAttributes" id="insertAttributes"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">insertAttributes</span> (line <span class="line-number">1961</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a new record with a list of keys &amp; values (assoc array) (Prepares and execute the INSERT statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The inserted record's Id</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			insertAttributes
+		</span>
+					(<span class="var-type">string|object </span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|object </span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be insert.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: Array of data (keys and values) to be insert</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="insert_attributes" id="insert_attributes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">insert_attributes</span> (line <span class="line-number">1951</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use insertAttributes() instead</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The inserted record's Id</li>
+				<li><span class="field">deprecated:</span> deprecated since version 1.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			insert_attributes
+		</span>
+					(<span class="var-type">string|object </span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|object </span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be insert.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: Array of data (keys and values) to be insert</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="lastInsertId" id="lastInsertId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">lastInsertId</span> (line <span class="line-number">406</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the last inserted record's id</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			lastInsertId
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="loadModel" id="loadModel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">loadModel</span> (line <span class="line-number">75</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadModel
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$className</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$createObj</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$className</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$createObj</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="query" id="query"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">query</span> (line <span class="line-number">247</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute a query to the connected database</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">PDOStatement</span>
+		<span class="method-name">
+			query
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$param</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: SQL query prepared statement</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$param</span><span class="var-description">: Values used in the prepared SQL</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="Tea-db/TeaMasterSlave.html#methodquery">TeaMasterSlave::query()</a>
+								: Execute a query to the connected database. Auto toggle between master &amp; slave.
+							</li>
+				</ul>
+	</div>
+<a name="quote" id="quote"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">quote</span> (line <span class="line-number">383</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Quotes a string for use in a query.</p>
+<p class="description"><p>Places quotes around the input string and escapes and single quotes within the input string, using a quoting style appropriate to the underlying driver.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns a quoted string that is theoretically safe to pass into an SQL statement. Returns FALSE if the driver does not support quoting in this way.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			quote
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: The string to be quoted.</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$type</span><span class="var-description">: Provides a data type hint for drivers that have alternate quoting styles. The default value is PDO::PARAM_STR.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="quoteArray" id="quoteArray"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">quoteArray</span> (line <span class="line-number">387</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			quoteArray
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$array</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$array</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="reconnect" id="reconnect"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">reconnect</span> (line <span class="line-number">168</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Reconnect to a database which has been defined in the database connection configurations</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			reconnect
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$db_config_name</span> = <span class="var-default">Null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$db_config_name</span><span class="var-description">: Name/key of the database configuration</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="relate" id="relate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">relate</span> (line <span class="line-number">680</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Find a record and its associated model. Relational search. (Prepares and execute the SELECT statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A list of model object(s) or associateve array of the queried result</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			relate
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$rmodel</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$model</span><span class="var-description">: The model class name or object to be select.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rmodel</span><span class="var-description">: The related model class name.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Associative array of options to generate the SELECT statement. Supported: <em>where, limit, select, param, groupby, having, joinType, match, asc, desc, custom, asArray, include, includeWhere, includeParam, filters</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="relatedInsert" id="relatedInsert"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">relatedInsert</span> (line <span class="line-number">2010</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a new record with its associated models. Relational insert. (Prepares and execute the INSERT statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The inserted record's Id</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			relatedInsert
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$rmodels</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be insert.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$rmodels</span><span class="var-description">: A list of associated model objects to be insert along with the main model.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="relatedUpdate" id="relatedUpdate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">relatedUpdate</span> (line <span class="line-number">2205</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update an existing record with its associated models. Relational update. (Prepares and execute the UPDATE statements)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			relatedUpdate
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$rmodels</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be updated.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$rmodels</span><span class="var-description">: A list of associated model objects to be updated or insert along with the main model.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Assoc array of options to update the main model. Supported: <em>where, limit, field, param</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="relateExpand" id="relateExpand"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">relateExpand</span> (line <span class="line-number">1841</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Expand related models (Tree Relationships).</p>
+<p class="description"><p>Example:  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methoddb">db</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="Tea-db/TeaSqlMagic.html#methodrelateExpand">relateExpand</a><span class="src-sym">(</span><span class="src-str">'Recipe'</span><span class="src-sym">,&nbsp;</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'Food'</span><span class="src-sym">,</span><span class="src-str">'Article'</span><span class="src-sym">))</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A list of model objects of the queried result</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			relateExpand
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$rmodel</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$model</span><span class="var-description">: The model class name or object to be select.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$rmodel</span><span class="var-description">: The related models class names.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Array of options for each related model to generate the SELECT statement. Supported: <em>where, limit, select, param, joinType, match, asc, desc, custom, asArray, include, includeWhere, includeParam</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="relateMany" id="relateMany"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">relateMany</span> (line <span class="line-number">1754</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Combine relational search results (combine multiple relates).</p>
+<p class="description"><p>Example:  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methoddb">db</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="Tea-db/TeaSqlMagic.html#methodrelateMany">relateMany</a><span class="src-sym">(</span><span class="src-str">'Food'</span><span class="src-sym">,</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'Recipe'</span><span class="src-sym">,</span><span class="src-str">'Article'</span><span class="src-sym">,</span><span class="src-str">'FoodType'</span><span class="src-sym">))</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> A list of model objects of the queried result</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			relateMany
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$rmodel</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$model</span><span class="var-description">: The model class name or object to be select.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$rmodel</span><span class="var-description">: The related models class names.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Array of options for each related model to generate the SELECT statement. Supported: <em>where, limit, select, param, joinType, match, asc, desc, custom, asArray, include, includeWhere, includeParam</em></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="rollBack" id="rollBack"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">rollBack</span> (line <span class="line-number">230</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Rolls back a transaction. Transactions can be nestable.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			rollBack
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="setDb" id="setDb"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setDb</span> (line <span class="line-number">100</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the database configuration</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setDb
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$dbconfig</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$default_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$dbconfig</span><span class="var-description">: Associative array of the configurations</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$default_name</span><span class="var-description">: Default configuration to be used</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="setMap" id="setMap"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setMap</span> (line <span class="line-number">117</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the database relationship mapping</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setMap
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$dbmap</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$dbmap</span><span class="var-description">: Database relationship mapping</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="showSQL" id="showSQL"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">showSQL</span> (line <span class="line-number">355</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve a list of executed SQL queries</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			showSQL
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="show_sql" id="show_sql"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">show_sql</span> (line <span class="line-number">347</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use showSQL() instead.</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> deprecated since version 1.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			show_sql
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="update" id="update"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">update</span> (line <span class="line-number">2074</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update an existing record. (Prepares and execute the UPDATE statements)</p>
+<p class="description"><p>If you want to set null values during the update use the setnulls option</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Number of rows affected</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			update
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be updated.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Associative array of options to generate the UPDATE statement. Supported:</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="update_attributes" id="update_attributes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">update_attributes</span> (line <span class="line-number">2141</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update an existing record with a list of keys &amp; values (assoc array). (Prepares and execute the UPDATE statements)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Number of rows affected</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			update_attributes
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$model</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$opt</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$model</span><span class="var-description">: The model object to be updated.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$opt</span><span class="var-description">: Associative array of options to generate the UPDATE statement. Supported: <em>where, limit, field, param</em></span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="JOIN" id="JOIN"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">JOIN</span>
+			 = <span class="const-default"> ''</span>
+			(line <span class="line-number">73</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="JOIN_INNER" id="JOIN_INNER"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">JOIN_INNER</span>
+			 = <span class="const-default"> 'INNER'</span>
+			(line <span class="line-number">72</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="JOIN_LEFT" id="JOIN_LEFT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">JOIN_LEFT</span>
+			 = <span class="const-default"> 'LEFT'</span>
+			(line <span class="line-number">68</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="JOIN_LEFT_OUTER" id="JOIN_LEFT_OUTER"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">JOIN_LEFT_OUTER</span>
+			 = <span class="const-default"> 'LEFT OUTER'</span>
+			(line <span class="line-number">70</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="JOIN_RIGHT" id="JOIN_RIGHT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">JOIN_RIGHT</span>
+			 = <span class="const-default"> 'RIGHT'</span>
+			(line <span class="line-number">69</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="JOIN_RIGHT_OUTER" id="JOIN_RIGHT_OUTER"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">JOIN_RIGHT_OUTER</span>
+			 = <span class="const-default"> 'RIGHT OUTER'</span>
+			(line <span class="line-number">71</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:59 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

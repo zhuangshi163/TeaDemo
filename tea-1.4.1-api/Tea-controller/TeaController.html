@@ -1,0 +1,1368 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaController</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> TeaController</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Base class of all controller</p>
+<p class="description"><p>Provides a few shorthand methods to access commonly used component during development. e.g. TeaLoader, TeaLog, TeaSqlMagic.</p><p>Parameter lists and extension type defined in routes configuration can be accessed through <strong>$this-&gt;params</strong> and <strong>$this-&gt;extension</strong></p><p>If a client sends PUT request to your controller, you can retrieve the values sent through <strong>$this-&gt;puts</strong></p><p>GET and POST variables can still be accessed via php $_GET and $_POST. They are not handled/process by Tea framework.</p><p>Auto routing can be denied from a Controller by setting <strong>$autoroute = false</strong></p><p>Therefore, the following class properties &amp; methods is reserved and should not be used in your Controller class. <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$params</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$puts</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$extension</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$autoroute</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$vdata</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$renderMethod</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodinit_put_vars">init_put_vars</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodload">load</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodlanguage">language</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodaccept_type">accept_type</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodrender">render</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodrenderc">renderc</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodsetContentType">setContentType</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodis_SSL">is_SSL</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodview">view</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methoddb">db</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodcache">cache</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodacl">acl</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodbeforeRun">beforeRun</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodisAjax">isAjax</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id">renderLayout</span><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodclientIP">clientIP</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodsaveRendered">saveRendered</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodsaveRenderedC">saveRenderedC</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodtoXML">toXML</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodtoJSON">toJSON</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodviewRenderAutomation">viewRenderAutomation</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodgetKeyParam">getKeyParam</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;<a href="Tea-controller/TeaController.html#methodafterRun">afterRun</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+</ol></div>
+ You still have a lot of freedom to name your methods and properties other than names mentioned.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Leng Sheng Hong &lt;<a href="mailto:darkredz@gmail.com">darkredz@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id: TeaController.php 1000 2009-07-7 18:27:22</li>
+				<li><span class="field">since:</span> 1.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-controller/_controller---TeaController.php.html">/controller/TeaController.php</a> (line <span class="field">64</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																								<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$autorender" title="details" class="var-name">$autorender</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$autoroute" title="details" class="var-name">$autoroute</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$extension" title="details" class="var-name">$extension</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$params" title="details" class="var-name">$params</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$puts" title="details" class="var-name">$puts</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$renderMethod" title="details" class="var-name">$renderMethod</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$vdata" title="details" class="var-name">$vdata</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$_load" title="details" class="var-name">$_load</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$_view" title="details" class="var-name">$_view</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#acceptType" title="details" class="method-name">acceptType</a>
+										()
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#accept_type" title="details" class="method-name">accept_type</a>
+										()
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#acl" title="details" class="method-name">acl</a>
+										()
+																<span class="method-result"><a href="Tea-auth/TeaAcl.html">TeaAcl</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#afterRun" title="details" class="method-name">afterRun</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$routeResult</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#beforeRun" title="details" class="method-name">beforeRun</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$resource</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$action</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#cache" title="details" class="method-name">cache</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$cacheType</span> = <span class="var-default">'file'</span>])
+																<span class="method-result"><a href="Tea-cache/TeaFileCache.html">TeaFileCache</a>|<a href="Tea-cache/TeaFrontCache.html">TeaFrontCache</a>|<a href="Tea-cache/TeaApcCache.html">TeaApcCache</a>|<a href="Tea-cache/TeaMemCache.html">TeaMemCache</a>|<a href="Tea-cache/TeaXCache.html">TeaXCache</a>|<a href="Tea-cache/TeaEAcceleratorCache.html">TeaEAcceleratorCache</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#clientIP" title="details" class="method-name">clientIP</a>
+										()
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#db" title="details" class="method-name">db</a>
+										()
+																<span class="method-result"><a href="Tea-db/TeaSqlMagic.html">TeaSqlMagic</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getKeyParam" title="details" class="method-name">getKeyParam</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#initPutVars" title="details" class="method-name">initPutVars</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#init_put_vars" title="details" class="method-name">init_put_vars</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#isAjax" title="details" class="method-name">isAjax</a>
+										()
+																<span class="method-result">bool</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#isSSL" title="details" class="method-name">isSSL</a>
+										()
+																<span class="method-result">bool</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#is_SSL" title="details" class="method-name">is_SSL</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#language" title="details" class="method-name">language</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$countryCode</span> = <span class="var-default">FALSE</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#load" title="details" class="method-name">load</a>
+										()
+																<span class="method-result"><a href="Tea-uri/TeaLoader.html">TeaLoader</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#render" title="details" class="method-name">render</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">NULL</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$process</span> = <span class="var-default">NULL</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$forceCompile</span> = <span class="var-default">false</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#renderc" title="details" class="method-name">renderc</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">NULL</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$enableControllerAccess</span> = <span class="var-default">False</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$includeTagClass</span> = <span class="var-default">True</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#saveRendered" title="details" class="method-name">saveRendered</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$templatefile</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">string|false</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#saveRenderedC" title="details" class="method-name">saveRenderedC</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$templatefile</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">NULL</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$enableControllerAccess</span> = <span class="var-default">False</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$includeTagClass</span> = <span class="var-default">True</span>])
+																<span class="method-result">string|false</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#setContentType" title="details" class="method-name">setContentType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$charset</span> = <span class="var-default">'utf-8'</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#toJSON" title="details" class="method-name">toJSON</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$result</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$output</span> = <span class="var-default">false</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$removeNullField</span> = <span class="var-default">false</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$exceptField</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$mustRemoveFieldList</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$setJSONContentType</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">'utf-8'</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#toXML" title="details" class="method-name">toXML</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$result</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$output</span> = <span class="var-default">false</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$setXMLContentType</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">'utf-8'</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#view" title="details" class="method-name">view</a>
+										()
+																<span class="method-result"><a href="Tea-view/TeaView.html">TeaView</a>|<a href="Tea-view/TeaViewBasic.html">TeaViewBasic</a></span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#viewRenderAutomation" title="details" class="method-name">viewRenderAutomation</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#__call" title="details" class="method-name">__call</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$arguments</span>)
+																<span class="method-result">void</span>
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="$autorender" id="$autorender"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$autorender</span>
+			 = <span class="var-default"> FALSE</span>			(line <span class="line-number">99</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Enable auto render of view at the end of a controller -&gt; method request</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$autoroute" id="$autoroute"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$autoroute</span>
+			 = <span class="var-default"> TRUE</span>			(line <span class="line-number">87</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Deny or allow auto routing access to a Controller. By default auto routes are allowed in a controller.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$extension" id="$extension"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$extension</span>
+						(line <span class="line-number">81</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Extension name (.html, .json, .xml ,...) found in the URI. Routes can be specified with a string or an array as matching extensions</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$params" id="$params"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$params</span>
+						(line <span class="line-number">69</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Associative array of the parameter list found matched in a URI route.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$puts" id="$puts"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$puts</span>
+						(line <span class="line-number">75</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Associative array of the PUT values sent by client.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$renderMethod" id="$renderMethod"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$renderMethod</span>
+			 = <span class="var-default"> 'renderc'</span>			(line <span class="line-number">105</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Render method for auto render. You can use 'renderc' &amp; 'render' or your own method in the controller.</p>
+	<ul class="tags">
+				<li><span class="field">var:</span> Default is renderc</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$vdata" id="$vdata"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$vdata</span>
+						(line <span class="line-number">93</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Data to be pass from controller to view to be rendered</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$_load" id="$_load"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_load</span>
+						(line <span class="line-number">107</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$_view" id="$_view"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_view</span>
+						(line <span class="line-number">108</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="acceptType" id="acceptType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">acceptType</span> (line <span class="line-number">268</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the client specified accept type from the header sent</p>
+<p class="description"><p>Instead of appending a extension name like '.json' to a URL,  clients can use 'Accept: application/json' for RESTful APIs.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Client accept type</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			acceptType
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="accept_type" id="accept_type"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">accept_type</span> (line <span class="line-number">257</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use acceptType() instead</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Client accept type</li>
+				<li><span class="field">deprecated:</span> deprecated since version 1.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			accept_type
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="acl" id="acl"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">acl</span> (line <span class="line-number">150</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the Acl singleton, shorthand to Tea::acl()</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-auth/TeaAcl.html">TeaAcl</a></span>
+		<span class="method-name">
+			acl
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="afterRun" id="afterRun"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">afterRun</span> (line <span class="line-number">379</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This will be called if the action method returns null or success status(200 to 299 not including 204) after the actual action is executed</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			afterRun
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$routeResult</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$routeResult</span><span class="var-description">: The result returned by an action</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="beforeRun" id="beforeRun"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">beforeRun</span> (line <span class="line-number">157</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This will be called before the actual action is executed</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			beforeRun
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$resource</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$action</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$resource</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$action</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="cache" id="cache"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">cache</span> (line <span class="line-number">163</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the cache singleton, shorthand to Tea::cache()</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-cache/TeaFileCache.html">TeaFileCache</a>|<a href="Tea-cache/TeaFrontCache.html">TeaFrontCache</a>|<a href="Tea-cache/TeaApcCache.html">TeaApcCache</a>|<a href="Tea-cache/TeaMemCache.html">TeaMemCache</a>|<a href="Tea-cache/TeaXCache.html">TeaXCache</a>|<a href="Tea-cache/TeaEAcceleratorCache.html">TeaEAcceleratorCache</a></span>
+		<span class="method-name">
+			cache
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$cacheType</span> = <span class="var-default">'file'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$cacheType</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="clientIP" id="clientIP"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">clientIP</span> (line <span class="line-number">363</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get client's IP</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			clientIP
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="db" id="db"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">db</span> (line <span class="line-number">142</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the database singleton, shorthand to Tea::db()</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-db/TeaSqlMagic.html">TeaSqlMagic</a></span>
+		<span class="method-name">
+			db
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="getKeyParam" id="getKeyParam"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getKeyParam</span> (line <span class="line-number">396</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve value of a key from URI accessed from an auto route.</p>
+<p class="description"><p>Example with a controller named UserController and a method named listAll():  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-comm">//URI&nbsp;is&nbsp;http://localhost/user/list-all/id/11</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="Tea-controller/TeaController.html#methodgetKeyParam">getKeyParam</a><span class="src-sym">(</span><span class="src-str">'id'</span><span class="src-sym">)</span><span class="src-sym">;&nbsp;&nbsp;&nbsp;</span><span class="src-comm">//returns&nbsp;11</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getKeyParam
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="initPutVars" id="initPutVars"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">initPutVars</span> (line <span class="line-number">121</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set PUT request variables in a controller. This method is to be used by the main web app class.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			initPutVars
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="init_put_vars" id="init_put_vars"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">init_put_vars</span> (line <span class="line-number">114</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use initPutVars() instead</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> deprecated since version 1.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			init_put_vars
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="isAjax" id="isAjax"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">isAjax</span> (line <span class="line-number">424</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check if the request is an AJAX request usually sent with JS library such as JQuery/YUI/MooTools</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			isAjax
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="isSSL" id="isSSL"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">isSSL</span> (line <span class="line-number">432</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check if the connection is a SSL connection</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> determined if it is a SSL connection</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			isSSL
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="is_SSL" id="is_SSL"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">is_SSL</span> (line <span class="line-number">455</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use isSSL() instead</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> deprecated since version 1.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			is_SSL
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="language" id="language"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">language</span> (line <span class="line-number">243</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the client accept language from the header</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The language code. eg. <strong>en</strong> or <strong>en-US</strong></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			language
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$countryCode</span> = <span class="var-default">FALSE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$countryCode</span><span class="var-description">: to return the language code along with country code</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="load" id="load"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">load</span> (line <span class="line-number">129</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The loader singleton, auto create if the singleton has not been created yet.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-uri/TeaLoader.html">TeaLoader</a></span>
+		<span class="method-name">
+			load
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="render" id="render"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">render</span> (line <span class="line-number">217</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Short hand for $this-&gt;view()-&gt;render() Renders the view file.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			render
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">NULL</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$process</span> = <span class="var-default">NULL</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$forceCompile</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: Template file name (without extension name)</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: Associative array of the data to be used in the Template file. eg. <strong>$data['username']</strong>, you should use <strong>{{username}}</strong> in the template.</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$process</span><span class="var-description">: If TRUE, checks the template's last modified time against the compiled version. Regenerates if template is newer.</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$forceCompile</span><span class="var-description">: Ignores last modified time checking and force compile the template everytime it is visited.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="renderc" id="renderc"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">renderc</span> (line <span class="line-number">229</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Short hand for $this-&gt;view()-&gt;renderc() Renders the view file(php) located in viewc.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			renderc
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">NULL</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$enableControllerAccess</span> = <span class="var-default">False</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$includeTagClass</span> = <span class="var-default">True</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: Template file name (without extension name)</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: Associative array of the data to be used in the php template.</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$enableControllerAccess</span><span class="var-description">: Enable the view scripts to access the controller property and methods.</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$includeTagClass</span><span class="var-description">: If true, TeaView will determine which Template tag class to include. Else, no files will be loaded</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="saveRendered" id="saveRendered"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">saveRendered</span> (line <span class="line-number">174</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Writes the generated output produced by render() to file.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The file name of the rendered output saved (html).</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string|false</span>
+		<span class="method-name">
+			saveRendered
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$templatefile</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: Path to save the generated output.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$templatefile</span><span class="var-description">: Template file name (without extension name)</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: Associative array of the data to be used in the Template file. eg. <strong>$data['username']</strong>, you should use <strong>{{username}}</strong> in the template.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="saveRenderedC" id="saveRenderedC"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">saveRenderedC</span> (line <span class="line-number">187</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Writes the generated output produced by renderc() to file.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The file name of the rendered output saved (html).</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string|false</span>
+		<span class="method-name">
+			saveRenderedC
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$templatefile</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">NULL</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$enableControllerAccess</span> = <span class="var-default">False</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$includeTagClass</span> = <span class="var-default">True</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: Path to save the generated output.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$templatefile</span><span class="var-description">: Template file name (without extension name)</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: Associative array of the data to be used in the Template file. eg. <strong>$data['username']</strong>, you should use <strong>{{username}}</strong> in the template.</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$enableControllerAccess</span><span class="var-description">: Enable the view scripts to access the controller property and methods.</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$includeTagClass</span><span class="var-description">: If true, TeaView will determine which Template tag class to include. Else, no files will be loaded</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="setContentType" id="setContentType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setContentType</span> (line <span class="line-number">337</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sent a content type header</p>
+<p class="description"><p>This can be used with your REST api if you allow clients to retrieve result format  by sending a <strong>Accept type header</strong> in their requests. Alternatively, extension names can be  used at the end of an URI such as <strong>.json</strong> and <strong>.xml</strong></p><p>NOTE: This method should be used before echoing out your results.  Use accept_type() or $extension to determined the desirable format the client wanted to accept.</p><p></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setContentType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$charset</span> = <span class="var-default">'utf-8'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Content type of the result. eg. text, xml, json, rss, atom</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$charset</span><span class="var-description">: Charset of the result content. Default utf-8.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="toJSON" id="toJSON"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">toJSON</span> (line <span class="line-number">543</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert DB result into JSON string for RESTful api.</p>
+<p class="description"><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><span class="src-id">listUser</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$user&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id">User</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$rs&nbsp;</span>=&nbsp;<span class="src-var">$user</span><span class="src-sym">-&gt;</span><span class="src-id">find</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="Tea-controller/TeaController.html#methodtoJSON">toJSON</a><span class="src-sym">(</span><span class="src-var">$rs</span><span class="src-sym">,&nbsp;</span><span class="src-id">true</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-sym">}</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> JSON string</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			toJSON
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$result</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$output</span> = <span class="var-default">false</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$removeNullField</span> = <span class="var-default">false</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$exceptField</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$mustRemoveFieldList</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$setJSONContentType</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">'utf-8'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$result</span><span class="var-description">: Result of a DB query. eg. $user-&gt;find();</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$output</span><span class="var-description">: Output the result automatically.</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$removeNullField</span><span class="var-description">: Remove fields with null value from JSON string.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$exceptField</span><span class="var-description">: Remove fields that are null except the ones in this list.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$mustRemoveFieldList</span><span class="var-description">: Remove fields in this list.</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$setJSONContentType</span><span class="var-description">: Set content type.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$encoding</span><span class="var-description">: Encoding of the result content. Default utf-8.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="toXML" id="toXML"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">toXML</span> (line <span class="line-number">474</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert DB result into XML string for RESTful api.</p>
+<p class="description"><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><span class="src-id">listUser</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$user&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id">User</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$rs&nbsp;</span>=&nbsp;<span class="src-var">$user</span><span class="src-sym">-&gt;</span><span class="src-id">find</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="Tea-controller/TeaController.html#methodtoXML">toXML</a><span class="src-sym">(</span><span class="src-var">$rs</span><span class="src-sym">,&nbsp;</span><span class="src-id">true</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-sym">}</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> XML string</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			toXML
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$result</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$output</span> = <span class="var-default">false</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$setXMLContentType</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">'utf-8'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$result</span><span class="var-description">: Result of a DB query. eg. $user-&gt;find();</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$output</span><span class="var-description">: Output the result automatically.</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$setXMLContentType</span><span class="var-description">: Set content type.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$encoding</span><span class="var-description">: Encoding of the result content. Default utf-8.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="view" id="view"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">view</span> (line <span class="line-number">199</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The view singleton, auto create if the singleton has not been created yet.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="Tea-view/TeaView.html">TeaView</a>|<a href="Tea-view/TeaViewBasic.html">TeaViewBasic</a></span>
+		<span class="method-name">
+			view
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="viewRenderAutomation" id="viewRenderAutomation"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">viewRenderAutomation</span> (line <span class="line-number">407</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Controls the automated view rendering process.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			viewRenderAutomation
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="__call" id="__call"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">__call</span> (line <span class="line-number">629</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__call
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$arguments</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$arguments</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:53 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

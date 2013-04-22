@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaUriRouter</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> TeaUriRouter</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">TeaUriRouter parse the server request URI</p>
+<p class="description"><p>The uri router parse the URI and returns the matching controller, action and parameters as defined in the routes configuration.  Auto routing is also handled if <strong>AUTOROUTE</strong> is on. A controller can disable autorouting request by writing the  <div class="src-code"><ol><li><div class="src-line"><span class="src-key">public&nbsp;</span><span class="src-var">$autoroute&nbsp;</span>=&nbsp;<span class="src-id">false</span><span class="src-sym">;</span></div></li>
+</ol></div></p><p>The Uri Router is tested and should work in most modern web servers such as <strong>Apache</strong> and <strong>Cherokee</strong>  in both mod_php or FastCGI mode. Please refer to http://Teaphp.com/tutorial/setup to see how to used Teaphp with Cherokee web server</p><p>HTTP digest authentication can be used with the URI router.  HTTP digest is much more recommended over the use of HTTP Basic auth which doesn't provide any encryption.  If you are running PHP on Apache in CGI/FastCGI mode, you would need to  add the following line to your .htaccess for digest auth to work correctly.</p><p><div class="src-code"><ol><li><div class="src-line"><span class="src-id">RewriteRule&nbsp;</span>.*&nbsp;-&nbsp;<span class="src-sym">[</span><span class="src-id">E</span>=<span class="src-id">HTTP_AUTHORIZATION</span>:%<span class="src-sym">{</span><span class="src-id">HTTP</span>:<span class="src-id">Authorization</span><span class="src-sym">}</span><span class="src-sym">,</span><span class="src-id">L</span><span class="src-sym">]</span></div></li>
+</ol></div>
+ Almost identical routes can be parsed by setting the matching URI pattern for each of the identical routes.</p><p>URI ends with an extension name such as .html .php .aspx will also be parsed by setting a extension value in the route definitions. eg.  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-comm">//static&nbsp;route,&nbsp;just&nbsp;add&nbsp;a&nbsp;.html</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/products/promotion.html'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'ProductController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'promo'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//dynamic&nbsp;route,&nbsp;add&nbsp;'extension'=&gt;'.html'</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/products/promotion/:month'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'ProductController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'promo'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'extension'</span>=&gt;<span class="src-str">'.html'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p><p><strong>RESTful API</strong>s are supported natively. You can mocked up <strong>RESTful API</strong>s easily with TeaUriRouter.  Just defined the routes to be accessed through the specified request method and handles them in different  controller or action method. eg. GET/POST/PUT/DELETE/etc.  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/news/:id'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="src-comm">#can&nbsp;be&nbsp;accessed&nbsp;through&nbsp;any&nbsp;method</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'get'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/news/:id'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;</span><span class="src-comm">#only&nbsp;accessed&nbsp;through&nbsp;GET</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'post'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/news/:id'</span><span class="src-sym">]&nbsp;&nbsp;</span><span class="src-comm">#only&nbsp;accessed&nbsp;through&nbsp;POST</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'delete'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/news/:id'</span><span class="src-sym">]</span><span class="src-comm">#only&nbsp;accessed&nbsp;through&nbsp;DELETE</span></div></li>
+</ol></div></p><p>Routes can be redirect either to an external URL or an internal route.  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-comm">//internal&nbsp;redirect</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/some/route2'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/some/route1'</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//-----&nbsp;external&nbsp;redirect&nbsp;-----</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/google/go'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'redirect'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'http://localhost/index.html'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//sends&nbsp;a&nbsp;301&nbsp;Moved&nbsp;Permenantly&nbsp;header</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/google/go2'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'redirect'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'http://localhost/index.html'</span><span class="src-sym">,&nbsp;</span><span class="src-num">301</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//redirect&nbsp;to&nbsp;a&nbsp;file&nbsp;called&nbsp;error.html&nbsp;on&nbsp;the&nbsp;same&nbsp;domain.</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/some/error'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'redirect'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'/error.html'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p><p>Defining HTTP authentication  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-comm">//authFail&nbsp;can&nbsp;also&nbsp;be&nbsp;a&nbsp;URL&nbsp;for&nbsp;redirection</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/admin'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'AdminController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'index'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'authName'</span>=&gt;<span class="src-str">'My&nbsp;ABC'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'auth'</span>=&gt;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'admin'</span>=&gt;<span class="src-str">'1234'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'moderator'</span>=&gt;<span class="src-str">'123456'</span><span class="src-sym">)</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'authFail'</span>=&gt;<span class="src-str">'login&nbsp;first&nbsp;to&nbsp;view!'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p><p>If you have your controller file name different from its class name, eg. home.php HomeController  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'home'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'index'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'className'</span>=&gt;<span class="src-str">'HomeController'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p><p>If you need to reverse generate URL based on route ID with TeaUrlBuilder in template view, please defined the id along with the routes  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'HomeController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'index'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'id'</span>=&gt;<span class="src-str">'home'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p><p>If you need dynamic routes on root domain, such as http://facebook.com/username  Use the key 'root':  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'root'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/:username'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'UserController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'showProfile'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p><p>If you need to catch unlimited parameters at the end of the url, eg. http://localhost/paramA/paramB/param1/param2/param.../.../..  Use the key 'catchall':  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'catchall'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/:first'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'TestController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'showAllParams'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p><p>If you have placed your controllers in a sub folder, eg. /protected/admin/EditStuffController.php  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'admin/EditStuffController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'action'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p><p>If you want a module to be publicly accessed (without using Tea::app()-&gt;getModule() ) , use [module name] ,   eg. /protected/module/forum/PostController.php  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'[forum]PostController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'action'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p><p>If you create subfolders in a module,  eg. /protected/module/forum/post/ListController.php, the module here is forum, subfolder is post  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'[forum]post/PostController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'action'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p><p>Aliasing give you an option to access the action method/controller through a different URL. This is useful when you need a different url than the controller class name.  For instance, you have a ClientController::new() . By default, you can access via http://localhost/client/new  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'autoroute_alias'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/customer'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">'ClientController'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'autoroute_alias'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/company/client'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">'ClientController'</span><span class="src-sym">;</span></div></li>
+</ol></div>   With the definition above, it allows user to access the same controller::method with the following URLs:  http://localhost/company/client/new   To define alias for a Controller inside a module, you may use an array:  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'autoroute_alias'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/customer'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'controller'</span>=&gt;<span class="src-str">'ClientController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'module'</span>=&gt;<span class="src-str">'example'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'autoroute_alias'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/company/client'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'controller'</span>=&gt;<span class="src-str">'ClientController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'module'</span>=&gt;<span class="src-str">'example'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p><p>Auto routes can be accessed via URL: http://domain.com/controller/method  If you have a camel case method listAllUser(), it can be accessed via http://domain.com/controller/listAllUser or http://domain.com/controller/list-all-user  In any case you want to control auto route to be accessed via dashed URL (list-all-user)  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'autoroute_force_dash'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-id">true</span><span class="src-sym">;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="src-comm">//setting&nbsp;this&nbsp;to&nbsp;false&nbsp;or&nbsp;not&nbsp;defining&nbsp;it&nbsp;will&nbsp;keep&nbsp;routes&nbsp;accessible&nbsp;with&nbsp;the&nbsp;2&nbsp;URLs.</span></div></li>
+</ol></div></p><p>If you do not want case sensitive routing you can force all routes to lowercase. Note this will also result in  All parmeters being converted to lowercase as well.  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'force_lowercase'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-id">true</span><span class="src-sym">;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="src-comm">//&nbsp;Setting&nbsp;this&nbsp;to&nbsp;false&nbsp;or&nbsp;not&nbsp;defining&nbsp;it&nbsp;will&nbsp;keep&nbsp;routes&nbsp;case&nbsp;sensetive.</span></div></li>
+</ol></div></p><p>See http://Teaphp.com/doc/guide/uri-routing for information in configuring Routes</p><p></p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Leng Sheng Hong &lt;<a href="mailto:darkredz@gmail.com">darkredz@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id: Tea.php 1000 2009-07-7 18:27:22</li>
+				<li><span class="field">since:</span> 1.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea/_deployment---deploy.php.html">/deployment/deploy.php</a> (line <span class="field">1441</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																												<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#redirect" title="details" class="method-name">redirect</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$location</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$exit</span> = <span class="var-default">true</span>], [<span class="var-type">code</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">302</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$headerBefore</span> = <span class="var-default">NULL</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$headerAfter</span> = <span class="var-default">NULL</span>])
+																<span class="method-result">void</span>
+									</div>
+																				<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#auto_connect" title="details" class="method-name">auto_connect</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$subfolder</span> = <span class="var-default">'/'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$autoroute_alias</span> = <span class="var-default">null</span>])
+																<span class="method-result">array</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#execute" title="details" class="method-name">execute</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$routeArr</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$subfolder</span> = <span class="var-default">'/'</span>])
+																<span class="method-result">array</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#parse_params" title="details" class="method-name">parse_params</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$req_route</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$defined_route</span>)
+																<span class="method-result">array</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#parse_params_catch" title="details" class="method-name">parse_params_catch</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$req_route</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$defined_route</span>)
+																<span class="method-result">array</span>
+									</div>
+																			</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+													<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="redirect" id="redirect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static redirect</span> (line <span class="line-number">1494</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Redirect to an external URL with HTTP 302 header sent by default</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			redirect
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$location</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$exit</span> = <span class="var-default">true</span>], [<span class="var-type">code</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">302</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$headerBefore</span> = <span class="var-default">NULL</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$headerAfter</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$location</span><span class="var-description">: URL of the redirect location</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$exit</span><span class="var-description">: to end the application</span>			</li>
+					<li>
+				<span class="var-type">code</span>
+				<span class="var-name">$code</span><span class="var-description">: HTTP status code to be sent with the header</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$headerBefore</span><span class="var-description">: Headers to be sent before header(&quot;Location: some_url_address&quot;);</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$headerAfter</span><span class="var-description">: Headers to be sent after header(&quot;Location: some_url_address&quot;);</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="auto_connect" id="auto_connect"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">auto_connect</span> (line <span class="line-number">1868</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Handles auto routing.</p>
+<p class="description"><p>If AUTOROUTE is on, you can access a controller action method by  accessing the URL http://localhost/controllername/methodname</p><p>If your controller class has a Camel Case naming convention for the class name,  access it through http://localhost/camel-case/method for a class name CamelCaseController</p><p>If no method is specified in the URL, <em>index()</em> will be executed by default if available.  If no matching controller/method is found, a 404 status will be sent in the header.</p><p>The returned parameter list is access through an indexed array ( $param[0], $param[1], $param[2] ) instead of a assoc array in the Controller class.</p><p></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> returns an array consist of the Controller class, action method and parameters of the route</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			auto_connect
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$subfolder</span> = <span class="var-default">'/'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$autoroute_alias</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$subfolder</span><span class="var-description">: Relative path of the sub directory where the app is located. eg. http://localhost/Teaphp, the value should be '/Teaphp/'</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$autoroute_alias</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="execute" id="execute"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">execute</span> (line <span class="line-number">1457</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Main function to be called in order to parse the requested URI.</p>
+<p class="description"><p>The returned parameter list can be accessed as an assoc array.</p><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-comm">#Defined&nbsp;in&nbsp;routes.conf.php</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$route</span><span class="src-sym">[</span><span class="src-str">'*'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'/news/:year/:month'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'NewsController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'show_news_by_year'</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> returns an array consist of the Controller class, action method and parameters of the route</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			execute
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$routeArr</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$subfolder</span> = <span class="var-default">'/'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$routeArr</span><span class="var-description">: Routes defined in <em>routes.conf.php</em></span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$subfolder</span><span class="var-description">: Relative path of the sub directory where the app is located. eg. http://localhost/Teaphp, the value should be '/Teaphp/'</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="parse_params" id="parse_params"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">parse_params</span> (line <span class="line-number">2042</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the parameter list found in the URI which matched a user defined route</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of parameters found in the requested URI</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			parse_params
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$req_route</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$defined_route</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$req_route</span><span class="var-description">: The requested route</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$defined_route</span><span class="var-description">: Route defined by the user</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="parse_params_catch" id="parse_params_catch"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">parse_params_catch</span> (line <span class="line-number">2064</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the parameter list found in the URI (unlimited)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of parameters found in the requested URI</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			parse_params_catch
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$req_route</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$defined_route</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$req_route</span><span class="var-description">: The requested route</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$defined_route</span><span class="var-description">: Route defined by the user</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:51 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

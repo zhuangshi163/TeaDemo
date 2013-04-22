@@ -1,0 +1,1743 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaManageDb</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> TeaManageDb</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An abstract Database manager for specific RDBMS adapters.</p>
+<p class="description"><p>For each specific engine being supported the following functions and properties must be overriden</p><p>{{code: php  	protected $colTypeMapping;  	protected $identiferQuotePrefix;  	protected $identiferQuoteSuffix;  	abstract columnDefineAutoincPrimary(&amp;$columnDefinition, $autoinc, $primary);  }}</p></p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-db/_db---manage---TeaManageDb.php.html">/db/manage/TeaManageDb.php</a> (line <span class="field">28</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="Tea-db-manage-adapters/TeaManageMySqlDb.html">TeaManageMySqlDb</a>
+					</td>
+					<td>
+											TeaManageMySqlDb class file.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="Tea-db-manage-adapters/TeaManagePgSqlDb.html">TeaManagePgSqlDb</a>
+					</td>
+					<td>
+											TeaManagePgSqlDb class file.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="Tea-db-manage-adapters/TeaManageSqliteDb.html">TeaManageSqliteDb</a>
+					</td>
+					<td>
+											TeaManageSqliteDb class file.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#COL_TYPE_BIGINT" title="details" class="const-name">COL_TYPE_BIGINT</a> = 					<span class="var-type"> 'bigint'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#COL_TYPE_BOOL" title="details" class="const-name">COL_TYPE_BOOL</a> = 					<span class="var-type"> 'bool'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#COL_TYPE_CHAR" title="details" class="const-name">COL_TYPE_CHAR</a> = 					<span class="var-type"> 'char'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#COL_TYPE_CLOB" title="details" class="const-name">COL_TYPE_CLOB</a> = 					<span class="var-type"> 'clob'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#COL_TYPE_DATE" title="details" class="const-name">COL_TYPE_DATE</a> = 					<span class="var-type"> 'date'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#COL_TYPE_DECIMAL" title="details" class="const-name">COL_TYPE_DECIMAL</a> = 					<span class="var-type"> 'decimal'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#COL_TYPE_FLOAT" title="details" class="const-name">COL_TYPE_FLOAT</a> = 					<span class="var-type"> 'float'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#COL_TYPE_INT" title="details" class="const-name">COL_TYPE_INT</a> = 					<span class="var-type"> 'int'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#COL_TYPE_SMALLINT" title="details" class="const-name">COL_TYPE_SMALLINT</a> = 					<span class="var-type"> 'smallint'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#COL_TYPE_TIME" title="details" class="const-name">COL_TYPE_TIME</a> = 					<span class="var-type"> 'time'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#COL_TYPE_TIMESTAMP" title="details" class="const-name">COL_TYPE_TIMESTAMP</a> = 					<span class="var-type"> 'timestamp'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#COL_TYPE_VARCHAR" title="details" class="const-name">COL_TYPE_VARCHAR</a> = 					<span class="var-type"> 'varchar'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																								<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$colTypeMapping" title="details" class="var-name">$colTypeMapping</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$connected" title="details" class="var-name">$connected</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$dbconfig" title="details" class="var-name">$dbconfig</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$identiferQuotePrefix" title="details" class="var-name">$identiferQuotePrefix</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$identiferQuoteSuffix" title="details" class="var-name">$identiferQuoteSuffix</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">object</span>
+					<a href="#$pdo" title="details" class="var-name">$pdo</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$sqlList" title="details" class="var-name">$sqlList</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																								<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#addColumn" title="details" class="method-name">addColumn</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">object</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$attributes</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#buildColumnDefinition" title="details" class="method-name">buildColumnDefinition</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$attributes</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#checkIdentifier" title="details" class="method-name">checkIdentifier</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+																<span class="method-result">bool</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/AbstractMethod.png" alt=" "/>
+					<a href="#columnDefineAutoincPrimary" title="details" class="method-name">columnDefineAutoincPrimary</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$columnDefinition</span>, <span class="var-type">bool</span>&nbsp;<span class="var-name">$autoinc</span>, <span class="var-type">bool</span>&nbsp;<span class="var-name">$primary</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$columnDefinition</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#connect" title="details" class="method-name">connect</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#createIndex" title="details" class="method-name">createIndex</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">bool</span>&nbsp;<span class="var-name">$unique</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$colNames</span> = <span class="var-default">null</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#createTable" title="details" class="method-name">createTable</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$cols</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+																<span class="method-result">bool</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#dropColumn" title="details" class="method-name">dropColumn</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">object</span>&nbsp;<span class="var-name">$column</span>)
+																<span class="method-result">bool</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#dropIndex" title="details" class="method-name">dropIndex</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+																<span class="method-result">mixed</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#dropTable" title="details" class="method-name">dropTable</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>)
+																<span class="method-result">bool</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#enableSqlHistory" title="details" class="method-name">enableSqlHistory</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$enable</span> = <span class="var-default">true</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getQueryCount" title="details" class="method-name">getQueryCount</a>
+										()
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#getSqlHistory" title="details" class="method-name">getSqlHistory</a>
+										()
+																<span class="method-result">array</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#modifyIndexName" title="details" class="method-name">modifyIndexName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#query" title="details" class="method-name">query</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$param</span>)
+																<span class="method-result">PDOStatement</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#quote" title="details" class="method-name">quote</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>], <span class="var-type">string|array</span>&nbsp;<span class="var-name">$string</span>)
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#quoteName" title="details" class="method-name">quoteName</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$name</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#resetSqlHistory" title="details" class="method-name">resetSqlHistory</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#setDb" title="details" class="method-name">setDb</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$dbconfig</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#tableExists" title="details" class="method-name">tableExists</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/AbstractMethod.png" alt=" "/>
+					<a href="#_dropIndex" title="details" class="method-name">_dropIndex</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#_sqlAddColumn" title="details" class="method-name">_sqlAddColumn</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$attributes</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#_sqlCreateTable" title="details" class="method-name">_sqlCreateTable</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$columnDefinitions</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>], <span class="var-type">array</span>&nbsp;<span class="var-name">$cols</span>)
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#_sqlDropColumn" title="details" class="method-name">_sqlDropColumn</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#_sqlDropTable" title="details" class="method-name">_sqlDropTable</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$table</span>)
+																<span class="method-result">void</span>
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="$colTypeMapping" id="$colTypeMapping"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$colTypeMapping</span>
+			 = <span class="var-default">array (<br />		TeaManageDb::COL_TYPE_BOOL		=&gt; null,<br />    	TeaManageDb::COL_TYPE_SMALLINT	=&gt; null,<br />    	TeaManageDb::COL_TYPE_INT		=&gt; null,<br />    	TeaManageDb::COL_TYPE_BIGINT	=&gt; null,<br />    	TeaManageDb::COL_TYPE_DECIMAL	=&gt; null,<br />    	TeaManageDb::COL_TYPE_FLOAT		=&gt; null,<br />    	TeaManageDb::COL_TYPE_CHAR		=&gt; null,<br />    	TeaManageDb::COL_TYPE_VARCHAR	=&gt; null,<br />    	TeaManageDb::COL_TYPE_CLOB		=&gt; null,<br />    	TeaManageDb::COL_TYPE_DATE		=&gt; null,<br />    	TeaManageDb::COL_TYPE_TIME		=&gt; null,<br />    	TeaManageDb::COL_TYPE_TIMESTAMP	=&gt; null,<br />	)</span>			(line <span class="line-number">72</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A mapping of Tea generic datatypes to RDBMS native datatypes for columns  These must be defined in each specific adapter</p>
+<p class="description"><p>The datatypes are  COL_TYPE_BOOL		: A true or false boolean  COL_TYPE_SMALLINT	: 2-byte integer (-32,767 to 32,768)  COL_TYPE_INT			: 4-byte integer (-2,147,483,648 to 2,147,483,647)  COL_TYPE_BIGINT		: 8-byte integer (about -9,000 trilllion to 9,000 trillion)  COL_TYPE_DECIMAL		: Fixed point decimal of specific size (total digits) and scope (num digits after decimal point)  COL_TYPE_FLOAT		: A double-percision floating point decimal number  COL_TYPE_CHAR		: A fixed length string of 1-255 characters  COL_TYPE_VARCHAR		: A variable length string of 1-255 characters  COL_TYPE_CLOB		: A large character object of up to about 2Gb  COL_TYPE_DATE		: an ISO 8601 date eg. 2009-09-27  COL_TYPE_TIME		: an ISO 8601 time eg. 18:38:49  COL_TYPE_TIMESTAMP	: an ISO 8601 timestamp without a timezone eg. 2009-09-27 18:38:49</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManageMySqlDb.html#var$colTypeMapping">TeaManageMySqlDb::$colTypeMapping</a>
+								: A mapping of TeaManageDb generic datatypes to RDBMS native datatypes for columns  These must be defined in each specific adapter
+							</li>
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManagePgSqlDb.html#var$colTypeMapping">TeaManagePgSqlDb::$colTypeMapping</a>
+								: A mapping of TeaManageDb generic datatypes to RDBMS native datatypes for columns  These must be defined in each specific adapter
+							</li>
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManageSqliteDb.html#var$colTypeMapping">TeaManageSqliteDb::$colTypeMapping</a>
+								: A mapping of TeaManageDb generic datatypes to RDBMS native datatypes for columns  These must be defined in each specific adapter
+							</li>
+				</ul>
+		
+
+</div>
+<a name="$connected" id="$connected"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$connected</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">50</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determined whether the database connection is made.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$dbconfig" id="$dbconfig"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$dbconfig</span>
+						(line <span class="line-number">111</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Database configuration to use</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$identiferQuotePrefix" id="$identiferQuotePrefix"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$identiferQuotePrefix</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">98</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The RDBMS specific quote character before an identifiers name</p>
+<p class="description"><p>This must be defined in each specific adapter</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManageMySqlDb.html#var$identiferQuotePrefix">TeaManageMySqlDb::$identiferQuotePrefix</a>
+							</li>
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManagePgSqlDb.html#var$identiferQuotePrefix">TeaManagePgSqlDb::$identiferQuotePrefix</a>
+							</li>
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManageSqliteDb.html#var$identiferQuotePrefix">TeaManageSqliteDb::$identiferQuotePrefix</a>
+							</li>
+				</ul>
+		
+
+</div>
+<a name="$identiferQuoteSuffix" id="$identiferQuoteSuffix"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$identiferQuoteSuffix</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">105</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The RDBMS specific quote character after an identifiers name</p>
+<p class="description"><p>This must be defined in each specific adapter</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManageMySqlDb.html#var$identiferQuoteSuffix">TeaManageMySqlDb::$identiferQuoteSuffix</a>
+							</li>
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManagePgSqlDb.html#var$identiferQuoteSuffix">TeaManagePgSqlDb::$identiferQuoteSuffix</a>
+							</li>
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManageSqliteDb.html#var$identiferQuoteSuffix">TeaManageSqliteDb::$identiferQuoteSuffix</a>
+							</li>
+				</ul>
+		
+
+</div>
+<a name="$pdo" id="$pdo"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">object</span>
+			<span class="var-name">$pdo</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">118</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A PDO Object for accessing the Database</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$sqlList" id="$sqlList"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$sqlList</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">91</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of all SQL commands run against db</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="addColumn" id="addColumn"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">addColumn</span> (line <span class="line-number">328</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a new column $name to $table with $attributes</p>
+<p class="description"><p>The $attributes should be formatted as...</p><p>{{code: php  	$attributes = array(  		'type'    =&gt; Tea_DB_COL_TYPE_*  		'size'    =&gt; (int) size limitation for char|varchar|numeric  		'scope'   =&gt; (int) decimal places for numeric  		'require' =&gt; (bool) is the value required ie. NOT NULL  		'default' =&gt; (mixed) default value for this column  		'autoinc' =&gt; (bool) is this value to be auto incremented?  		'primary' =&gt; (bool) is this a primary column?   );  }}</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addColumn
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">object</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$attributes</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$table</span><span class="var-description">: Name of the table the column is to be added to</span>			</li>
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the new column to add</span>			</li>
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$attributes</span><span class="var-description">: The column attributes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="buildColumnDefinition" id="buildColumnDefinition"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">buildColumnDefinition</span> (line <span class="line-number">363</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			buildColumnDefinition
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$attributes</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$attributes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="checkIdentifier" id="checkIdentifier"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">checkIdentifier</span> (line <span class="line-number">575</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if a database identifier is allowed</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if the identifier is allowed, false otherwise</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			checkIdentifier
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: the type of identified table|column</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: the identifier to be checked</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="columnDefineAutoincPrimary" id="columnDefineAutoincPrimary"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/AbstractMethod.png" />
+		<span class="method-title">columnDefineAutoincPrimary</span> (line <span class="line-number">523</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds SQL DB Engine specific auto increment and primary key clauses inplace to the column definition</p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			columnDefineAutoincPrimary
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$columnDefinition</span>, <span class="var-type">bool</span>&nbsp;<span class="var-name">$autoinc</span>, <span class="var-type">bool</span>&nbsp;<span class="var-name">$primary</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$columnDefinition</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$columnDefinition</span><span class="var-description">: Reference to the columnDefention to append to</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$autoinc</span><span class="var-description">: True if this column should be a primary key</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$primary</span><span class="var-description">: True if this column should be a primary key</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$columnDefinition</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManageMySqlDb.html#methodcolumnDefineAutoincPrimary">TeaManageMySqlDb::columnDefineAutoincPrimary()</a>
+								: Adds SQL DB Engine specific auto increment and primary key clauses inplace to the column definition
+							</li>
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManagePgSqlDb.html#methodcolumnDefineAutoincPrimary">TeaManagePgSqlDb::columnDefineAutoincPrimary()</a>
+								: Adds SQL DB Engine specific auto increment and primary key clauses inplace to the column definition
+							</li>
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManageSqliteDb.html#methodcolumnDefineAutoincPrimary">TeaManageSqliteDb::columnDefineAutoincPrimary()</a>
+								: Adds SQL DB Engine specific auto increment and primary key clauses inplace to the column definition
+							</li>
+				</ul>
+	</div>
+<a name="connect" id="connect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">connect</span> (line <span class="line-number">137</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Connects to the database with the default database connection configuration</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			connect
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="createIndex" id="createIndex"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">createIndex</span> (line <span class="line-number">458</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates an index on a table.</p>
+<p class="description"><p>It is recommended you check when and how you should use indexes for your database engine  before you create indexes or you may hurt the performance of your application</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			createIndex
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">bool</span>&nbsp;<span class="var-name">$unique</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$colNames</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: Name of the table to create the index on</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name for the index</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$unique</span><span class="var-description">: Should the index be unique (eg no two rows have the same values in index columns)</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$colNames</span><span class="var-description">: The names of the columns to be indexed. If null use the index name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="createTable" id="createTable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">createTable</span> (line <span class="line-number">244</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates a new table within the active database</p>
+<p class="description"><p>The $cols parameter should be an array of column information in the following format</p><p>{{code: php  	$cols = array(  		'column1' =&gt; array(  			'type'    =&gt; TeaManageDb::COL_TYPE_*  			'size'    =&gt; (int) size limitation for char|varchar|numeric  			'scope'   =&gt; (int) decimal places for numeric  			'require' =&gt; (bool) is the value required ie. NOT NULL  			'default' =&gt; (mixed) default value for this column  			'autoinc' =&gt; (bool) is this value to be auto incremented?  			'primary' =&gt; (bool) is this a primary column?       ),       'column2' =&gt; array(...)   );  }}</p><p>The field types are defined in the Tea_DB_COL_TYPE_* definitions which are defined in the TeaDbManager.php file</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> on success of the tables creation</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			createTable
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$cols</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: Name of the table to create</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$cols</span><span class="var-description">: Array of the columns to create</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="dropColumn" id="dropColumn"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">dropColumn</span> (line <span class="line-number">349</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Removes the $colum from $table if it exists</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if the column is dropped (or does not exist), false if drop fails</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			dropColumn
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">object</span>&nbsp;<span class="var-name">$column</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$table</span><span class="var-description">: Name of the table the column is in</span>			</li>
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$column</span><span class="var-description">: Name of the column to be dropped</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="dropIndex" id="dropIndex"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">dropIndex</span> (line <span class="line-number">492</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Drops a database from a table in the database</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			dropIndex
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: Name of the table the index belongs to</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the index to be dropped</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="dropTable" id="dropTable"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">dropTable</span> (line <span class="line-number">287</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Drops a table from the database if it exists</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if the table was dropped (or does not exist), false if drop fails</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			dropTable
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: Name of the table to be dropped</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="enableSqlHistory" id="enableSqlHistory"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">enableSqlHistory</span> (line <span class="line-number">179</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Should SQL querys being executed be logged?</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			enableSqlHistory
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$enable</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$enable</span><span class="var-description">: True if tracking should be on, false otherwise</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getQueryCount" id="getQueryCount"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getQueryCount</span> (line <span class="line-number">195</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the number of queries executed</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			getQueryCount
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="getSqlHistory" id="getSqlHistory"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getSqlHistory</span> (line <span class="line-number">187</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve a list of executed SQL queries</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getSqlHistory
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="modifyIndexName" id="modifyIndexName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">modifyIndexName</span> (line <span class="line-number">503</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Used to allow an index name to be modified if required by a specific db engine</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			modifyIndexName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: Name of the table</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the index</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManagePgSqlDb.html#methodmodifyIndexName">TeaManagePgSqlDb::modifyIndexName()</a>
+								: Used to allow an index name to be modified if required by a specific db engine
+							</li>
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManageSqliteDb.html#methodmodifyIndexName">TeaManageSqliteDb::modifyIndexName()</a>
+								: Used to allow an index name to be modified if required by a specific db engine
+							</li>
+				</ul>
+	</div>
+<a name="query" id="query"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">query</span> (line <span class="line-number">166</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Execute a query to the connected database</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">PDOStatement</span>
+		<span class="method-name">
+			query
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$param</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: SQL query prepared statement</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$param</span><span class="var-description">: Values used in the prepared SQL</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="quote" id="quote"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">quote</span> (line <span class="line-number">535</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Quotes a string for use in a query.</p>
+<p class="description"><p>Places quotes around the input string and escapes and single quotes within the input string, using a quoting style appropriate to the underlying driver.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns a quoted string that is theoretically safe to pass into an SQL statement. Returns FALSE if the driver does not support quoting in this way.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			quote
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>], <span class="var-type">string|array</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$string</span><span class="var-description">: The string to be quoted. Or if an array itterate over each element and quote it</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$type</span><span class="var-description">: Provides a data type hint for drivers that have alternate quoting styles</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManageSqliteDb.html#methodquote">TeaManageSqliteDb::quote()</a>
+								: SQLite does not quote numeric values so we need to overide the quoting mechanism
+							</li>
+				</ul>
+	</div>
+<a name="quoteName" id="quoteName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">quoteName</span> (line <span class="line-number">551</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Quotes an identifier name (table, column etc); ignores values of just '*'</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			quoteName
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="resetSqlHistory" id="resetSqlHistory"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">resetSqlHistory</span> (line <span class="line-number">203</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Reset list of executed SQL queries</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			resetSqlHistory
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="setDb" id="setDb"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setDb</span> (line <span class="line-number">130</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the database configuration</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setDb
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$dbconfig</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$dbconfig</span><span class="var-description">: Connection information (db_host, db_name, db_user, db_pwd, db_driver, db_connection_cache)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="tableExists" id="tableExists"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">tableExists</span> (line <span class="line-number">212</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks to see if the specified table</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			tableExists
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: Name of the table to check existance of</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_dropIndex" id="_dropIndex"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/AbstractMethod.png" />
+		<span class="method-title">_dropIndex</span> (line <span class="line-number">513</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Drops an index from a table and specifically implemented for each db engine</p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_dropIndex
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: Name of the table the index is for</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Name of the index to be removed</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManageMySqlDb.html#method_dropIndex">TeaManageMySqlDb::_dropIndex()</a>
+								: Drops an index from a table and specifically implemented for each db engine
+							</li>
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManagePgSqlDb.html#method_dropIndex">TeaManagePgSqlDb::_dropIndex()</a>
+								: Drops an index from a table and specifically implemented for each db engine
+							</li>
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManageSqliteDb.html#method_dropIndex">TeaManageSqliteDb::_dropIndex()</a>
+								: Drops an index from a table and specifically implemented for each db engine
+							</li>
+				</ul>
+	</div>
+<a name="_sqlAddColumn" id="_sqlAddColumn"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">_sqlAddColumn</span> (line <span class="line-number">337</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_sqlAddColumn
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$attributes</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$table</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$attributes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_sqlCreateTable" id="_sqlCreateTable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">_sqlCreateTable</span> (line <span class="line-number">259</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates an SQL CREATE TABLE statement for the active database type</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> SQL CREATE TABLE statement for the active database engine</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_sqlCreateTable
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$columnDefinitions</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>], <span class="var-type">array</span>&nbsp;<span class="var-name">$cols</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$table</span><span class="var-description">: Name of the table to create</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$cols</span><span class="var-description">: Array of column defenitions</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$columnDefinitions</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="Tea-db-manage-adapters/TeaManageMySqlDb.html#method_sqlCreateTable">TeaManageMySqlDb::_sqlCreateTable()</a>
+								: Builds the Create Table command to run against MySQL.
+							</li>
+				</ul>
+	</div>
+<a name="_sqlDropColumn" id="_sqlDropColumn"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">_sqlDropColumn</span> (line <span class="line-number">358</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_sqlDropColumn
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$table</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="_sqlDropTable" id="_sqlDropTable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">_sqlDropTable</span> (line <span class="line-number">302</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates the SQL for the active database to delete a table</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_sqlDropTable
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$table</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="COL_TYPE_BIGINT" id="COL_TYPE_BIGINT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">COL_TYPE_BIGINT</span>
+			 = <span class="const-default"> 'bigint'</span>
+			(line <span class="line-number">36</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="COL_TYPE_BOOL" id="COL_TYPE_BOOL"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">COL_TYPE_BOOL</span>
+			 = <span class="const-default"> 'bool'</span>
+			(line <span class="line-number">33</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Usable Column Types</p>
+	
+	
+</div>
+<a name="COL_TYPE_CHAR" id="COL_TYPE_CHAR"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">COL_TYPE_CHAR</span>
+			 = <span class="const-default"> 'char'</span>
+			(line <span class="line-number">39</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="COL_TYPE_CLOB" id="COL_TYPE_CLOB"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">COL_TYPE_CLOB</span>
+			 = <span class="const-default"> 'clob'</span>
+			(line <span class="line-number">41</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="COL_TYPE_DATE" id="COL_TYPE_DATE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">COL_TYPE_DATE</span>
+			 = <span class="const-default"> 'date'</span>
+			(line <span class="line-number">42</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="COL_TYPE_DECIMAL" id="COL_TYPE_DECIMAL"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">COL_TYPE_DECIMAL</span>
+			 = <span class="const-default"> 'decimal'</span>
+			(line <span class="line-number">37</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="COL_TYPE_FLOAT" id="COL_TYPE_FLOAT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">COL_TYPE_FLOAT</span>
+			 = <span class="const-default"> 'float'</span>
+			(line <span class="line-number">38</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="COL_TYPE_INT" id="COL_TYPE_INT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">COL_TYPE_INT</span>
+			 = <span class="const-default"> 'int'</span>
+			(line <span class="line-number">35</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="COL_TYPE_SMALLINT" id="COL_TYPE_SMALLINT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">COL_TYPE_SMALLINT</span>
+			 = <span class="const-default"> 'smallint'</span>
+			(line <span class="line-number">34</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="COL_TYPE_TIME" id="COL_TYPE_TIME"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">COL_TYPE_TIME</span>
+			 = <span class="const-default"> 'time'</span>
+			(line <span class="line-number">43</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="COL_TYPE_TIMESTAMP" id="COL_TYPE_TIMESTAMP"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">COL_TYPE_TIMESTAMP</span>
+			 = <span class="const-default"> 'timestamp'</span>
+			(line <span class="line-number">44</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="COL_TYPE_VARCHAR" id="COL_TYPE_VARCHAR"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">COL_TYPE_VARCHAR</span>
+			 = <span class="const-default"> 'varchar'</span>
+			(line <span class="line-number">40</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:56 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

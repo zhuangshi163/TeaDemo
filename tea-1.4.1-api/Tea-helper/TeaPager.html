@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaPager</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> TeaPager</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A helper class to help generating pagination widget when displaying a list of items.</p>
+<p class="description"><p>You can change every component of the pagination widget through CSS. The CSS class name for the components can be changed if needed.</p><p>&lt;p&gt;You can send GET, POST, PUT and DELETE requests with TeaRestClient.  Method chaining is also supported by this class.&lt;/p&gt;  Example usage:  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodloadHelper">loadHelper</a><span class="src-sym">(</span><span class="src-str">'TeaPager'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodloadModel">loadModel</a><span class="src-sym">(</span><span class="src-str">'User'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$page&nbsp;</span>=&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id">params</span><span class="src-sym">[</span><span class="src-str">'pindex'</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$total&nbsp;</span>=&nbsp;<span class="src-id">User</span><span class="src-sym">::</span><span class="src-id">getTotal</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$pager&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="Tea-helper/TeaPager.html">TeaPager</a></span><span class="src-sym">(</span><span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodconf">conf</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><span class="src-id">APP_URL</span>.<span class="src-str">'main/gallery'</span><span class="src-sym">,&nbsp;</span><span class="src-var">$total</span><span class="src-sym">,&nbsp;</span><span class="src-num">6</span><span class="src-sym">,&nbsp;</span><span class="src-num">10</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">#change&nbsp;the&nbsp;text&nbsp;of&nbsp;next/prev</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//$pager-&gt;prevText&nbsp;=&nbsp;'prev';</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//$pager-&gt;nextText&nbsp;=&nbsp;'next';</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">#If&nbsp;you&nbsp;don't&nbsp;need&nbsp;the&nbsp;next/prev&nbsp;links</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//$pager-&gt;noNextPrev();</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">#Do&nbsp;the&nbsp;pagination</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$pager</span><span class="src-sym">-&gt;</span><a href="Tea-helper/TeaPager.html#methodpaginate">paginate</a><span class="src-sym">(</span><span class="src-var">$page</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$limit&nbsp;</span>=&nbsp;<span class="src-var">$pager</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="Tea-helper/TeaPager.html#var$limit">limit</a></span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methoddb">db</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><span class="src-id">find</span><span class="src-sym">(</span><span class="src-str">'User'</span><span class="src-sym">,&nbsp;</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'limit'</span>=&gt;<span class="src-var">$limit</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;echo&nbsp;<span class="src-var">$pager</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="Tea-helper/TeaPager.html#var$defaultCss">defaultCss</a></span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//echo&nbsp;$pager-&gt;components['prev_link'];</span></div></li>
+<li><div class="src-line">&nbsp;echo&nbsp;<span class="src-var">$pager</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="Tea-helper/TeaPager.html#var$output">output</a></span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;echo&nbsp;<span class="src-var">$pager</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="Tea-helper/TeaPager.html#var$components">components</a></span><span class="src-sym">[</span><span class="src-str">'jump_menu'</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;echo&nbsp;<span class="src-var">$pager</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="Tea-helper/TeaPager.html#var$components">components</a></span><span class="src-sym">[</span><span class="src-str">'page_size'</span><span class="src-sym">]</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//echo&nbsp;$pager-&gt;components['next_link'];</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Leng Sheng Hong &lt;<a href="mailto:darkredz@gmail.com">darkredz@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id: TeaPager.php 1000 2009-08-21 15:27:22</li>
+				<li><span class="field">since:</span> 1.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-helper/_helper---TeaPager.php.html">/helper/TeaPager.php</a> (line <span class="field">53</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																																																																																																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$baseUrl" title="details" class="var-name">$baseUrl</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$components" title="details" class="var-name">$components</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$currentCss" title="details" class="var-name">$currentCss</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$currentPage" title="details" class="var-name">$currentPage</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$defaultCss" title="details" class="var-name">$defaultCss</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$dropDownCss" title="details" class="var-name">$dropDownCss</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$high" title="details" class="var-name">$high</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$inactiveNextCss" title="details" class="var-name">$inactiveNextCss</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$inactivePrevCss" title="details" class="var-name">$inactivePrevCss</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$itemPerPage" title="details" class="var-name">$itemPerPage</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$limit" title="details" class="var-name">$limit</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$low" title="details" class="var-name">$low</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$maxLength" title="details" class="var-name">$maxLength</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$nextCss" title="details" class="var-name">$nextCss</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$nextText" title="details" class="var-name">$nextText</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$output" title="details" class="var-name">$output</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$pagesCss" title="details" class="var-name">$pagesCss</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$pageSizeCss" title="details" class="var-name">$pageSizeCss</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$prevCss" title="details" class="var-name">$prevCss</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$prevText" title="details" class="var-name">$prevText</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$totalItem" title="details" class="var-name">$totalItem</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$totalPage" title="details" class="var-name">$totalPage</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																<div class="method-definition">
+					<img src="images/Constructor.png" alt=" "/>
+					<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$baseURL</span> = <span class="var-default">''</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$totalItems</span> = <span class="var-default">120</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$itemPerPage</span> = <span class="var-default">10</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$maxlength</span> = <span class="var-default">10</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prevText</span> = <span class="var-default">'&amp;laquo;'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$nextText</span> = <span class="var-default">'&amp;raquo;'</span>])
+																<span class="method-result">TeaPager</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#noNextPrev" title="details" class="method-name">noNextPrev</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#paginate" title="details" class="method-name">paginate</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$page</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$itemPerPage</span> = <span class="var-default">0</span>])
+																<span class="method-result">array</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#setCss" title="details" class="method-name">setCss</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$pagesName</span> = <span class="var-default">'paginate'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$inactiveName</span> = <span class="var-default">'inactive'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$currentName</span> = <span class="var-default">'current'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$nextName</span> = <span class="var-default">'next'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prevName</span> = <span class="var-default">'prev'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$dropDownName</span> = <span class="var-default">'pagerDropDown'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pageSizeName</span> = <span class="var-default">'pageSize'</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#showJumpMenu" title="details" class="method-name">showJumpMenu</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$withPageSize</span> = <span class="var-default">false</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#showPageSize" title="details" class="method-name">showPageSize</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$sizeArr</span> = <span class="var-default">null</span>])
+																<span class="method-result">string</span>
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="$baseUrl" id="$baseUrl"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$baseUrl</span>
+						(line <span class="line-number">161</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The URL prefix for all the pagination links</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$components" id="$components"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$components</span>
+						(line <span class="line-number">118</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Contain the list of components to be used in view. (pages, jump menu, page_size, current_page, total_page)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$currentCss" id="$currentCss"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$currentCss</span>
+			 = <span class="var-default"> 'current'</span>			(line <span class="line-number">88</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CSS class name for selected current link</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$currentPage" id="$currentPage"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$currentPage</span>
+			 = <span class="var-default"> 1</span>			(line <span class="line-number">130</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The current page number</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$defaultCss" id="$defaultCss"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$defaultCss</span>
+			 = <span class="var-default"> '&lt;style&gt;<br />.paginate, .current, .inactivePrev, .inactiveNext, .prev, .next {<br />    font-family: Verdana,Helvetica,Arial,sans-serif;<br />    font-size:12px;<br />    border:1px solid #D8D8D8;<br />    float:left;<br />    height:20px;<br />    line-height:20px;<br />    margin-right:2px;<br />    overflow:hidden;<br />    padding:0 6px;<br />    text-decoration:none;<br />}<br />a:hover .paginate{<br />    border-color:#006699;<br />}<br /><br />.current {<br />    border-color:#006699;<br />    background-color:#006699;<br />    color:#fff;<br />    font-weight:bold;<br />}<br />.inactivePrev, .inactiveNext{<br />    color:#999;<br />}<br />&lt;/style&gt;'</span>			(line <span class="line-number">192</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Default css for testing</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$dropDownCss" id="$dropDownCss"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$dropDownCss</span>
+			 = <span class="var-default"> 'pagerDropDown'</span>			(line <span class="line-number">64</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CSS class name for the Pages DropDown menu</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$high" id="$high"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$high</span>
+						(line <span class="line-number">174</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Position of the record to end the pagination LIMIT query</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$inactiveNextCss" id="$inactiveNextCss"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$inactiveNextCss</span>
+			 = <span class="var-default"> 'inactiveNext'</span>			(line <span class="line-number">82</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CSS class name for inactive links</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$inactivePrevCss" id="$inactivePrevCss"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$inactivePrevCss</span>
+			 = <span class="var-default"> 'inactivePrev'</span>			(line <span class="line-number">76</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CSS class name for inactive links</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$itemPerPage" id="$itemPerPage"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$itemPerPage</span>
+			 = <span class="var-default">10</span>			(line <span class="line-number">124</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Items to be displayed per page</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$limit" id="$limit"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$limit</span>
+						(line <span class="line-number">180</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">To be use with the pagination LIMIT query LIMIT $limit</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$low" id="$low"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$low</span>
+						(line <span class="line-number">168</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Position of the record to begin the pagination LIMIT query</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$maxLength" id="$maxLength"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$maxLength</span>
+			 = <span class="var-default"> 10</span>			(line <span class="line-number">136</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Maximum Pager length</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$nextCss" id="$nextCss"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$nextCss</span>
+			 = <span class="var-default"> 'next'</span>			(line <span class="line-number">94</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CSS class name for next link</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$nextText" id="$nextText"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$nextText</span>
+			 = <span class="var-default"> '&amp;raquo;'</span>			(line <span class="line-number">112</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Text for the Next button link</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$output" id="$output"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$output</span>
+						(line <span class="line-number">155</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The pages HTML output</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$pagesCss" id="$pagesCss"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$pagesCss</span>
+			 = <span class="var-default">'paginate'</span>			(line <span class="line-number">58</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CSS class name for the Pages links</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$pageSizeCss" id="$pageSizeCss"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$pageSizeCss</span>
+			 = <span class="var-default"> 'pageSize'</span>			(line <span class="line-number">70</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CSS class name for the page sizes menu</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$prevCss" id="$prevCss"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$prevCss</span>
+			 = <span class="var-default"> 'prev'</span>			(line <span class="line-number">100</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CSS class name for previous link</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$prevText" id="$prevText"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$prevText</span>
+			 = <span class="var-default"> '&amp;laquo;'</span>			(line <span class="line-number">106</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Text for the Previous link</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$totalItem" id="$totalItem"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$totalItem</span>
+						(line <span class="line-number">142</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Total items to be split in the pagination</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$totalPage" id="$totalPage"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$totalPage</span>
+						(line <span class="line-number">148</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Total pages in the pagination</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">230</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Instanciate the Pager object</p>
+	
+	<div class="method-signature">
+		<span class="method-result">TeaPager</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$baseURL</span> = <span class="var-default">''</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$totalItems</span> = <span class="var-default">120</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$itemPerPage</span> = <span class="var-default">10</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$maxlength</span> = <span class="var-default">10</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prevText</span> = <span class="var-default">'&amp;laquo;'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$nextText</span> = <span class="var-default">'&amp;raquo;'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$baseURL</span><span class="var-description">: Base URL to be appended to the page number</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$totalItems</span><span class="var-description">: Total items to be paginate</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$itemPerPage</span><span class="var-description">: Items to be shown in one page.</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$maxlength</span><span class="var-description">: Number of links for the pager navigation</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prevText</span><span class="var-description">: Text for the Previous button link</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$nextText</span><span class="var-description">: Text for the Next button link</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="noNextPrev" id="noNextPrev"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">noNextPrev</span> (line <span class="line-number">242</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Hide next &amp; prev links from the output</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			noNextPrev
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="paginate" id="paginate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">paginate</span> (line <span class="line-number">274</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Paginate the list of items and prepare pager components to be use in View.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An array of pager component, access via &lt;strong&gt;pages, jump_menu, page_size, current_page, total_page, next_link, prev_link&lt;/strong&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			paginate
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$page</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$itemPerPage</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$page</span><span class="var-description">: The current page number</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$itemPerPage</span><span class="var-description">: Items per page</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="setCss" id="setCss"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setCss</span> (line <span class="line-number">257</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the CSS class name for the pager components</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setCss
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$pagesName</span> = <span class="var-default">'paginate'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$inactiveName</span> = <span class="var-default">'inactive'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$currentName</span> = <span class="var-default">'current'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$nextName</span> = <span class="var-default">'next'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$prevName</span> = <span class="var-default">'prev'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$dropDownName</span> = <span class="var-default">'pagerDropDown'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pageSizeName</span> = <span class="var-default">'pageSize'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pagesName</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$inactiveName</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$currentName</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$nextName</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prevName</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dropDownName</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pageSizeName</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="showJumpMenu" id="showJumpMenu"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">showJumpMenu</span> (line <span class="line-number">406</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generate a Drop down menu for all page numer</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Drop down menu for all page numer</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			showJumpMenu
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$withPageSize</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$withPageSize</span><span class="var-description">: Navigate with page size</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="showPageSize" id="showPageSize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">showPageSize</span> (line <span class="line-number">389</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generate a Drop down menu for different page sizes.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Drop down menu for the page sizes</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			showPageSize
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$sizeArr</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$sizeArr</span><span class="var-description">: Array of page size</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:57 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

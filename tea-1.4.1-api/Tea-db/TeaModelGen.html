@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaModelGen</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> TeaModelGen</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">TeaModelGen serves as a Model class file generator for rapid development</p>
+<p class="description"><p>If you have your database configurations setup, call TeaModelGen::gen_mysql() and  it will generate the Model files for all the tables in that database</p><p></p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Leng Sheng Hong &lt;<a href="mailto:darkredz@gmail.com">darkredz@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id: TeaModelGen.php 1000 2009-07-7 18:27:22</li>
+				<li><span class="field">since:</span> 1.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-db/_db---TeaModelGen.php.html">/db/TeaModelGen.php</a> (line <span class="field">23</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#EXTEND_MODEL" title="details" class="const-name">EXTEND_MODEL</a> = 					<span class="var-type"> 'TeaModel'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="images/Constant.png" alt=" " />
+					<a href="#EXTEND_SMARTMODEL" title="details" class="const-name">EXTEND_SMARTMODEL</a> = 					<span class="var-type"> 'TeaSmartModel'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+									<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+												<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#exportRules" title="details" class="method-name">exportRules</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$ruleArr</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#genMySQL" title="details" class="method-name">genMySQL</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$comments</span> = <span class="var-default">true</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$vrules</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$extends</span> = <span class="var-default">'TeaModel'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createBase</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$baseSuffix</span> = <span class="var-default">'Base'</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#genPgSQL" title="details" class="method-name">genPgSQL</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#genSqlite" title="details" class="method-name">genSqlite</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$extends</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createBase</span> = <span class="var-default">false</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$addmaps</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$filenameModelPrefix</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$baseSuffix</span> = <span class="var-default">'Base'</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#gen_mysql" title="details" class="method-name">gen_mysql</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$comments</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$vrules</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$extends</span> = <span class="var-default">'TeaModel'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$createBase</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$baseSuffix</span> = <span class="var-default">'Base'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#gen_pgsql" title="details" class="method-name">gen_pgsql</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#gen_sqlite" title="details" class="method-name">gen_sqlite</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$extends</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$createBase</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$addmaps</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$filenameModelPrefix</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$baseSuffix</span> = <span class="var-default">'Base'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+																<span class="method-result">void</span>
+									</div>
+																																																																							</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+													<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="exportRules" id="exportRules"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static exportRules</span> (line <span class="line-number">28</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			exportRules
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$ruleArr</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$ruleArr</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="genMySQL" id="genMySQL"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static genMySQL</span> (line <span class="line-number">59</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates Model class files from a MySQL database</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			genMySQL
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$comments</span> = <span class="var-default">true</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$vrules</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$extends</span> = <span class="var-default">'TeaModel'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createBase</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$baseSuffix</span> = <span class="var-default">'Base'</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$comments</span><span class="var-description">: Generate comments along with the Model class</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$vrules</span><span class="var-description">: Generate validation rules along with the Model class</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$extends</span><span class="var-description">: make Model class to extend TeaModel or TeaSmartModel</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$createBase</span><span class="var-description">: Generate base model class, will not rewrite/replace model classes if True.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$baseSuffix</span><span class="var-description">: Suffix string for the base model.</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$chmod</span><span class="var-description">: Chmod for file manager</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: Path to write the model class files</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="genPgSQL" id="genPgSQL"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static genPgSQL</span> (line <span class="line-number">408</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			genPgSQL
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$path</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="genSqlite" id="genSqlite"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static genSqlite</span> (line <span class="line-number">258</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates Model class files from a SQLite database</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			genSqlite
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$extends</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$createBase</span> = <span class="var-default">false</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$addmaps</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$filenameModelPrefix</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$baseSuffix</span> = <span class="var-default">'Base'</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$extends</span><span class="var-description">: make Model class to extend TeaModel or TeaSmartModel</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$createBase</span><span class="var-description">: Generate base model class, will not rewrite/replace model classes if True.</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$addmaps</span><span class="var-description">: Writes table relation map in Model class analyze with foreign keys available (You do not need to define in the maps in db.conf.php)</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filenameModelPrefix</span><span class="var-description">: Add a prefix for the model class name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$baseSuffix</span><span class="var-description">: Suffix string for the base model.</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$chmod</span><span class="var-description">: Chmod for file manager</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span><span class="var-description">: Path to write the model class files</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="gen_mysql" id="gen_mysql"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static gen_mysql</span> (line <span class="line-number">45</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use TeaModelGen::genMySQL() instead</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> deprecated since version 1.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			gen_mysql
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$comments</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$vrules</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$extends</span> = <span class="var-default">'TeaModel'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$createBase</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$baseSuffix</span> = <span class="var-default">'Base'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$comments</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$vrules</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$extends</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$createBase</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$baseSuffix</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$chmod</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$path</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="gen_pgsql" id="gen_pgsql"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static gen_pgsql</span> (line <span class="line-number">404</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use TeaModelGen::genPgSQL() instead</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> deprecated since version 1.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			gen_pgsql
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="gen_sqlite" id="gen_sqlite"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static gen_sqlite</span> (line <span class="line-number">244</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use TeaModelGen::genSqlite() instead</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> deprecated since version 1.3</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			gen_sqlite
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$extends</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$createBase</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$addmaps</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$filenameModelPrefix</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$baseSuffix</span> = <span class="var-default">'Base'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$extends</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$createBase</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$addmaps</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filenameModelPrefix</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$baseSuffix</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$chmod</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$path</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="EXTEND_MODEL" id="EXTEND_MODEL"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">EXTEND_MODEL</span>
+			 = <span class="const-default"> 'TeaModel'</span>
+			(line <span class="line-number">25</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="EXTEND_SMARTMODEL" id="EXTEND_SMARTMODEL"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">EXTEND_SMARTMODEL</span>
+			 = <span class="const-default"> 'TeaSmartModel'</span>
+			(line <span class="line-number">26</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:57 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

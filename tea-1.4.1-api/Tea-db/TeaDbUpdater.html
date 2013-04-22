@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaDbUpdater</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> TeaDbUpdater</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">TeaDbUpdater abstract class file.</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Richard Myers &lt;<a href="mailto:richard.myers@hotmail.co.uk">richard.myers@hotmail.co.uk</a>&gt;</li>
+				<li><span class="field">copyright:</span> Copyright &amp;copy; 2009 Leng Sheng Hong</li>
+				<li><span class="field">link:</span> <a href="http://www.Teaphp.com/">http://www.Teaphp.com/</a></li>
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">since:</span> 1.3</li>
+				<li><span class="field">license:</span> <a href="http://www.Teaphp.com/license">http://www.Teaphp.com/license</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-db/_db---manage---TeaDbUpdater.php.html">/db/manage/TeaDbUpdater.php</a> (line <span class="field">12</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type"><a href="Tea-db/TeaManageDb.html">TeaManageDb</a></span>
+					<a href="#$db" title="details" class="var-name">$db</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$latestVersion" title="details" class="var-name">$latestVersion</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																<div class="method-definition">
+					<img src="images/Constructor.png" alt=" "/>
+					<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$dbConfig</span>)
+																<span class="method-result">TeaDbUpdater</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#downgradeToVersion" title="details" class="method-name">downgradeToVersion</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$version</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#enableDebugging" title="details" class="method-name">enableDebugging</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$enable</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#executeVersionDowngrade" title="details" class="method-name">executeVersionDowngrade</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$version</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#executeVersionUpdate" title="details" class="method-name">executeVersionUpdate</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$version</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/AbstractMethod.png" alt=" "/>
+					<a href="#getCurrentDbVersion" title="details" class="method-name">getCurrentDbVersion</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#revertToStart" title="details" class="method-name">revertToStart</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/AbstractMethod.png" alt=" "/>
+					<a href="#storeCurrentDbVersion" title="details" class="method-name">storeCurrentDbVersion</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#updateToLatestVersion" title="details" class="method-name">updateToLatestVersion</a>
+										()
+																<span class="method-result">void</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#updateToVersion" title="details" class="method-name">updateToVersion</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$version</span>)
+																<span class="method-result">void</span>
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="$db" id="$db"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="Tea-db/TeaManageDb.html">TeaManageDb</a></span>
+			<span class="var-name">$db</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">25</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A TeaDbAdmin adapater for the active DB engine</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$latestVersion" id="$latestVersion"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$latestVersion</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number">19</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This represents the newest version update avaliable</p>
+<p class="description"><p>This should reflect the id of the newest upgrade_* function</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">32</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets up the TeaDbUpdater</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">TeaDbUpdater</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$dbConfig</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$dbConfig</span><span class="var-description">: Database connection settings (db_host, db_name, db_user, db_pwd, db_driver, db_connection_cache)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="downgradeToVersion" id="downgradeToVersion"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">downgradeToVersion</span> (line <span class="line-number">99</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Will run all of the required downgrades from the current version down to and including</p>
+<p class="description"><p>the the version specified. eg. A call to downgradeToVersion(5) when the current version  is 10 will run downgrades 10, 9, 8, 7 and 6</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			downgradeToVersion
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$version</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$version</span><span class="var-description">: Version to downgrade to</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="enableDebugging" id="enableDebugging"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">enableDebugging</span> (line <span class="line-number">42</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			enableDebugging
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$enable</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$enable</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="executeVersionDowngrade" id="executeVersionDowngrade"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">executeVersionDowngrade</span> (line <span class="line-number">143</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Runs a single downgrade step so a call to executeVersionDowngrade(12) will run the function</p>
+<p class="description"><p>downgrade_12() in the extending class. It will throw an exception on an error running the  downgrade or if the downgrade function is missing</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			executeVersionDowngrade
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$version</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$version</span><span class="var-description">: The downgrade version to run</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="executeVersionUpdate" id="executeVersionUpdate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">executeVersionUpdate</span> (line <span class="line-number">126</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Runs a single update step so a call to executeVersionUpdate(12) will run the function</p>
+<p class="description"><p>upgrade_12() in the extending class. It will throw an exception on an error running the  update or if the update function is missing</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			executeVersionUpdate
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$version</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$version</span><span class="var-description">: The update version to run</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getCurrentDbVersion" id="getCurrentDbVersion"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/AbstractMethod.png" />
+		<span class="method-title">getCurrentDbVersion</span> (line <span class="line-number">153</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getCurrentDbVersion
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="revertToStart" id="revertToStart"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">revertToStart</span> (line <span class="line-number">63</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Will run all of the downgrade steps from the current version to the very start</p>
+<p class="description"><p>This will leave the database as it was before any upgrades</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			revertToStart
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="storeCurrentDbVersion" id="storeCurrentDbVersion"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/AbstractMethod.png" />
+		<span class="method-title">storeCurrentDbVersion</span> (line <span class="line-number">154</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			storeCurrentDbVersion
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$version</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="updateToLatestVersion" id="updateToLatestVersion"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">updateToLatestVersion</span> (line <span class="line-number">54</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Will run all of the updates since the current version upto and including the</p>
+<p class="description"><p>TeaDbUpdater::latestVersion. eg. if the current version is 5 and the latestVersion  is set to 10 then updates 6, 7, 8, 9 and 10 will be run</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			updateToLatestVersion
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="updateToVersion" id="updateToVersion"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">updateToVersion</span> (line <span class="line-number">74</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Will run all of the required updates since the current version upto and including</p>
+<p class="description"><p>the the version specified. eg. A call to updateToVersion(10) when the current version  is 5 will run updates 6, 7, 8, 9 and 10</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			updateToVersion
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$version</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$version</span><span class="var-description">: Version to update to</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:53 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

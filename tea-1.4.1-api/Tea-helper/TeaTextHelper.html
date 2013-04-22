@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaTextHelper</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> TeaTextHelper</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A helper class that helps to manipulate text.</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Leng Sheng Hong &lt;<a href="mailto:darkredz@gmail.com">darkredz@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id: TeaTextHelper.php 1000 2009-08-4 11:17:22</li>
+				<li><span class="field">since:</span> 1.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-helper/_helper---TeaTextHelper.php.html">/helper/TeaTextHelper.php</a> (line <span class="field">19</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+												<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#convertUrl" title="details" class="method-name">convertUrl</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$classname</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$target</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$convertEmail</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$emailHide</span> = <span class="var-default">'@'</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#countWord" title="details" class="method-name">countWord</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+																<span class="method-result">int</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#escape" title="details" class="method-name">escape</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$escapeType</span> = <span class="var-default">'html'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$charSet</span> = <span class="var-default">'ISO-8859-1'</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#filter" title="details" class="method-name">filter</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$censorWords</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$replacement</span> = <span class="var-default">'*'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$word</span> = <span class="var-default">true</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#highlightPHP" title="details" class="method-name">highlightPHP</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#highlightWord" title="details" class="method-name">highlightWord</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$phrase</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$tagOpen</span> = <span class="var-default">'&lt;span style=&quot;font-weight:bold;background-color:#ffff00&quot;&gt;'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$tagClose</span> = <span class="var-default">'&lt;/span&gt;'</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#limitChar" title="details" class="method-name">limitChar</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$limit</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$ending</span> = <span class="var-default">'...'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">null</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#limitWord" title="details" class="method-name">limitWord</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$limit</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$ending</span> = <span class="var-default">'...'</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#randomName" title="details" class="method-name">randomName</a>
+											([<span class="var-type">int</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">6</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#removeRepeatPunc" title="details" class="method-name">removeRepeatPunc</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#removeRepeatWords" title="details" class="method-name">removeRepeatWords</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#strip" title="details" class="method-name">strip</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">' '</span>])
+																<span class="method-result">string</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/StaticMethod.png" alt=" "/>
+					static
+					<a href="#wordwrap" title="details" class="method-name">wordwrap</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$charLimit</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$breakline</span> = <span class="var-default">'&lt;br/&gt;'</span>])
+																<span class="method-result">string</span>
+									</div>
+																																																																																																																							</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+													<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="convertUrl" id="convertUrl"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static convertUrl</span> (line <span class="line-number">68</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert all URLs in the text into hyperlinks.</p>
+<p class="description"><p>All URLs are converted. http://domain.com, www.domain.com, email@address.com  Passed in a false to disable converting Email to link.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			convertUrl
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$classname</span> = <span class="var-default">''</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$target</span> = <span class="var-default">''</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$convertEmail</span> = <span class="var-default">true</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$emailHide</span> = <span class="var-default">'@'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$classname</span><span class="var-description">: CSS class name of the link tag</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$target</span><span class="var-description">: Target: _self, _blank, _parent, etc.</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$convertEmail</span><span class="var-description">: Convert email address into links. Default true.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$emailHide</span><span class="var-description">: Change this if you want to hide the email. eg. leng[AT]Teaphp.com, value = '[AT]'</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="countWord" id="countWord"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static countWord</span> (line <span class="line-number">92</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Count words.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Number of words</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			countWord
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: Input String</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="escape" id="escape"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static escape</span> (line <span class="line-number">104</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Escape/encode a string</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			escape
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$escapeType</span> = <span class="var-default">'html'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$charSet</span> = <span class="var-default">'ISO-8859-1'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: The input string</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$escapeType</span><span class="var-description">: Escape type: html, htmlall, url</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$charSet</span><span class="var-description">: Character set, default ISO-8859-1</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="filter" id="filter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static filter</span> (line <span class="line-number">172</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Filter/censor word(s) from a string input</p>
+<p class="description"><p>A list of disallowed words will be replaced to '*' or the replacement value  from the input string.</p><p></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			filter
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$censorWords</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$replacement</span> = <span class="var-default">'*'</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$word</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: Input string to be processed</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$censorWords</span><span class="var-description">: List of words to be censored</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$replacement</span><span class="var-description">: Optional replacement string for the censored word</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$word</span><span class="var-description">: True to be an exact word, False to censor within word 'Youprofanity'</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="highlightPHP" id="highlightPHP"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static highlightPHP</span> (line <span class="line-number">188</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Highlight PHP code</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			highlightPHP
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: String of the PHP script</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="highlightWord" id="highlightWord"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static highlightWord</span> (line <span class="line-number">213</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Highlight word(s) within a string</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			highlightWord
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$phrase</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$tagOpen</span> = <span class="var-default">'&lt;span style=&quot;font-weight:bold;background-color:#ffff00&quot;&gt;'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$tagClose</span> = <span class="var-default">'&lt;/span&gt;'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: String input</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$phrase</span><span class="var-description">: The phrase to be highlighted</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tagOpen</span><span class="var-description">: HTML tag added right before the word</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tagClose</span><span class="var-description">: HTML tag added right after the word</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="limitChar" id="limitChar"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static limitChar</span> (line <span class="line-number">250</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Limit the string to a certain amount of characters.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			limitChar
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$limit</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$ending</span> = <span class="var-default">'...'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: String input</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$limit</span><span class="var-description">: Number of characters to limit</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ending</span><span class="var-description">: End characters. Default '...'</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$encoding</span><span class="var-description">: The character encoding. eg. utf8</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="limitWord" id="limitWord"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static limitWord</span> (line <span class="line-number">225</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Limit the string to a certain amount of words.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			limitWord
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$limit</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$ending</span> = <span class="var-default">'...'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: String input</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$limit</span><span class="var-description">: Number of words to limit</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ending</span><span class="var-description">: End characters. Default '...'</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="randomName" id="randomName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static randomName</span> (line <span class="line-number">26</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates a random string.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			randomName
+		</span>
+					([<span class="var-type">int</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">6</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$length</span><span class="var-description">: Length of the generated string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="removeRepeatPunc" id="removeRepeatPunc"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static removeRepeatPunc</span> (line <span class="line-number">50</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Removing repeated punctuation from text.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			removeRepeatPunc
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: Original text to be processed.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="removeRepeatWords" id="removeRepeatWords"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static removeRepeatWords</span> (line <span class="line-number">40</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Removing repeated words from text.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			removeRepeatWords
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: Original text to be processed.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="strip" id="strip"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static strip</span> (line <span class="line-number">271</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Replace all repeated spaces, newlines and tabs.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			strip
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">' '</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: String input</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$replace</span><span class="var-description">: Replacement value (optional)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="wordwrap" id="wordwrap"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/StaticMethod.png" />
+		<span class="method-title">static wordwrap</span> (line <span class="line-number">285</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Word wraping of string</p>
+<p class="description"><p>Anything within [nowrap][/nowrap] in the string won't be wrapped.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			wordwrap
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$charLimit</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$breakline</span> = <span class="var-default">'&lt;br/&gt;'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: String input</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$charLimit</span><span class="var-description">: Character limit per line</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$breakline</span><span class="var-description">: Break line HTML replacement</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:59 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class TeaAcl</title>
+			<link rel="stylesheet" href="styles/phpdoc.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> TeaAcl</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Provides Access Control List feature to the application.</p>
+<p class="description"><p>TeaAcl performs authorization checks for the specified resource and action. It checks against the rules defined in acl.conf.php.</p><p>Only when the user is allowed by one of the rules, will he be able to access the action.  If the user role cannot be found in both deny and allow list, he will not be able to access the action/resource</p><p>Rules has to be defined in this way:</p><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-comm">#&nbsp;Allow&nbsp;member&nbsp;to&nbsp;access&nbsp;all&nbsp;actions&nbsp;in&nbsp;Sns&nbsp;and&nbsp;Blog&nbsp;resource.</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$acl</span><span class="src-sym">[</span><span class="src-str">'member'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'allow'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'SnsController'</span>=&gt;<span class="src-str">'*'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BlogController'</span>=&gt;<span class="src-str">'*'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">#&nbsp;Allow&nbsp;anonymous&nbsp;visitors&nbsp;for&nbsp;Blog&nbsp;index&nbsp;only.</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$acl</span><span class="src-sym">[</span><span class="src-str">'anonymous'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'allow'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BlogController'</span>=&gt;<span class="src-str">'index'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">#&nbsp;Deny&nbsp;member&nbsp;from&nbsp;banUser,&nbsp;showVipHome,&nbsp;etc.</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$acl</span><span class="src-sym">[</span><span class="src-str">'member'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'deny'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'SnsController'</span>=&gt;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'banUser'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'showVipHome'</span><span class="src-sym">)</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BlogController'&nbsp;</span>=&gt;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'deleteComment'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'writePost'</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">#&nbsp;Admin&nbsp;can&nbsp;access&nbsp;all&nbsp;except&nbsp;Sns&nbsp;showVipHome</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$acl</span><span class="src-sym">[</span><span class="src-str">'admin'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'allow'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">'*'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$acl</span><span class="src-sym">[</span><span class="src-str">'admin'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'deny'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'SnsController'</span>=&gt;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'showVipHome'</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">#&nbsp;If&nbsp;member&nbsp;is&nbsp;denied,&nbsp;reroute&nbsp;to&nbsp;the&nbsp;following&nbsp;routes.</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$acl</span><span class="src-sym">[</span><span class="src-str">'member'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'failRoute'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//if&nbsp;not&nbsp;found&nbsp;this&nbsp;will&nbsp;be&nbsp;used</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'_default'</span>=&gt;<span class="src-str">'/error/member'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//if&nbsp;denied&nbsp;from&nbsp;sns&nbsp;banUser</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'SnsController/banUser'</span>=&gt;<span class="src-str">'/error/member/sns/notAdmin'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'SnsController/showVipHome'</span>=&gt;<span class="src-str">'/error/member/sns/notVip'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'BlogController'</span>=&gt;<span class="src-str">'/error/member/blog/notAdmin'</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div>
+ You have to assign the rules to TeaAcl in bootstrap.</p><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-comm">#&nbsp;set&nbsp;rules</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodacl">acl</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="Tea-auth/TeaAcl.html#var$rules">rules</a>&nbsp;</span>=&nbsp;<span class="src-var">$acl</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">#&nbsp;The&nbsp;default&nbsp;route&nbsp;to&nbsp;be&nbsp;reroute&nbsp;to&nbsp;when&nbsp;resource&nbsp;is&nbsp;denied.&nbsp;If&nbsp;not&nbsp;set,&nbsp;404&nbsp;error&nbsp;will&nbsp;be&nbsp;displayed.</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodacl">acl</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="Tea-auth/TeaAcl.html#var$defaultFailedRoute">defaultFailedRoute</a>&nbsp;</span>=&nbsp;<span class="src-str">'/error'</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Leng Sheng Hong &lt;<a href="mailto:darkredz@gmail.com">darkredz@gmail.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id: TeaAcl.php 1000 2009-08-23 20:46:49</li>
+				<li><span class="field">since:</span> 1.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="Tea-auth/_auth---TeaAcl.php.html">/auth/TeaAcl.php</a> (line <span class="field">70</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="Tea-auth/TeaRbAcl.html">TeaRbAcl</a>
+					</td>
+					<td>
+											TeaRbAcl class file.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">string|array</span>
+					<a href="#$defaultFailedRoute" title="details" class="var-name">$defaultFailedRoute</a>
+				</div>
+																<div class="var-title">
+					<img src="images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$rules" title="details" class="var-name">$rules</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																								<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#hasAllowed" title="details" class="method-name">hasAllowed</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$role</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$resource</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">''</span>])
+																<span class="method-result">bool</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#hasDenied" title="details" class="method-name">hasDenied</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$role</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$resource</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">''</span>])
+																<span class="method-result">bool</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#isAllowed" title="details" class="method-name">isAllowed</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$role</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$resource</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">''</span>])
+																<span class="method-result">bool</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#isDenied" title="details" class="method-name">isDenied</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$role</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$resource</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">''</span>])
+																<span class="method-result">bool</span>
+									</div>
+																<div class="method-definition">
+					<img src="images/Method.png" alt=" "/>
+					<a href="#process" title="details" class="method-name">process</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$role</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$resource</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">''</span>])
+																<span class="method-result">array|string</span>
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="$defaultFailedRoute" id="$defaultFailedRoute"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string|array</span>
+			<span class="var-name">$defaultFailedRoute</span>
+			 = <span class="var-default">array('/error-default/failed-route/please-set-in-route', 404)</span>			(line <span class="line-number">81</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Default route to be reroute to if no custome fail route is defined for a certain rule.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="$rules" id="$rules"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$rules</span>
+						(line <span class="line-number">75</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Rules settings for the application ACL. Defined in acl.conf.php</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="hasAllowed" id="hasAllowed"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">hasAllowed</span> (line <span class="line-number">91</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check if the user Role is in the allowed rule</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			hasAllowed
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$role</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$resource</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$role</span><span class="var-description">: Role of a user, usually retrieve from user's login session</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$resource</span><span class="var-description">: Resource name (use Controller class name)</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: Action name (use Method name)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="hasDenied" id="hasDenied"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">hasDenied</span> (line <span class="line-number">144</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check if the user Role is denied from the resource or action list or both.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			hasDenied
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$role</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$resource</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$role</span><span class="var-description">: Role of a user, usually retrieve from user's login session</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$resource</span><span class="var-description">: Resource name (use Controller class name)</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: Action name (use Method name)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="isAllowed" id="isAllowed"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">isAllowed</span> (line <span class="line-number">126</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check if the user Role is allowed to access the resource or action list or both.</p>
+<p class="description"><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-comm">//Check&nbsp;if&nbsp;member&nbsp;is&nbsp;allowed&nbsp;for&nbsp;BlogController-&gt;post</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodacl">acl</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="Tea-auth/TeaAcl.html#methodisAllowed">isAllowed</a><span class="src-sym">(</span><span class="src-str">'member'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'BlogController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'post'&nbsp;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//Check&nbsp;if&nbsp;member&nbsp;is&nbsp;allowed&nbsp;for&nbsp;BlogController</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodacl">acl</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="Tea-auth/TeaAcl.html#methodisAllowed">isAllowed</a><span class="src-sym">(</span><span class="src-str">'member'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'BlogController'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			isAllowed
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$role</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$resource</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$role</span><span class="var-description">: Role of a user, usually retrieve from user's login session</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$resource</span><span class="var-description">: Resource name (use Controller class name)</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: Action name (use Method name)</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="Tea-auth/TeaRbAcl.html#methodisAllowed">TeaRbAcl::isAllowed()</a>
+								: Check if the user Roles is allowed to access the resource or action list or both.
+							</li>
+				</ul>
+	</div>
+<a name="isDenied" id="isDenied"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">isDenied</span> (line <span class="line-number">181</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check if the user Role is denied from the resource or action list or both.</p>
+<p class="description"><p><div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-comm">//Check&nbsp;if&nbsp;member&nbsp;is&nbsp;denied&nbsp;from&nbsp;BlogController-&gt;post</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodacl">acl</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="Tea-auth/TeaAcl.html#methodisDenied">isDenied</a><span class="src-sym">(</span><span class="src-str">'member'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'BlogController'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'post'&nbsp;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;<span class="src-comm">//Check&nbsp;if&nbsp;member&nbsp;is&nbsp;denied&nbsp;from&nbsp;BlogController</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-id"><a href="Tea/Tea.html">Tea</a></span><span class="src-sym">::</span><a href="Tea/Tea.html#methodacl">acl</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">-&gt;</span><a href="Tea-auth/TeaAcl.html#methodisDenied">isDenied</a><span class="src-sym">(</span><span class="src-str">'member'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'BlogController'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			isDenied
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$role</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$resource</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$role</span><span class="var-description">: Role of a user, usually retrieve from user's login session</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$resource</span><span class="var-description">: Resource name (use Controller class name)</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: Action name (use Method name)</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="Tea-auth/TeaRbAcl.html#methodisDenied">TeaRbAcl::isDenied()</a>
+								: Check if the user Roles is denied from the resource or action list or both.
+							</li>
+				</ul>
+	</div>
+<a name="process" id="process"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">process</span> (line <span class="line-number">197</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check if the user's role is able to access the resource/action.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns the fail route if user cannot access the resource.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array|string</span>
+		<span class="method-name">
+			process
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$role</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$resource</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$role</span><span class="var-description">: Role of a user, usually retrieve from user's login session</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$resource</span><span class="var-description">: Resource name (use Controller class name)</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: Action name (use Method name)</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="Tea-auth/TeaRbAcl.html#methodprocess">TeaRbAcl::process()</a>
+								: Check if the user's role is able to access the resource/action.
+							</li>
+				</ul>
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 22 Feb 2011 09:22:51 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>
